@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 要求后续所有报告提供可点击的导航和相关内容链接。 | [报告导航规则](AGENTS.md#成果分类与报告导航) · [变更日志](changes/2026-11-21-report-navigation-requirement_v1.md) |
 | 2026-11-21 | 按类型归档成果，并为报告添加章节导航与互跳链接。 | [成果索引](outputs/README.md) · [变更日志](changes/2026-11-21-output-organization_v1.md) |
 | 2026-11-21 | 清理 WS-IFM 旧版图件，当前仅保留 v5。 | [WS-IFM 几何光路示意 v5](outputs/images/WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v5.svg) · [变更日志](changes/2026-11-21-ws-ifm-figure-cleanup_v1.md) |
 | 2026-11-20 | 在 WS-IFM 模型 v1 的光路一节嵌入通用几何光路示意图。 | [WS-IFM 模型 v1](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#光路与输入输出) · [变更日志](changes/2026-11-20-ws-ifm-model-figure_v1.md) |
