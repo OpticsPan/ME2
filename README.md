@@ -6,11 +6,12 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-20 | 撤回并删除 Agent 绘制的 WS-IFM 几何布局图 v1–v4。 | [撤回记录](changes/2026-11-20-ws-ifm-layout-withdrawal_v1.md) |
 | 2026-11-20 | 新增任务前阅读例外，用户下达当次特殊命令时可直接执行。 | [协作规则](AGENTS.md#任务开始前的资料学习) · [变更日志](changes/2026-11-20-pre-reading-exception_v1.md) |
-| 2026-11-20 | 按手绘 Z–X 切面重绘 Z1/Z2 双路沿 X 的光路，并对齐 M/E 布局与框架镜俯视。 | [几何布局图 v4](outputs/WS-IFM%E5%87%A0%E4%BD%95%E5%B8%83%E5%B1%80%E5%9B%BE_v4.svg) · [变更日志](changes/2026-11-20-ws-ifm-layout_v4.md) |
-| 2026-11-20 | 修正 WS-IFM 布局与俯视图的测高轴向，两路改为沿 X/Y 分别入射并配套独立剖面。 | [几何布局图 v3](outputs/WS-IFM%E5%87%A0%E4%BD%95%E5%B8%83%E5%B1%80%E5%9B%BE_v3.svg) · [变更日志](changes/2026-11-20-ws-ifm-layout_v3.md) |
-| 2026-11-20 | 修订 WS-IFM 几何布局图，加入坐标系、X/Y 正交 Z 长镜、可见的 45° 镜面和平底剖面。 | [几何布局图 v2](outputs/WS-IFM%E5%87%A0%E4%BD%95%E5%B8%83%E5%B1%80%E5%9B%BE_v2.svg) · [变更日志](changes/2026-11-20-ws-ifm-layout_v2.md) |
-| 2026-11-20 | 重绘 WS-IFM 的测量侧与曝光侧布局，以及 X/Y 三束、Z1/Z2 折返光路。 | [几何布局图 v1](outputs/WS-IFM%E5%87%A0%E4%BD%95%E5%B8%83%E5%B1%80%E5%9B%BE_v1.svg) · [变更日志](changes/2026-11-20-ws-ifm-layout_v1.md) |
+| 2026-11-20 | 按手绘 Z–X 切面重绘 Z1/Z2 双路沿 X 的光路，并对齐 M/E 布局与框架镜俯视（图件已撤回）。 | [变更日志](changes/2026-11-20-ws-ifm-layout_v4.md) |
+| 2026-11-20 | 修正 WS-IFM 布局与俯视图的测高轴向，两路改为沿 X/Y 分别入射并配套独立剖面（图件已撤回）。 | [变更日志](changes/2026-11-20-ws-ifm-layout_v3.md) |
+| 2026-11-20 | 修订 WS-IFM 几何布局图，加入坐标系、X/Y 正交 Z 长镜、可见的 45° 镜面和平底剖面（图件已撤回）。 | [变更日志](changes/2026-11-20-ws-ifm-layout_v2.md) |
+| 2026-11-20 | 重绘 WS-IFM 的测量侧与曝光侧布局，以及 X/Y 三束、Z1/Z2 折返光路（图件已撤回）。 | [变更日志](changes/2026-11-20-ws-ifm-layout_v1.md) |
 | 2026-11-20 | 建立 WS-IFM 模型的优先查阅入口，整理六个方程、参数、标定关系及原式差异。 | [WS-IFM 模型 v1](outputs/WS-IFM%E6%A8%A1%E5%9E%8B_v1.md) · [变更日志](changes/2026-11-20-ws-ifm-model_v1.md) |
 | 2026-11-20 | 将任务结果的本机与 GitHub 同步纳入协作规则，补同步 TWINSCAN 测校项目清单。 | [测校项目清单 v2](outputs/TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md) · [变更日志](changes/2026-11-20-result-sync_v1.md) |
 | 2026-11-20 | 建立 ME2 任务前资料学习要求，完成 Level 1–3 测校项目第一版清单。 | [清单登记与本机位置](changes/2026-11-20-calibration-inventory_v1.md) · [协作规则](AGENTS.md) |
