@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 为 WS-IFM v2 添加逐式修正对照及 FreeCAD 六自由度位姿回读验证。 | [WS-IFM 模型 v2](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#freecad-六自由度验证) · [变更日志](changes/2026-11-21-ws-ifm-freecad-six-dof-verification_v1.md) |
 | 2026-11-21 | 核对当前 CAD 下的 IFM 原式，归档修正后的几何模型和数值验证。 | [WS-IFM 模型 v2](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md) · [变更日志](changes/2026-11-21-ws-ifm-model-validation_v1.md) |
 | 2026-11-21 | 将本机参考文献目录明确定为只读原始资料区。 | [资料规则](AGENTS.md#read-only-references) · [变更日志](changes/2026-11-21-reference-read-only_v1.md) |
 | 2026-11-21 | 要求后续所有报告提供可点击的导航和相关内容链接。 | [报告导航规则](AGENTS.md#成果分类与报告导航) · [变更日志](changes/2026-11-21-report-navigation-requirement_v1.md) |
