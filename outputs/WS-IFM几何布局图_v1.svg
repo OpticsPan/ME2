@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="1040" viewBox="0 0 1480 1040" role="img" aria-labelledby="figure-title figure-description" lang="zh-CN">
+
+<title id="figure-title">WS-IFM 晶圆台干涉仪几何布局</title>
+<desc id="figure-description">测量侧和曝光侧同一示意视向。两侧 X 模组与 Z1 相邻，Z2 在镜块另一端，Y 模组分列相对两侧。下面给出 X 与 Y 各三束的相对几何和 Z 光路的直返参考与 45 度折返测量。</desc>
+<defs>
+  <style>
+    text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", "WenQuanYi Micro Hei", sans-serif; }
+    .title { fill:#18304a; font-size:42px; font-weight:700; }
+    .panel-title { fill:#18304a; font-size:25px; font-weight:700; }
+    .subtitle { font-size:17px; font-weight:400; }
+    .label { font-size:16px; font-weight:500; }
+    .note { font-size:15px; font-weight:400; }
+    .tag { font-size:17px; font-weight:700; }
+    .dim { font-size:15px; font-weight:600; font-family: Consolas, monospace; }
+  </style>
+  <marker id="dimension" markerWidth="7" markerHeight="7" refX="6" refY="3.5"
+          orient="auto-start-reverse" markerUnits="userSpaceOnUse">
+    <path d="M0 0 L7 3.5 L0 7 Z" fill="#4b637b"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="1480" height="1040" rx="0" fill="#edf3f7" stroke="none" stroke-width="1"/>
+<text x="44.00" y="64.00" class="title" text-anchor="start">WS-IFM 几何布局</text>
+<text x="46.00" y="95.00" class="subtitle" text-anchor="start" fill="#4b637b">晶圆台干涉仪  /  WS type-2 台体测量光路</text>
+<text x="1436.00" y="73.00" class="label" text-anchor="end" fill="#4b637b">拓扑示意 · 非比例</text>
+<g id="measure-side" aria-label="测量侧  M">
+<rect x="44" y="124" width="678" height="387" rx="16" fill="#ffffff" stroke="#cddbe6" stroke-width="1.3"/>
+<text x="68.00" y="163.00" class="panel-title" text-anchor="start">测量侧  M</text>
+<text x="219.00" y="160.00" class="note" text-anchor="start" fill="#4b637b">Kx / Ly 基准 · ATHENA 位置</text>
+<text x="698.00" y="160.00" class="note" text-anchor="end" fill="#4b637b">图 1.61</text>
+<path d="M68.00 177.00L698.00 177.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<path d="M70.32 350.65L412.32 184.15L697.68 323.35L355.68 489.85Z" fill="#f5f9fc" stroke="#deebf3" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M209.52 337.22L366.96 414.02L366.96 401.02L209.52 324.22Z" fill="#b6c9d8" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M366.96 414.02L558.48 320.78L558.48 307.78L366.96 401.02Z" fill="#c4d3e1" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M209.52 324.22L401.04 230.98L558.48 307.78L366.96 401.02Z" fill="#d4e1eb" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M229.12 322.67L370.16 391.47L370.16 363.47L229.12 294.67Z" fill="#b9ccdb" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M370.16 391.47L538.88 309.33L538.88 281.33L370.16 363.47Z" fill="#cbdbe6" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M229.12 294.67L397.84 212.53L538.88 281.33L370.16 363.47Z" fill="#eaf1f6" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M229.18 320.44L368.58 388.44L368.58 371.44L229.18 303.44Z" fill="#dceaf4" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M371.74 388.50L538.94 307.10L538.94 291.10L371.74 372.50Z" fill="#d8e6ef" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M430.36 261.43L434.14 263.41L437.61 265.52L440.76 267.75L443.55 270.07L445.97 272.49L448.02 274.97L449.66 277.50L450.91 280.08L451.74 282.68L452.15 285.29L452.14 287.90L451.72 290.47L450.87 293.01L449.62 295.49L447.95 297.91L445.90 300.23L443.46 302.46L440.66 304.57L437.50 306.55L434.02 308.40L430.23 310.10L426.15 311.63L421.82 312.99L417.25 314.18L412.47 315.18L407.52 315.99L402.43 316.60L397.22 317.01L391.93 317.21L386.59 317.21L381.23 317.01L375.89 316.60L370.61 315.99L365.40 315.19L360.31 314.19L355.37 313.01L350.60 311.64L346.04 310.11L341.71 308.41L337.64 306.57L333.86 304.59L330.39 302.48L327.24 300.25L324.45 297.93L322.03 295.51L319.98 293.03L318.34 290.50L317.09 287.92L316.26 285.32L315.85 282.71L315.86 280.10L316.28 277.53L317.13 274.99L318.38 272.51L320.05 270.09L322.10 267.77L324.54 265.54L327.34 263.43L330.50 261.45L333.98 259.60L337.77 257.90L341.85 256.37L346.18 255.01L350.75 253.82L355.53 252.82L360.48 252.01L365.57 251.40L370.78 250.99L376.07 250.79L381.41 250.79L386.77 250.99L392.11 251.40L397.39 252.01L402.60 252.81L407.69 253.81L412.63 254.99L417.40 256.36L421.96 257.89L426.29 259.59Z" fill="#dbeaf4" stroke="#7a98af" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318.29 290.42L397.23 251.98" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M337.64 306.57L430.36 261.43" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M370.77 316.02L449.71 277.58" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M425.04 264.02L429.18 266.23L432.89 268.62L436.13 271.15L438.86 273.81L441.07 276.56L442.72 279.39L443.82 282.26L444.33 285.15L444.26 288.02L443.62 290.86L442.40 293.63L440.61 296.31L438.29 298.87L435.44 301.29L432.09 303.54L428.28 305.60L424.04 307.45L419.42 309.08L414.46 310.47L409.20 311.60L403.71 312.47L398.02 313.06L392.19 313.37L386.29 313.40L380.37 313.15L374.48 312.61L368.68 311.80L363.03 310.73L357.58 309.39L352.39 307.81L347.50 306.00L342.96 303.98L338.82 301.77L335.11 299.38L331.87 296.85L329.14 294.19L326.93 291.44L325.28 288.61L324.18 285.74L323.67 282.85L323.74 279.98L324.38 277.14L325.60 274.37L327.39 271.69L329.71 269.13L332.56 266.71L335.91 264.46L339.72 262.40L343.96 260.55L348.58 258.92L353.54 257.53L358.80 256.40L364.29 255.53L369.98 254.94L375.81 254.63L381.71 254.60L387.63 254.85L393.52 255.39L399.32 256.20L404.97 257.27L410.42 258.61L415.61 260.19L420.50 262.00Z" fill="none" stroke="#bacfdf" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="384.00" y="292.00" class="note" text-anchor="middle" fill="#304c65">晶圆</text>
+<path d="M184.24 423.85L219.50 441.05L219.50 400.05L184.24 382.85Z" fill="#c2dafa" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M219.50 441.05L249.14 426.62L249.14 385.62L219.50 400.05Z" fill="#cce2f9" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M184.24 382.85L213.88 368.42L249.14 385.62L219.50 400.05Z" fill="#deedfc" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M127.60 395.48L154.66 408.68L154.66 371.68L127.60 358.48Z" fill="#efd2b0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M154.66 408.68L183.54 394.62L183.54 357.62L154.66 371.68Z" fill="#f3dbc0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M127.60 358.48L156.48 344.42L183.54 357.62L154.66 371.68Z" fill="#fae6d1" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M583.52 252.44L609.76 265.24L609.76 227.24L583.52 214.44Z" fill="#efd2b0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M609.76 265.24L634.08 253.40L634.08 215.40L609.76 227.24Z" fill="#f3dbc0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M583.52 214.44L607.84 202.60L634.08 215.40L609.76 227.24Z" fill="#fae6d1" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M519.16 409.45L549.50 424.25L549.50 383.25L519.16 368.45Z" fill="#bbe3d7" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M549.50 424.25L591.30 403.90L591.30 362.90L549.50 383.25Z" fill="#c6ebdf" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M519.16 368.45L560.96 348.10L591.30 362.90L549.50 383.25Z" fill="#dbf1e8" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222.08 383.42L309.48 340.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M242.58 393.42L329.98 350.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M238.48 408.42L325.88 365.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M526.00 376.12L442.36 335.32" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M554.12 362.43L470.48 321.63" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M550.32 381.28L466.68 340.48" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M170.42 358.22L257.82 315.67" fill="none" stroke="#ad4a08" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="5 4"/>
+<path d="M170.42 373.22L247.18 335.85" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<path d="M247.18 335.85L247.18 259.85" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<circle cx="247.18" cy="335.85" r="3.25" fill="#ad4a08" stroke="#ffffff" stroke-width="1"/>
+<path d="M229.86 260.29L248.10 251.41L264.50 259.41L246.26 268.29Z" fill="#e8eff4" stroke="#69879d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M596.64 229.84L507.72 273.13" fill="none" stroke="#ad4a08" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="5 4"/>
+<path d="M596.64 244.84L518.36 282.95" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<path d="M518.36 282.95L518.36 206.95" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<circle cx="518.36" cy="282.95" r="3.25" fill="#ad4a08" stroke="#ffffff" stroke-width="1"/>
+<path d="M501.04 207.39L519.28 198.51L535.68 206.51L517.44 215.39Z" fill="#e8eff4" stroke="#69879d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M636.00 413.00L616.00 413.00L558.42 366.12" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="558.42" cy="366.12" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="641.00" y="420.00" class="tag" text-anchor="start" fill="#007765">Y-IFM</text>
+<text x="153.00" y="455.00" class="tag" text-anchor="start" fill="#1661b6">X-IFM</text>
+<path d="M211.00 449.00L225.00 449.00L220.58 414.54" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="220.58" cy="414.54" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="106.00" y="374.00" class="tag" text-anchor="start" fill="#ad4a08">Z1</text>
+<path d="M130.00 369.00L145.00 369.00L146.62 372.61" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="146.62" cy="372.61" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="642.00" y="224.00" class="tag" text-anchor="start" fill="#ad4a08">Z2</text>
+<path d="M635.00 220.00L617.00 220.00L614.24 223.87" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="614.24" cy="223.87" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="397.00" y="464.00" class="note" text-anchor="middle" fill="#304c65">晶圆台镜块</text>
+<path d="M397.00 448.00L397.00 437.00L377.10 385.30" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="377.10" cy="385.30" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="393.00" y="211.00" class="note" text-anchor="middle" fill="#4b637b">计量框架 Z 镜</text>
+<path d="M451.00 206.00L465.00 206.00L518.36 205.95" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="518.36" cy="205.95" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+</g>
+<g id="expose-side" aria-label="曝光侧  E">
+<rect x="758" y="124" width="678" height="387" rx="16" fill="#ffffff" stroke="#cddbe6" stroke-width="1.3"/>
+<text x="782.00" y="163.00" class="panel-title" text-anchor="start">曝光侧  E</text>
+<text x="933.00" y="160.00" class="note" text-anchor="start" fill="#4b637b">Kx / Ly 基准 · 投影镜头中心</text>
+<text x="1412.00" y="160.00" class="note" text-anchor="end" fill="#4b637b">图 1.60</text>
+<path d="M782.00 177.00L1412.00 177.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<path d="M784.32 350.65L1126.32 184.15L1411.68 323.35L1069.68 489.85Z" fill="#f5f9fc" stroke="#deebf3" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M931.68 225.72L1015.32 266.52" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M959.80 212.03L1043.44 252.83" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M956.00 230.88L1039.64 271.68" fill="none" stroke="#007765" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M923.52 337.22L1080.96 414.02L1080.96 401.02L923.52 324.22Z" fill="#b6c9d8" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1080.96 414.02L1272.48 320.78L1272.48 307.78L1080.96 401.02Z" fill="#c4d3e1" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M923.52 324.22L1115.04 230.98L1272.48 307.78L1080.96 401.02Z" fill="#d4e1eb" stroke="#96adbf" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M943.12 322.67L1084.16 391.47L1084.16 363.47L943.12 294.67Z" fill="#b9ccdb" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1084.16 391.47L1252.88 309.33L1252.88 281.33L1084.16 363.47Z" fill="#cbdbe6" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M943.12 294.67L1111.84 212.53L1252.88 281.33L1084.16 363.47Z" fill="#eaf1f6" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M943.18 320.44L1082.58 388.44L1082.58 371.44L943.18 303.44Z" fill="#dceaf4" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1085.74 388.50L1252.94 307.10L1252.94 291.10L1085.74 372.50Z" fill="#d8e6ef" stroke="#91aabc" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1144.36 261.43L1148.14 263.41L1151.61 265.52L1154.76 267.75L1157.55 270.07L1159.97 272.49L1162.02 274.97L1163.66 277.50L1164.91 280.08L1165.74 282.68L1166.15 285.29L1166.14 287.90L1165.72 290.47L1164.87 293.01L1163.62 295.49L1161.95 297.91L1159.90 300.23L1157.46 302.46L1154.66 304.57L1151.50 306.55L1148.02 308.40L1144.23 310.10L1140.15 311.63L1135.82 312.99L1131.25 314.18L1126.47 315.18L1121.52 315.99L1116.43 316.60L1111.22 317.01L1105.93 317.21L1100.59 317.21L1095.23 317.01L1089.89 316.60L1084.61 315.99L1079.40 315.19L1074.31 314.19L1069.37 313.01L1064.60 311.64L1060.04 310.11L1055.71 308.41L1051.64 306.57L1047.86 304.59L1044.39 302.48L1041.24 300.25L1038.45 297.93L1036.03 295.51L1033.98 293.03L1032.34 290.50L1031.09 287.92L1030.26 285.32L1029.85 282.71L1029.86 280.10L1030.28 277.53L1031.13 274.99L1032.38 272.51L1034.05 270.09L1036.10 267.77L1038.54 265.54L1041.34 263.43L1044.50 261.45L1047.98 259.60L1051.77 257.90L1055.85 256.37L1060.18 255.01L1064.75 253.82L1069.53 252.82L1074.48 252.01L1079.57 251.40L1084.78 250.99L1090.07 250.79L1095.41 250.79L1100.77 250.99L1106.11 251.40L1111.39 252.01L1116.60 252.81L1121.69 253.81L1126.63 254.99L1131.40 256.36L1135.96 257.89L1140.29 259.59Z" fill="#dbeaf4" stroke="#7a98af" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1032.29 290.42L1111.23 251.98" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M1051.64 306.57L1144.36 261.43" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M1084.77 316.02L1163.71 277.58" fill="none" stroke="#b6cbdc" stroke-width="0.85" stroke-linecap="round"/>
+<path d="M1139.04 264.02L1143.18 266.23L1146.89 268.62L1150.13 271.15L1152.86 273.81L1155.07 276.56L1156.72 279.39L1157.82 282.26L1158.33 285.15L1158.26 288.02L1157.62 290.86L1156.40 293.63L1154.61 296.31L1152.29 298.87L1149.44 301.29L1146.09 303.54L1142.28 305.60L1138.04 307.45L1133.42 309.08L1128.46 310.47L1123.20 311.60L1117.71 312.47L1112.02 313.06L1106.19 313.37L1100.29 313.40L1094.37 313.15L1088.48 312.61L1082.68 311.80L1077.03 310.73L1071.58 309.39L1066.39 307.81L1061.50 306.00L1056.96 303.98L1052.82 301.77L1049.11 299.38L1045.87 296.85L1043.14 294.19L1040.93 291.44L1039.28 288.61L1038.18 285.74L1037.67 282.85L1037.74 279.98L1038.38 277.14L1039.60 274.37L1041.39 271.69L1043.71 269.13L1046.56 266.71L1049.91 264.46L1053.72 262.40L1057.96 260.55L1062.58 258.92L1067.54 257.53L1072.80 256.40L1078.29 255.53L1083.98 254.94L1089.81 254.63L1095.71 254.60L1101.63 254.85L1107.52 255.39L1113.32 256.20L1118.97 257.27L1124.42 258.61L1129.61 260.19L1134.50 262.00Z" fill="none" stroke="#bacfdf" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1098.00" y="292.00" class="note" text-anchor="middle" fill="#304c65">晶圆</text>
+<path d="M898.24 423.85L933.50 441.05L933.50 400.05L898.24 382.85Z" fill="#c2dafa" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M933.50 441.05L963.14 426.62L963.14 385.62L933.50 400.05Z" fill="#cce2f9" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M898.24 382.85L927.88 368.42L963.14 385.62L933.50 400.05Z" fill="#deedfc" stroke="#6995c5" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M841.60 395.48L868.66 408.68L868.66 371.68L841.60 358.48Z" fill="#efd2b0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M868.66 408.68L897.54 394.62L897.54 357.62L868.66 371.68Z" fill="#f3dbc0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M841.60 358.48L870.48 344.42L897.54 357.62L868.66 371.68Z" fill="#fae6d1" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1297.52 252.44L1323.76 265.24L1323.76 227.24L1297.52 214.44Z" fill="#efd2b0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1323.76 265.24L1348.08 253.40L1348.08 215.40L1323.76 227.24Z" fill="#f3dbc0" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1297.52 214.44L1321.84 202.60L1348.08 215.40L1323.76 227.24Z" fill="#fae6d1" stroke="#bb885f" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M894.50 244.25L924.84 259.05L924.84 218.05L894.50 203.25Z" fill="#bbe3d7" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M924.84 259.05L966.64 238.70L966.64 197.70L924.84 218.05Z" fill="#c6ebdf" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M894.50 203.25L936.30 182.90L966.64 197.70L924.84 218.05Z" fill="#dbf1e8" stroke="#639e90" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M936.08 383.42L1023.48 340.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M956.58 393.42L1043.98 350.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M952.48 408.42L1039.88 365.87" fill="none" stroke="#1661b6" stroke-width="2.3" stroke-linecap="round"/>
+<path d="M884.42 358.22L971.82 315.67" fill="none" stroke="#ad4a08" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="5 4"/>
+<path d="M884.42 373.22L961.18 335.85" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<path d="M961.18 335.85L961.18 259.85" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<circle cx="961.18" cy="335.85" r="3.25" fill="#ad4a08" stroke="#ffffff" stroke-width="1"/>
+<path d="M943.86 260.29L962.10 251.41L978.50 259.41L960.26 268.29Z" fill="#e8eff4" stroke="#69879d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1310.64 229.84L1221.72 273.13" fill="none" stroke="#ad4a08" stroke-width="1.9" stroke-linecap="round" stroke-dasharray="5 4"/>
+<path d="M1310.64 244.84L1232.36 282.95" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<path d="M1232.36 282.95L1232.36 206.95" fill="none" stroke="#ad4a08" stroke-width="2.55" stroke-linecap="round"/>
+<circle cx="1232.36" cy="282.95" r="3.25" fill="#ad4a08" stroke="#ffffff" stroke-width="1"/>
+<path d="M1215.04 207.39L1233.28 198.51L1249.68 206.51L1231.44 215.39Z" fill="#e8eff4" stroke="#69879d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M871.00 217.00L888.00 217.00L926.56 199.63" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="926.56" cy="199.63" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="812.00" y="224.00" class="tag" text-anchor="start" fill="#007765">Y-IFM</text>
+<text x="867.00" y="455.00" class="tag" text-anchor="start" fill="#1661b6">X-IFM</text>
+<path d="M925.00 449.00L939.00 449.00L934.58 414.54" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="934.58" cy="414.54" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="820.00" y="374.00" class="tag" text-anchor="start" fill="#ad4a08">Z1</text>
+<path d="M844.00 369.00L859.00 369.00L860.62 372.61" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="860.62" cy="372.61" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="1356.00" y="224.00" class="tag" text-anchor="start" fill="#ad4a08">Z2</text>
+<path d="M1349.00 220.00L1331.00 220.00L1328.24 223.87" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1328.24" cy="223.87" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="1111.00" y="464.00" class="note" text-anchor="middle" fill="#304c65">晶圆台镜块</text>
+<path d="M1111.00 448.00L1111.00 437.00L1091.10 385.30" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1091.10" cy="385.30" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="1107.00" y="211.00" class="note" text-anchor="middle" fill="#4b637b">计量框架 Z 镜</text>
+<path d="M1165.00 206.00L1179.00 206.00L1232.36 205.95" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1232.36" cy="205.95" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+</g>
+<path d="M45.00 537.00L76.00 537.00" fill="none" stroke="#1661b6" stroke-width="3" stroke-linecap="round"/>
+<text x="88.00" y="542.00" class="note" text-anchor="start" fill="#304c65">X 三束</text>
+<path d="M216.00 537.00L247.00 537.00" fill="none" stroke="#007765" stroke-width="3" stroke-linecap="round"/>
+<text x="259.00" y="542.00" class="note" text-anchor="start" fill="#304c65">Y 三束</text>
+<path d="M387.00 537.00L418.00 537.00" fill="none" stroke="#ad4a08" stroke-width="3" stroke-linecap="round"/>
+<text x="430.00" y="542.00" class="note" text-anchor="start" fill="#304c65">Z 折返测量</text>
+<path d="M617.00 537.00L648.00 537.00" fill="none" stroke="#ad4a08" stroke-width="3" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="660.00" y="542.00" class="note" text-anchor="start" fill="#304c65">Z 直返参考</text>
+<text x="1436.00" y="542.00" class="note" text-anchor="end" fill="#4b637b">M/E 同一视向 · 光线表示往返光路</text>
+<g id="xy-beam-section" aria-label="X 与 Y 三束观测">
+<rect x="44" y="562" width="678" height="361" rx="16" fill="#ffffff" stroke="#cddbe6" stroke-width="1.3"/>
+<text x="68.00" y="602.00" class="panel-title" text-anchor="start">X / Y 三束观测</text>
+<text x="697.00" y="601.00" class="note" text-anchor="end" fill="#4b637b">沿光束方向的示意截面</text>
+<path d="M68.00 615.00L698.00 615.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<path d="M383.00 629.00L383.00 851.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<text x="86.00" y="645.00" class="tag" text-anchor="start" fill="#1661b6">X-IFM</text>
+<path d="M116.00 668.00L350.00 668.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="354.00" y="672.00" class="note" text-anchor="end" fill="#4b637b">焦面</text>
+<path d="M109.00 668.00L109.00 739.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+<path d="M116.00 739.00L175.00 739.00" fill="none" stroke="#9cb0c2" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="99.00" y="708.50" class="dim" text-anchor="end" fill="#4b637b">ax</text>
+<path d="M187.00 705.00L187.00 729.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M299.00 705.00L299.00 729.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M187.00 706.00L299.00 706.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+<text x="243.00" y="696.00" class="dim" text-anchor="middle" fill="#4b637b">4cx</text>
+<circle cx="187.00" cy="739.00" r="7" fill="#1661b6" stroke="none" stroke-width="1"/>
+<text x="187.00" y="768.00" class="tag" text-anchor="middle" fill="#1661b6">X1</text>
+<circle cx="299.00" cy="739.00" r="7" fill="#1661b6" stroke="none" stroke-width="1"/>
+<text x="299.00" y="768.00" class="tag" text-anchor="middle" fill="#1661b6">X2</text>
+<circle cx="243.00" cy="810.00" r="7" fill="#ffffff" stroke="#1661b6" stroke-width="2.5"/>
+<text x="257.00" y="816.00" class="tag" text-anchor="start" fill="#1661b6">X3</text>
+<text x="86.00" y="851.00" class="note" text-anchor="start" fill="#304c65">上束均值 mx1 · 上束差值 mx2</text>
+<text x="415.00" y="645.00" class="tag" text-anchor="start" fill="#007765">Y-IFM</text>
+<path d="M445.00 668.00L679.00 668.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-dasharray="5 4"/>
+<text x="683.00" y="672.00" class="note" text-anchor="end" fill="#4b637b">焦面</text>
+<path d="M438.00 668.00L438.00 739.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+<path d="M445.00 739.00L504.00 739.00" fill="none" stroke="#9cb0c2" stroke-width="1.1" stroke-linecap="round" stroke-dasharray="3 4"/>
+<text x="428.00" y="708.50" class="dim" text-anchor="end" fill="#4b637b">ay</text>
+<path d="M516.00 705.00L516.00 729.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M628.00 705.00L628.00 729.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M516.00 706.00L628.00 706.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+<text x="572.00" y="696.00" class="dim" text-anchor="middle" fill="#4b637b">4cy</text>
+<circle cx="516.00" cy="739.00" r="7" fill="#007765" stroke="none" stroke-width="1"/>
+<text x="516.00" y="768.00" class="tag" text-anchor="middle" fill="#007765">Y1</text>
+<circle cx="628.00" cy="739.00" r="7" fill="#007765" stroke="none" stroke-width="1"/>
+<text x="628.00" y="768.00" class="tag" text-anchor="middle" fill="#007765">Y2</text>
+<circle cx="572.00" cy="810.00" r="7" fill="#ffffff" stroke="#007765" stroke-width="2.5"/>
+<text x="586.00" y="816.00" class="tag" text-anchor="start" fill="#007765">Y3</text>
+<text x="415.00" y="851.00" class="note" text-anchor="start" fill="#304c65">上束均值 my1 · 上束差值 my2</text>
+<path d="M68.00 867.00L698.00 867.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<text x="68.00" y="897.00" class="label" text-anchor="start" fill="#304c65">X 观测 X、Rzx、Ryx     /     Y 观测 Y、Rzy、Rx</text>
+</g>
+<g id="z-beam-section" aria-label="Z1 和 Z2 测量与参考光路">
+<rect x="758" y="562" width="678" height="361" rx="16" fill="#ffffff" stroke="#cddbe6" stroke-width="1.3"/>
+<text x="782.00" y="602.00" class="panel-title" text-anchor="start">Z1 / Z2 折返光路</text>
+<text x="1412.00" y="601.00" class="note" text-anchor="end" fill="#4b637b">沿 X 方向的示意剖面</text>
+<path d="M782.00 615.00L1412.00 615.00" fill="none" stroke="#cddbe6" stroke-width="1" stroke-linecap="round"/>
+<text x="1100.00" y="648.00" class="label" text-anchor="middle" fill="#304c65">计量框架 Z 镜（底面）</text>
+<rect x="895" y="665" width="70" height="10" rx="1" fill="#bfd0df" stroke="#7e9aae" stroke-width="1"/>
+<path d="M895.00 675.00L965.00 675.00" fill="none" stroke="#314f66" stroke-width="2.1" stroke-linecap="round"/>
+<rect x="1229" y="665" width="72" height="10" rx="1" fill="#bfd0df" stroke="#7e9aae" stroke-width="1"/>
+<path d="M1229.00 675.00L1301.00 675.00" fill="none" stroke="#314f66" stroke-width="2.1" stroke-linecap="round"/>
+<path d="M949.00 729.00L1246.00 729.00L1246.00 768.00L1277.00 800.00L1246.00 818.00L949.00 818.00L918.00 800.00L949.00 768.00Z" fill="#e9f0f5" stroke="#9db3c6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M949.00 735.00L949.00 766.00" fill="none" stroke="#6b879d" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M1246.00 735.00L1246.00 766.00" fill="none" stroke="#6b879d" stroke-width="4.5" stroke-linecap="round"/>
+<text x="1097.00" y="756.00" class="label" text-anchor="middle" fill="#304c65">晶圆台镜块</text>
+<rect x="791" y="730" width="79" height="77" rx="9" fill="#fff3e5" stroke="#c58e60" stroke-width="1.3"/>
+<rect x="1326" y="730" width="79" height="77" rx="9" fill="#fff3e5" stroke="#c58e60" stroke-width="1.3"/>
+<text x="830.50" y="761.00" class="tag" text-anchor="middle" fill="#ad4a08">Z1</text>
+<text x="1365.50" y="761.00" class="tag" text-anchor="middle" fill="#ad4a08">Z2</text>
+<path d="M870.00 746.00L924.00 746.00" fill="none" stroke="#ad4a08" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M936.00 746.00L949.00 746.00" fill="none" stroke="#ad4a08" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M1326.00 746.00L1271.00 746.00" fill="none" stroke="#ad4a08" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M1259.00 746.00L1246.00 746.00" fill="none" stroke="#ad4a08" stroke-width="2.1" stroke-linecap="round" stroke-dasharray="6 5"/>
+<path d="M870.00 787.00L930.00 787.00L930.00 675.00" fill="none" stroke="#ad4a08" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1326.00 787.00L1265.00 787.00L1265.00 675.00" fill="none" stroke="#ad4a08" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M918.00 799.00L941.00 776.00" fill="none" stroke="#314f66" stroke-width="3.9" stroke-linecap="round"/>
+<path d="M1254.00 776.00L1277.00 799.00" fill="none" stroke="#314f66" stroke-width="3.9" stroke-linecap="round"/>
+<circle cx="930.00" cy="787.00" r="3" fill="#ad4a08" stroke="#fff" stroke-width="0.7"/>
+<circle cx="1265.00" cy="787.00" r="3" fill="#ad4a08" stroke="#fff" stroke-width="0.7"/>
+<circle cx="930.00" cy="675.00" r="3" fill="#ad4a08" stroke="#fff" stroke-width="0.7"/>
+<circle cx="1265.00" cy="675.00" r="3" fill="#ad4a08" stroke="#fff" stroke-width="0.7"/>
+<text x="1097.00" y="791.00" class="note" text-anchor="middle" fill="#4b637b">台体 45° 镜</text>
+<path d="M1041.00 785.00L995.00 785.00L941.00 779.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="941.00" cy="779.00" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<path d="M1152.00 785.00L1198.00 785.00L1254.00 779.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1254.00" cy="779.00" r="2.6" fill="#4b637b" stroke="none" stroke-width="1"/>
+<text x="1097.00" y="837.00" class="note" text-anchor="middle" fill="#4b637b">上束直返 X 镜      /      下束经 45° 镜折返</text>
+<path d="M930.00 848.00L930.00 869.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M1265.00 848.00L1265.00 869.00" fill="none" stroke="#9cb0c2" stroke-width="1" stroke-linecap="round"/>
+<path d="M930.00 859.00L1265.00 859.00" fill="none" stroke="#4b637b" stroke-width="1.35" stroke-linecap="round" marker-start="url(#dimension)" marker-end="url(#dimension)"/>
+<rect x="995" y="847" width="203" height="22" rx="0" fill="#fff" stroke="none" stroke-width="1"/>
+<text x="1096.50" y="864.00" class="note" text-anchor="middle" fill="#4b637b">kze 有效臂（模型量）</text>
+<text x="782.00" y="897.00" class="label" text-anchor="start" fill="#304c65">Z1、Z2 的均值 mz1 与差值 mz2 用于 Z / Ryz 模型</text>
+</g>
+<path d="M44.00 947.00L1436.00 947.00" fill="none" stroke="#9cb0c2" stroke-width="1.1" stroke-linecap="round"/>
+<text x="44.00" y="977.00" class="note" text-anchor="start" fill="#304c65">布局来源  《09-TT-L3-WSbook.pdf》文件第 57–59 页（印刷第 49–51 页），图 1.59–1.63。</text>
+<text x="44.00" y="1004.00" class="note" text-anchor="start" fill="#304c65">光路与符号  《TT-L2-WS-3v0.pdf》文件第 27 页 · 《12-TT-L3-L3-ME_book.pdf》文件第 32 页图 2.12 · 《ifm模型.docx》第 1–5 页</text>
+</svg>
