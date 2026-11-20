@@ -2,11 +2,13 @@
 
 本文是 ME2 中晶圆台干涉仪（Wafer Stage Interferometer，WS-IFM）的优先参考。主来源为本机 `参考文献/ifm模型.docx`，下文的 DOCX 页码按 Word 渲染的 5 页计数。附件给出 X、Y、Z 和三种分通道角度观测的六个方程。Level 1–3 资料用于核对光路、观测关系及标定步骤。原附件 SHA-256 为 `506566cb2f79d46bddb0ed4fda19fb5a7876571760c22f6dfd41257789081fb5`。
 
+**快速跳转**  [光路与输入输出](#光路与输入输出) · [XY 模型](#xy-ifm-原式) · [Z 模型](#z-ifm-原式) · [标定项目](#标定项目与模型项的关系) · [实现边界](#原件差异与实现边界) · [成果索引](../README.md)
+
 ## 光路与输入输出
 
-M 表示测量侧（Measure），E 表示曝光侧（Expose）。通道模型把光束长度组合和台体姿态转换为坐标及角度估计。IFM 通过位移测量跟踪台体，位置参考由归零建立。读数据前要确认 chuck、M/E 工位、归零基准以及报表单位。培训资料显示 Rzx/Rzy 和 Ryx/Ryz 有冗余观测，附件给出了其中 Rzx、Rzy 与 Ryz 的方程。
+M 表示测量侧（Measure），E 表示曝光侧（Expose）。通道模型把光束长度组合和台体姿态转换为坐标及角度估计。IFM 通过位移测量跟踪台体，位置参考由[归零](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#swzs)建立。读数据前要确认 chuck、M/E 工位、归零基准以及报表单位。培训资料显示 Rzx/Rzy 和 Ryx/Ryz 有冗余观测，附件给出了其中 Rzx、Rzy 与 Ryz 的方程。
 
-![WS-IFM 几何光路示意，标出 X/Y 束间距、上下束高差及模型几何参数](WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v5.svg)
+![WS-IFM 几何光路示意，标出 X/Y 束间距、上下束高差及模型几何参数](../images/WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v5.svg)
 
 | 通道 | 测量量 | 模型量与用途 |
 | --- | --- | --- |
@@ -118,15 +120,15 @@ Ryz = sfryz * (mz2 * ((1 - 2*Z/kze)/kze)^2
 
 ## 标定项目与模型项的关系
 
-这里以 Level 3 的 rel.3.4 资料为交叉参照。具体流程、测点和其他测试见[测校项目清单 v2](TWINSCAN测校项目清单_v2.md)中的 WS 章节。
+这里以 Level 3 的 rel.3.4 资料为交叉参照。具体流程、测点和其他测试见 [测校项目清单的晶圆台章节](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#晶圆台-ws)，下表的项目名可直达相应条目。
 
 | 测校 | 侧别与参考 | 对模型的作用与出处 |
 | --- | --- | --- |
-| WZIM，初始高度与倾斜 | M 侧，以 LS M4 为高度基准。裸晶圆转 180° 重测以分离晶圆楔角。 | 建立 Z0、Ry0，并调整 XTZ/YTZ 一阶项，附件中的代表字段为 `szxa`、`szya`。资料在推导中也采用 `szx0`、`szy0`。见《12-TT-L3-L3-ME_book.pdf》文件第 27–29 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 10–18 张。 |
-| WGIM，WS TRIM | 以 X/Y 的 Rz 冗余读数及 X/Z 的 Ry 冗余读数作比较。 | 消除 Rz 与姿态、平移的主要串扰，并拟合 `Ryz` 对比 `Ryx` 的一阶偏差。培训书后续复查明确举例 `srxa` 是 X 对 Ryz 的贡献。见《12-TT-L3-L3-ME_book.pdf》文件第 30–32、57 页、《TT-L2-ME-3v0.pdf》文件第 58–59 页。 |
-| WTAF，XY 倾斜依赖 | M 侧，使用 AA 对已知标记进行不同倾转下的横向位置观测。 | 拟合 M 侧 XY 模型参数，覆盖 Abbe 臂。早期粗标与后续精标可更新同一类参数。见《12-TT-L3-L3-ME_book.pdf》文件第 44 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 44–46 张、《13_AP-L1-ME_rel_3.2.pdf》文件第 29 页。 |
-| WZTD，Z 倾斜依赖 | M 侧，以 LS 中央光斑观测不同位置和姿态下的高度。 | 让 Z-IFM 的有效倾转点对准 LS，降低恒高倾转时的表观 Z 变化。见《12-TT-L3-L3-ME_book.pdf》文件第 60 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 81–82 张。 |
-| WGTD，XYZ 倾斜依赖 | E 侧，TIS1/TIS2 normal 各测 RS 基准板的 T1/T2，在多种姿态下拟合。 | E 侧报表组例 `wse_chuck1_if_model_parameters` 显示 23 个字段。几何与光束方向组为 `K`、`L`、`ax`、`ay`、`cx`、`cy`、`dd`、`ee`、`Ryix0`、`Rzix0`、`Rxiy0`、`Rziy0`。Z 相关组为 `ezxa`、`ezya`、`ezza`、`czxxa`、`czxya`、`czxza`、`czyya`、`dzxxa`、`dzyya`、`dzzza`、`dzxza`。该报表是特定版本的字段证据。见《12-TT-L3-L3-ME_book.pdf》文件第 89–92 页、《TT-MA-ME_setupblock_6-8_1v3.ppt》第 33–38 张。 |
+| <a name="ifm-wzim"></a>[WZIM，初始高度与倾斜](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wzim) | M 侧，以 LS M4 为高度基准。裸晶圆转 180° 重测以分离晶圆楔角。 | 建立 Z0、Ry0，并调整 XTZ/YTZ 一阶项，附件中的代表字段为 `szxa`、`szya`。资料在推导中也采用 `szx0`、`szy0`。见《12-TT-L3-L3-ME_book.pdf》文件第 27–29 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 10–18 张。 |
+| <a name="ifm-wgim"></a>[WGIM，WS TRIM](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wgim) | 以 X/Y 的 Rz 冗余读数及 X/Z 的 Ry 冗余读数作比较。 | 消除 Rz 与姿态、平移的主要串扰，并拟合 `Ryz` 对比 `Ryx` 的一阶偏差。培训书后续复查明确举例 `srxa` 是 X 对 Ryz 的贡献。见《12-TT-L3-L3-ME_book.pdf》文件第 30–32、57 页、《TT-L2-ME-3v0.pdf》文件第 58–59 页。 |
+| <a name="ifm-wtaf"></a>[WTAF，XY 倾斜依赖](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wtaf) | M 侧，使用 AA 对已知标记进行不同倾转下的横向位置观测。 | 拟合 M 侧 XY 模型参数，覆盖 Abbe 臂。早期粗标与后续精标可更新同一类参数。见《12-TT-L3-L3-ME_book.pdf》文件第 44 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 44–46 张、《13_AP-L1-ME_rel_3.2.pdf》文件第 29 页。 |
+| <a name="ifm-wztd"></a>[WZTD，Z 倾斜依赖](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wztd) | M 侧，以 LS 中央光斑观测不同位置和姿态下的高度。 | 让 Z-IFM 的有效倾转点对准 LS，降低恒高倾转时的表观 Z 变化。见《12-TT-L3-L3-ME_book.pdf》文件第 60 页、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 81–82 张。 |
+| <a name="ifm-wgtd"></a>[WGTD，XYZ 倾斜依赖](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wgtd) | E 侧，TIS1/TIS2 normal 各测 RS 基准板的 T1/T2，在多种姿态下拟合。 | E 侧报表组例 `wse_chuck1_if_model_parameters` 显示 23 个字段。几何与光束方向组为 `K`、`L`、`ax`、`ay`、`cx`、`cy`、`dd`、`ee`、`Ryix0`、`Rzix0`、`Rxiy0`、`Rziy0`。Z 相关组为 `ezxa`、`ezya`、`ezza`、`czxxa`、`czxya`、`czxza`、`czyya`、`dzxxa`、`dzyya`、`dzzza`、`dzxza`。该报表是特定版本的字段证据。见《12-TT-L3-L3-ME_book.pdf》文件第 89–92 页、《TT-MA-ME_setupblock_6-8_1v3.ppt》第 33–38 张。 |
 | GIWS、GRMO 与焦面校准 | 双侧镜面／网格参考，应用范围随版本和配置。 | GIWS 处理位置相关镜面图，GRMO 处理 XY 非正交和尺度。较新的无 CS 流程还用 Combined FOCAL 约束与焦面有关的 Z 镜残差。旧版的 CS 相对 Z 镜面图应按旧版流程追溯。见《TT-MA-ME_setupblock_6-8_1v3.ppt》第 39–58、77–94 张、《12-TT-L3-L3-ME_book.pdf》文件第 53–56 页、《13_AP-L1-ME_rel_3.2.pdf》文件第 62–67 页。 |
 
 ## 原件差异与实现边界
