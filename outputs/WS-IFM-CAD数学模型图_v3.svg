@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1024" viewBox="0 0 1600 1024" role="img" aria-labelledby="title desc">
+<title id="title">WS-IFM 三维几何布局与一阶模型</title>
+<desc id="desc">同一 FreeCAD 名义位姿在两个三维轴测视角下的投影。主视角含 X/Y 六束和两路 Z；对侧视角显示 Z2 对应的 45° 面。图中虚线表示直返束，淡点线表示被实体遮挡的光路。</desc>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC","PingFang SC",sans-serif}.mono{font-family:Consolas,"DejaVu Sans Mono",monospace}</style>
+<rect x="0" y="0" width="1600" height="1024" fill="#f2f5f8"/>
+<text x="38" y="60" font-size="44" fill="#18283b" font-weight="700">WS-IFM 三维几何布局与一阶模型</text>
+<text x="40" y="98" font-size="20" fill="#496075" font-weight="400">M 侧测量工位  /  同一 FreeCAD 名义位姿  /  右手坐标</text>
+<text x="1561" y="98" font-size="16" fill="#496075" font-weight="400" text-anchor="end">长度 mm  ·  转角 rad</text>
+<rect x="36" y="126" width="978" height="600" fill="white" stroke="#d8e2eb" rx="15"/>
+<text x="59" y="162" font-size="25" fill="#18283b" font-weight="700">三维轴测 · 从 −X、−Y 侧俯视</text>
+<text x="59" y="189" font-size="16" fill="#496075" font-weight="400">X/Y 三束、Z1/Z2 直返及折返光路</text>
+<rect x="1033" y="126" width="531" height="600" fill="white" stroke="#d8e2eb" rx="15"/>
+<text x="1056" y="162" font-size="25" fill="#18283b" font-weight="700">对侧轴测 · 从 +X、−Y 侧俯视</text>
+<text x="1056" y="189" font-size="16" fill="#496075" font-weight="400">显示 Z2 命中的 45° 面与其固定 Z 镜</text>
+<polygon points="760.56,601.53 704.62,464.13 652.39,421.01 708.32,558.42" fill="#e7a971" stroke="#9c5624" stroke-width="1.65" stroke-linejoin="round"/>
+<polygon points="386.89,584.91 330.96,447.51 278.73,499.23 334.66,636.64" fill="#e7a971" stroke="#9c5624" stroke-width="1.65" stroke-linejoin="round"/>
+<polygon points="386.89,493.71 330.96,356.31 330.96,447.51 386.89,584.91" fill="#94adc2" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="386.89,584.91 334.66,636.64 760.56,601.53 708.32,558.42 708.32,467.22 386.89,493.71" fill="#b5c9d9" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="708.32,467.22 652.39,329.82 330.96,356.31 386.89,493.71" fill="#dce6ee" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="543.97,454.16 550.24,453.35 556.38,452.36 562.36,451.19 568.16,449.85 573.75,448.33 579.11,446.66 584.21,444.83 589.04,442.86 593.57,440.75 597.78,438.51 601.66,436.15 605.19,433.68 608.35,431.11 611.13,428.46 613.52,425.73 615.51,422.93 617.09,420.09 618.25,417.20 618.98,414.28 619.30,411.35 619.18,408.42 618.64,405.49 617.68,402.59 616.29,399.72 614.49,396.90 612.29,394.14 609.69,391.45 606.70,388.84 603.34,386.32 599.62,383.91 595.56,381.62 591.18,379.44 586.49,377.40 581.51,375.51 576.26,373.76 570.78,372.18 565.07,370.75 559.17,369.50 553.11,368.43 546.89,367.53 540.57,366.82 534.15,366.30 527.67,365.97 521.15,365.83 514.63,365.88 508.13,366.12 501.68,366.56 495.31,367.18 489.04,367.99 482.90,368.98 476.92,370.15 471.12,371.49 465.53,373.01 460.17,374.68 455.07,376.51 450.24,378.48 445.71,380.59 441.50,382.83 437.62,385.19 434.09,387.66 430.93,390.23 428.15,392.88 425.76,395.61 423.77,398.41 422.19,401.25 421.03,404.14 420.30,407.06 419.98,409.99 420.10,412.92 420.64,415.85 421.60,418.75 422.99,421.62 424.79,424.44 426.99,427.20 429.59,429.89 432.58,432.50 435.94,435.02 439.66,437.43 443.72,439.73 448.10,441.90 452.80,443.94 457.77,445.83 463.02,447.58 468.50,449.17 474.21,450.59 480.11,451.84 486.17,452.91 492.39,453.81 498.71,454.52 505.13,455.04 511.61,455.37 518.13,455.51 524.65,455.46 531.15,455.22 537.60,454.78" fill="#e8f5ff" stroke="#7496b4" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="89.00,323.19 89.00,329.39 93.12,339.52 93.12,333.32" fill="#91a9be" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="462.77,302.85 93.12,333.32 93.12,339.52 462.77,309.05" fill="#a9bdce" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="89.00,323.19 93.12,333.32 462.77,302.85 458.64,292.72" fill="#d5e4ef" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="591.23,281.79 591.23,288.00 595.36,298.12 595.36,291.92" fill="#91a9be" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="965.00,261.45 595.36,291.92 595.36,298.12 965.00,267.65" fill="#a9bdce" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="591.23,281.79 595.36,291.92 965.00,261.45 960.88,251.33" fill="#d5e4ef" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<line x1="340.17" y1="319.15" x2="340.17" y2="313.92" stroke="#ad4b10" stroke-width="1.9" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.51"/>
+<line x1="713.83" y1="288.35" x2="713.83" y2="283.12" stroke="#ad4b10" stroke-width="1.9" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.51"/>
+<line x1="708.32" y1="497.34" x2="687.71" y2="499.04" stroke="#764491" stroke-width="1.9" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.51"/>
+<line x1="149.38" y1="512.17" x2="374.38" y2="493.62" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="149.38" y1="512.17" x2="374.38" y2="493.62" stroke="#185da8" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="284.38,501.04 274.76,506.05 274.07,497.67" fill="#185da8" stroke-width="1" stroke-linejoin="round"/>
+<line x1="118.47" y1="436.23" x2="343.47" y2="417.69" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="118.47" y1="436.23" x2="343.47" y2="417.69" stroke="#185da8" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="253.47,425.11 243.85,430.11 243.16,421.74" fill="#185da8" stroke-width="1" stroke-linejoin="round"/>
+<line x1="136.87" y1="521.56" x2="361.87" y2="503.01" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="136.87" y1="521.56" x2="361.87" y2="503.01" stroke="#367cbb" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="271.87,510.43 262.25,515.44 261.56,507.07" fill="#367cbb" stroke-width="1" stroke-linejoin="round"/>
+<line x1="509.88" y1="594.02" x2="475.29" y2="509.04" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="509.88" y1="594.02" x2="475.29" y2="509.04" stroke="#00766c" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="489.12,543.03 496.78,550.71 489.00,553.88" fill="#00766c" stroke-width="1" stroke-linejoin="round"/>
+<line x1="654.52" y1="582.1" x2="619.93" y2="497.12" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="654.52" y1="582.1" x2="619.93" y2="497.12" stroke="#00766c" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="633.77,531.11 641.43,538.79 633.65,541.96" fill="#00766c" stroke-width="1" stroke-linejoin="round"/>
+<line x1="594.25" y1="636.67" x2="559.66" y2="551.7" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="594.25" y1="636.67" x2="559.66" y2="551.7" stroke="#00766c" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="573.50,585.69 581.16,593.37 573.38,596.54" fill="#00766c" stroke-width="1" stroke-linejoin="round"/>
+<line x1="133.25" y1="577.21" x2="340.17" y2="560.15" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="133.25" y1="577.21" x2="340.17" y2="560.15" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="257.40,566.97 247.78,571.98 247.09,563.61" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="340.17" y1="560.15" x2="340.17" y2="319.15" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="340.17" y1="560.15" x2="340.17" y2="319.15" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="340.17,415.55 344.37,425.55 335.97,425.55" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="920.75" y1="512.29" x2="713.83" y2="529.35" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="920.75" y1="512.29" x2="713.83" y2="529.35" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="796.60,522.53 806.22,517.52 806.91,525.89" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="713.83" y1="529.35" x2="713.83" y2="288.35" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="713.83" y1="529.35" x2="713.83" y2="288.35" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="713.83,384.75 718.03,394.75 709.63,394.75" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="133.25" y1="544.74" x2="366.29" y2="525.53" stroke="#ffffff" stroke-width="4.6" stroke-dasharray="7 5" stroke-linecap="round"/>
+<line x1="133.25" y1="544.74" x2="366.29" y2="525.53" stroke="#764491" stroke-width="2.15" stroke-dasharray="7 5" stroke-linecap="round"/>
+<line x1="920.75" y1="479.83" x2="708.32" y2="497.34" stroke="#ffffff" stroke-width="4.6" stroke-dasharray="7 5" stroke-linecap="round"/>
+<line x1="920.75" y1="479.83" x2="708.32" y2="497.34" stroke="#764491" stroke-width="2.15" stroke-dasharray="7 5" stroke-linecap="round"/>
+<circle cx="374.38" cy="493.62" r="2.8" fill="#ffffff" stroke="#185da8" stroke-width="1.8"/>
+<circle cx="343.47" cy="417.69" r="2.8" fill="#ffffff" stroke="#185da8" stroke-width="1.8"/>
+<circle cx="361.87" cy="503.01" r="2.8" fill="#ffffff" stroke="#367cbb" stroke-width="1.8"/>
+<circle cx="475.29" cy="509.04" r="2.8" fill="#ffffff" stroke="#00766c" stroke-width="1.8"/>
+<circle cx="619.93" cy="497.12" r="2.8" fill="#ffffff" stroke="#00766c" stroke-width="1.8"/>
+<circle cx="559.66" cy="551.7" r="2.8" fill="#ffffff" stroke="#00766c" stroke-width="1.8"/>
+<circle cx="340.17" cy="560.15" r="3.8" fill="#ffffff" stroke="#ad4b10" stroke-width="1.8"/>
+<circle cx="713.83" cy="529.35" r="3.8" fill="#ffffff" stroke="#ad4b10" stroke-width="1.8"/>
+<circle cx="366.29" cy="525.53" r="2.8" fill="#ffffff" stroke="#764491" stroke-width="1.8"/>
+<line x1="519.64" y1="410.67" x2="587.94" y2="405.04" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="519.64" y1="410.67" x2="587.94" y2="405.04" stroke="#18283b" stroke-width="1.95" stroke-linecap="round"/>
+<polygon points="587.94,405.04 579.28,409.55 578.66,402.01" fill="#18283b" stroke-width="1" stroke-linejoin="round"/>
+<text x="599.9" y="408.05" font-size="15" fill="#18283b" font-weight="700" text-anchor="middle" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">+X</text>
+<line x1="519.64" y1="410.67" x2="507.13" y2="379.94" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="519.64" y1="410.67" x2="507.13" y2="379.94" stroke="#18283b" stroke-width="1.95" stroke-linecap="round"/>
+<polygon points="507.13,379.94 514.02,386.85 507.02,389.70" fill="#18283b" stroke-width="1" stroke-linejoin="round"/>
+<text x="502.6" y="372.82" font-size="15" fill="#18283b" font-weight="700" text-anchor="middle" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">+Y</text>
+<line x1="519.64" y1="410.67" x2="519.64" y2="348.66" stroke="white" stroke-width="4.5" stroke-linecap="round"/>
+<line x1="519.64" y1="410.67" x2="519.64" y2="348.66" stroke="#18283b" stroke-width="1.95" stroke-linecap="round"/>
+<polygon points="519.64,348.66 523.42,357.66 515.86,357.66" fill="#18283b" stroke-width="1" stroke-linejoin="round"/>
+<text x="519.64" y="340.66" font-size="15" fill="#18283b" font-weight="700" text-anchor="middle" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">+Z</text>
+<circle cx="519.64" cy="410.67" r="3.1" fill="#18283b" stroke="white" stroke-width="1"/>
+<text x="505.64" y="426.67" font-size="15" fill="#18283b" font-weight="700" text-anchor="middle" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">O</text>
+<polygon points="1312.58,612.60 1471.54,570.00 1452.24,528.85 1293.28,571.46" fill="#e7a971" stroke="#9c5624" stroke-width="1.65" stroke-linejoin="round"/>
+<polygon points="1293.28,571.46 1452.24,528.85 1452.24,469.47 1293.28,512.08" fill="#94adc2" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="1174.47,508.29 1155.17,528.90 1312.58,612.60 1293.28,571.46 1293.28,512.08 1174.47,448.91" fill="#b5c9d9" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="1293.28,512.08 1452.24,469.47 1333.43,406.30 1174.47,448.91" fill="#dce6ee" stroke="#526b81" stroke-width="1.45" stroke-linejoin="round"/>
+<polygon points="1264.80,473.39 1267.49,474.55 1270.37,475.65 1273.44,476.67 1276.68,477.62 1280.07,478.49 1283.61,479.27 1287.28,479.96 1291.05,480.55 1294.93,481.06 1298.88,481.46 1302.89,481.77 1306.95,481.98 1311.03,482.09 1315.13,482.09 1319.22,482.00 1323.28,481.81 1327.30,481.51 1331.26,481.12 1335.15,480.63 1338.94,480.04 1342.62,479.36 1346.17,478.60 1349.59,477.74 1352.85,476.81 1355.94,475.79 1358.85,474.70 1361.56,473.54 1364.07,472.32 1366.36,471.04 1368.43,469.70 1370.25,468.32 1371.84,466.89 1373.17,465.43 1374.25,463.94 1375.06,462.43 1375.62,460.89 1375.90,459.35 1375.92,457.81 1375.67,456.26 1375.15,454.73 1374.37,453.21 1373.33,451.71 1372.03,450.25 1370.48,448.82 1368.68,447.43 1366.65,446.09 1364.39,444.80 1361.91,443.56 1359.22,442.40 1356.34,441.30 1353.27,440.28 1350.03,439.33 1346.64,438.46 1343.10,437.68 1339.44,436.99 1335.66,436.40 1331.79,435.89 1327.83,435.49 1323.82,435.18 1319.76,434.97 1315.68,434.86 1311.58,434.86 1307.49,434.95 1303.43,435.14 1299.41,435.44 1295.45,435.83 1291.56,436.32 1287.77,436.91 1284.09,437.59 1280.54,438.35 1277.12,439.21 1273.86,440.14 1270.77,441.16 1267.86,442.25 1265.15,443.41 1262.64,444.63 1260.35,445.91 1258.29,447.25 1256.46,448.63 1254.87,450.06 1253.54,451.52 1252.46,453.01 1251.65,454.52 1251.09,456.06 1250.81,457.60 1250.79,459.14 1251.04,460.69 1251.56,462.22 1252.34,463.74 1253.38,465.24 1254.68,466.70 1256.23,468.13 1258.03,469.52 1260.06,470.87 1262.32,472.15" fill="#e8f5ff" stroke="#7496b4" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="1262.08,363.78 1262.08,367.82 1273.79,364.68 1273.79,360.65" fill="#91a9be" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="1262.08,363.78 1125.46,291.14 1125.46,295.18 1262.08,367.82" fill="#a9bdce" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="1137.17,288.00 1125.46,291.14 1262.08,363.78 1273.79,360.65" fill="#d5e4ef" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="1447.71,462.49 1447.71,466.53 1459.42,463.39 1459.42,459.35" fill="#91a9be" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="1447.71,462.49 1311.09,389.84 1311.09,393.88 1447.71,466.53" fill="#a9bdce" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="1322.80,386.70 1311.09,389.84 1447.71,462.49 1459.42,459.35" fill="#d5e4ef" stroke="#456078" stroke-width="1.2" stroke-linejoin="round"/>
+<line x1="1361.49" y1="420.68" x2="1361.49" y2="416.0" stroke="#ad4b10" stroke-width="1.9" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.51"/>
+<line x1="1437.97" y1="617.0" x2="1361.49" y2="576.33" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="1437.97" y1="617.0" x2="1361.49" y2="576.33" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="1392.08,592.60 1402.89,593.59 1398.94,601.00" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="1361.49" y1="576.33" x2="1361.49" y2="420.68" stroke="#ffffff" stroke-width="4.6" stroke-linecap="round"/>
+<line x1="1361.49" y1="576.33" x2="1361.49" y2="420.68" stroke="#ad4b10" stroke-width="2.9" stroke-linecap="round"/>
+<polygon points="1361.49,482.94 1365.69,492.94 1357.29,492.94" fill="#ad4b10" stroke-width="1" stroke-linejoin="round"/>
+<line x1="1437.97" y1="595.86" x2="1351.84" y2="550.06" stroke="#ffffff" stroke-width="4.6" stroke-dasharray="7 5" stroke-linecap="round"/>
+<line x1="1437.97" y1="595.86" x2="1351.84" y2="550.06" stroke="#764491" stroke-width="2.15" stroke-dasharray="7 5" stroke-linecap="round"/>
+<circle cx="1361.49" cy="576.33" r="3.8" fill="#ffffff" stroke="#ad4b10" stroke-width="1.8"/>
+<circle cx="1351.84" cy="550.06" r="2.8" fill="#ffffff" stroke="#764491" stroke-width="1.8"/>
+<line x1="149.38" y1="512.17" x2="143.38" y2="494.17" stroke="#185da8" stroke-width="0.95" stroke-linecap="round"/>
+<text x="136.38" y="498.17" font-size="16" fill="#185da8" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">X1</text>
+<text x="107.51" y="442.14" font-size="16" fill="#185da8" font-weight="700" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">X2</text>
+<text x="125.91" y="527.46" font-size="16" fill="#367cbb" font-weight="700" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">X3</text>
+<text x="514.03" y="609.21" font-size="16" fill="#00766c" font-weight="700" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Y1</text>
+<text x="658.67" y="597.28" font-size="16" fill="#00766c" font-weight="700" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Y2</text>
+<text x="598.4" y="651.86" font-size="16" fill="#00766c" font-weight="700" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Y3</text>
+<line x1="133.25" y1="577.21" x2="122" y2="578" stroke="#ad4b10" stroke-width="0.95" stroke-linecap="round"/>
+<text x="115" y="582" font-size="16" fill="#ad4b10" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z1 折返</text>
+<line x1="133.25" y1="544.74" x2="122" y2="547" stroke="#764491" stroke-width="0.95" stroke-linecap="round"/>
+<text x="115" y="551" font-size="16" fill="#764491" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z1 直返</text>
+<line x1="846.26" y1="518.44" x2="844" y2="559" stroke="#ad4b10" stroke-width="0.95" stroke-linecap="round"/>
+<text x="851" y="563" font-size="16" fill="#ad4b10" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z2 折返</text>
+<line x1="836.86" y1="486.74" x2="846" y2="441" stroke="#764491" stroke-width="0.95" stroke-linecap="round"/>
+<text x="853" y="445" font-size="16" fill="#764491" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z2 直返</text>
+<line x1="275.88" y1="316.12" x2="236" y2="266" stroke="#425a73" stroke-width="0.95" stroke-linecap="round"/>
+<text x="229" y="270" font-size="17" fill="#425a73" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">固定 Z 镜 1</text>
+<line x1="778.12" y1="274.72" x2="866" y2="222" stroke="#425a73" stroke-width="0.95" stroke-linecap="round"/>
+<text x="873" y="226" font-size="17" fill="#425a73" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">固定 Z 镜 2</text>
+<line x1="517.58" y1="357.74" x2="465" y2="302" stroke="#425a73" stroke-width="0.95" stroke-linecap="round"/>
+<text x="472" y="306" font-size="17" fill="#425a73" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">移动镜块</text>
+<line x1="578.39" y1="385.65" x2="626" y2="360" stroke="#425a73" stroke-width="0.95" stroke-linecap="round"/>
+<text x="633" y="364" font-size="17" fill="#425a73" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">晶圆</text>
+<line x1="340.17" y1="560.15" x2="315" y2="643" stroke="#ad4b10" stroke-width="0.95" stroke-linecap="round"/>
+<text x="308" y="647" font-size="16" fill="#ad4b10" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">F1 · 45° 镜面</text>
+<line x1="1361.49" y1="576.33" x2="1258" y2="642" stroke="#ad4b10" stroke-width="0.95" stroke-linecap="round"/>
+<text x="1251" y="646" font-size="16" fill="#ad4b10" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">F2 · 45° 镜面</text>
+<line x1="1437.97" y1="595.86" x2="1457" y2="575" stroke="#764491" stroke-width="0.95" stroke-linecap="round"/>
+<text x="1464" y="579" font-size="16" fill="#764491" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z2 直返</text>
+<line x1="1437.97" y1="617.0" x2="1453" y2="633" stroke="#ad4b10" stroke-width="0.95" stroke-linecap="round"/>
+<text x="1460" y="637" font-size="16" fill="#ad4b10" font-weight="600" text-anchor="start" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Z2 折返</text>
+<line x1="1385.25" y1="426.61" x2="1524" y2="363" stroke="#425a73" stroke-width="0.95" stroke-linecap="round"/>
+<text x="1517" y="367" font-size="17" fill="#425a73" font-weight="600" text-anchor="end" stroke="white" stroke-width="4" paint-order="stroke" stroke-linejoin="round">固定 Z 镜 2</text>
+<line x1="58" y1="672" x2="992" y2="672" stroke="#d8e2eb" stroke-width="1" stroke-linecap="round"/>
+<line x1="61" y1="700" x2="93" y2="700" stroke="#185da8" stroke-width="2.6" stroke-linecap="round"/>
+<text x="103" y="705" font-size="15" fill="#496075" font-weight="400">X 光束</text>
+<line x1="218" y1="700" x2="250" y2="700" stroke="#00766c" stroke-width="2.6" stroke-linecap="round"/>
+<text x="260" y="705" font-size="15" fill="#496075" font-weight="400">Y 光束</text>
+<line x1="368" y1="700" x2="400" y2="700" stroke="#ad4b10" stroke-width="2.6" stroke-linecap="round"/>
+<text x="410" y="705" font-size="15" fill="#496075" font-weight="400">Z 折返</text>
+<line x1="526" y1="700" x2="558" y2="700" stroke="#764491" stroke-width="2.6" stroke-dasharray="7 5" stroke-linecap="round"/>
+<text x="568" y="705" font-size="15" fill="#496075" font-weight="400">Z 直返</text>
+<line x1="710" y1="700" x2="742" y2="700" stroke="#425a73" stroke-width="2.6" stroke-dasharray="1 5" stroke-linecap="round" opacity="0.56"/>
+<text x="752" y="705" font-size="15" fill="#496075" font-weight="400">被实体遮挡的光路</text>
+<line x1="1054" y1="672" x2="1543" y2="672" stroke="#d8e2eb" stroke-width="1" stroke-linecap="round"/>
+<text x="1057" y="704" font-size="15" fill="#496075" font-weight="400">Z1、Z2 上方的固定条镜均沿 X，反射面 Z = +178.5。</text>
+<rect x="36" y="746" width="978" height="216" fill="white" stroke="#d8e2eb" rx="15"/>
+<text x="59" y="782" font-size="25" fill="#18283b" font-weight="700">命中点与一阶观测</text>
+<text x="59" y="809" font-size="16" fill="#496075" font-weight="400">O 在晶圆顶面中心；Δ 为平移，ω = (Rx, Ry, Rz)</text>
+<text x="60" y="839" font-size="19" fill="#18283b" font-weight="700" class="mono">v(p) = Δ + ω × p</text>
+<text x="60" y="874" font-size="18" fill="#18283b" font-weight="500" class="mono">Xᵢ = eX · v(PXᵢ)    Yᵢ = eY · v(PYᵢ)</text>
+<text x="60" y="906" font-size="18" fill="#ad4b10" font-weight="600" class="mono">dⱼ = eZ · v(Fⱼ) + uⱼ · [v(Rⱼ) − v(Fⱼ)]</text>
+<text x="60" y="938" font-size="16" fill="#496075" font-weight="400">PXᵢ、PYᵢ 为 X/Y 命中点，Fⱼ 为折点，Rⱼ 为 Z 直返点，uⱼ 为水平入射单位向量。</text>
+<line x1="526" y1="833" x2="526" y2="915" stroke="#d8e2eb" stroke-width="1" stroke-linecap="round"/>
+<text x="553" y="842" font-size="18" fill="#ad4b10" font-weight="600" class="mono">F1 = (−232.5, −50, −159)</text>
+<text x="553" y="872" font-size="18" fill="#ad4b10" font-weight="600" class="mono">F2 = (+232.5, −50, −159)</text>
+<text x="553" y="906" font-size="16" fill="#496075" font-weight="400">两折点 X 向间距 465 mm</text>
+<rect x="1033" y="746" width="531" height="216" fill="white" stroke="#d8e2eb" rx="15"/>
+<text x="1056" y="782" font-size="25" fill="#18283b" font-weight="700">Z 双路差分</text>
+<text x="1056" y="809" font-size="16" fill="#496075" font-weight="400">dⱼ 取直返减折返的等效单程光程增量</text>
+<text x="1056" y="844" font-size="19" fill="#ad4b10" font-weight="600" class="mono">d₁ = ΔZ − 50Rx + 277Ry</text>
+<text x="1056" y="875" font-size="19" fill="#ad4b10" font-weight="600" class="mono">d₂ = ΔZ − 50Rx − 277Ry</text>
+<text x="1056" y="910" font-size="16" fill="#496075" font-weight="400">直返束比折返束的水平段高 44.5 mm。</text>
+<text x="1056" y="936" font-size="16" fill="#496075" font-weight="400">系数适用于名义位姿附近的理想平面反射。</text>
+<text x="40" y="998" font-size="15" fill="#496075" font-weight="400">几何依据  ws-ifm-agent.FCStd  ·  WS_MirrorBlock / Wafer / Optical_Paths / Fixed_Z_Mirrors</text>
+<text x="1564" y="998" font-size="15" fill="#496075" font-weight="400" text-anchor="end" class="mono">2026-11-20  /  v3</text>
+</svg>
