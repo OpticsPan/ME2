@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-20 | 在 WS-IFM 模型 v1 的光路一节嵌入通用几何光路示意图。 | [WS-IFM 模型 v1](outputs/WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#光路与输入输出) · [变更日志](changes/2026-11-20-ws-ifm-model-figure_v1.md) |
 | 2026-11-20 | 将 WS-IFM 三维图改为通用光路示意，以尺寸线标注模型几何参数。 | [WS-IFM 几何光路示意 v5](outputs/WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v5.svg) · [变更日志](changes/2026-11-20-ws-ifm-symbolic-layout_v1.md) |
 | 2026-11-20 | 基于 v2 微调三维主视角，分开 X1 与 X3 的投影。 | [WS-IFM 三维图 v4](outputs/WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v4.svg) · [变更日志](changes/2026-11-20-ws-ifm-cad-3d-view-fine-adjustment_v1.md) |
 | 2026-11-20 | 撤回本次三维视角调整，恢复首版三维视图。 | [首版三维图 v2](outputs/WS-IFM-CAD%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E5%9B%BE_v2.svg) · [撤回记录](changes/2026-11-20-ws-ifm-cad-3d-view-rollback_v1.md) |
