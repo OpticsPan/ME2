@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 保留 C0 六式 47 项，逐项核对符号、下标和幂次，并用 81 组 FreeCAD 工况验算。 | [C0 符号与下标核对](outputs/reports/WS-IFM-C0-%E5%85%AC%E5%BC%8F%E7%AC%A6%E5%8F%B7%E4%B8%8E%E4%B8%8B%E6%A0%87%E6%A0%B8%E5%AF%B9_v1.md#c0-sign-result) · [变更日志](changes/2026-11-21-ws-ifm-c0-sign-index-review_v1.md) |
 | 2026-11-21 | 核对 C0 在 ZXY 两种约定下的偏航、Abbe 项和 Ryz 高度增益。 | [C0 的 ZXY 转序核对](outputs/reports/WS-IFM-C0-ZXY%E8%BD%AC%E5%BA%8F%E6%A0%B8%E5%AF%B9_v1.md#c0-zxy-conventions) · [变更日志](changes/2026-11-21-ws-ifm-c0-zxy-review_v1.md) |
 | 2026-11-21 | 复核 ASML 公开专利、Level 1–3 与 C0 的 WS-IFM 旋转顺序证据。 | [旋转顺序核对](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v2.md#rotation-order) · [变更日志](changes/2026-11-21-ws-ifm-rotation-order-evidence_v1.md) |
 | 2026-11-21 | 调研八轴 IFM 的公开布局和解算公式，核对其与 C0 的对应关系。 | [八轴解算调研](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v1.md#findings) · [变更日志](changes/2026-11-21-ws-ifm-eight-axis-public-research_v1.md) |
