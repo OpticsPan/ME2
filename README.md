@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 为指定条目或关键词增加 Level 1–3 通读、独立 Markdown 汇整与回读规则。 | [协作规则](AGENTS.md#keyword-reference-study) · [变更日志](changes/2026-11-21-keyword-reference-study_v1.md) |
 | 2026-11-21 | 将 MEtrology.md 校准项目范式更新为 Purpose、How、Principle。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-purpose-how-principle_v1.md) |
 | 2026-11-21 | 为 MEtrology.md 增加项目分节与图、表、公式编号规范，并应用到 SWZS。 | [报告规范](outputs/reports/MEtrology.md#report-format) · [第 1 节 SWZS](outputs/reports/MEtrology.md#swzs) · [变更日志](changes/2026-11-21-metrology-section-numbering_v1.md) |
 | 2026-11-21 | 整合 SWZS 的 IFM 回波、PSD 增益与初始零位图，并标注 MEtrology.md 的来源层级。 | [整合后的图 3](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [报告规范](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-swzs-integrated-zeroing-and-source-levels_v1.md) |
