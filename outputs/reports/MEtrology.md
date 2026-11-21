@@ -8,7 +8,7 @@
 
 | 项目 | 定位 | 快速跳转 |
 | --- | --- | --- |
-| [SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#swzs-constants) · [校准原理](#swzs-principle) · [操作流程](#swzs-procedure) · [原图](#swzs-source-figures) |
+| [SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#swzs-constants) · [校准原理](#swzs-principle) · [操作流程](#swzs-procedure) · [原图 1.68](#swzs-figure-168) |
 
 <a name="szws"></a>
 <a name="swzs"></a>
@@ -43,6 +43,12 @@ Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Se
 ### 校准原理
 
 固定计量框架上每侧装三只零传感器，镜块上装三个对应的角锥反射器。每只传感器发出光束并测回波光斑在 PSD 上的两个方向。台体移动或转动时，三个光斑以不同的组合偏离中心。用标定得到的六轴灵敏度，把六路光斑电压换算成参考位置附近的位姿。原件图 1.68 直接标注了三只框架传感器和三个镜块角锥，图 1.69 从框架底面给出了 M/E 两侧布置。[原图位置与解读](#swzs-source-figures)
+
+<a name="swzs-figure-168"></a>
+
+![Level 3 原图 1.68，计量框架上的三只零传感器与镜块上的三个角锥反射器](../images/SWZS%E9%9B%B6%E4%BC%A0%E6%84%9F%E5%99%A8%E5%8E%9F%E5%9B%BE_%E5%9B%BE1.68_v1.jpg)
+
+**原图 1.68　零传感器与镜块角锥。** 三只零传感器固定在计量框架（MF），三个对应的角锥反射器随镜块运动。来源为 Level 3《09-TT-L3-WSbook.pdf》文件第 62 页（印刷第 54 页），图 1.68。
 
 ![SWZS 零传感器原理，框架上的三只 PSD 测量镜块角锥的六路光斑信号](../images/SWZS零传感器原理_v1.png)
 
@@ -87,7 +93,7 @@ Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Se
 
 ### 原图与出处
 
-以下原图可在本机打开。最后一列相对 `D:\work\ME2\参考文献\Markdown_v1\`。图像与页码的查询方式见 [Level 1–3 资料规则](../../AGENTS.md#read-only-references)。
+正文附有 [原图 1.68](#swzs-figure-168)。以下列出相应的本机原图位置，最后一列相对 `D:\work\ME2\参考文献\Markdown_v1\`。图像与页码的查询方式见 [Level 1–3 资料规则](../../AGENTS.md#read-only-references)。
 
 | 原始资料 | 图中可核实的信息 | 本机原图位置 |
 | --- | --- | --- |

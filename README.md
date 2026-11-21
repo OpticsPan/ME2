@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 在 SWZS 校准原理正文嵌入 Level 3 原图 1.68，并注明原文件与页码。 | [SWZS 原图](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-original-figure_v1.md) |
 | 2026-11-21 | 统一 WS 初步归零项目编号为 SWZS，更新专题报告、清单与配图。 | [SWZS 专题](outputs/reports/MEtrology.md#swzs) · [校准清单 v4](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#initial-zero) · [变更日志](changes/2026-11-21-metrology-swzs-rename_v1.md) |
 | 2026-11-21 | 将 WS 初步归零补入 WS-IFM 清单，并建立 MEtrology 图文校准专题报告。 | [初步归零专题](outputs/reports/MEtrology.md#swzs) · [校准清单 v3](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v3.md#initial-zero) · [变更日志](changes/2026-11-21-metrology-szws-zeroing_v1.md) |
 | 2026-11-21 | 按 Level 1–3 复核 WS-IFM 校准项目、机器常数、流程与原图，更新任务前资料学习和 IFM 模型存档规则。 | [校准项目 v2](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v2.md#core-calibrations) · [协作规则](AGENTS.md#任务开始前的资料学习) · [变更日志](changes/2026-11-21-ws-ifm-calibrations-and-reference-rules_v1.md) |
