@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 用同一批 20 组 FreeCAD 读数逐组对比 WS-IFM v1 和 v2 的位姿解算及误差。 | [六自由度与误差对照](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#逐项解算的-20-组-freecad-验证) · [变更日志](changes/2026-11-21-ws-ifm-v1-v2-freecad-comparison_v1.md) |
 | 2026-11-21 | 将 WS-IFM v2 改为左右栏新旧对照，正文保留按 v1 参数定义的修正式。 | [新旧公式对照](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#v1-原式逐项核对) · [变更日志](changes/2026-11-21-ws-ifm-v2-side-by-side_v1.md) |
 | 2026-11-21 | 按 v1 的参数定义重写 WS-IFM v2 主式，并验证参考点换算和转角二阶解算。 | [按 v1 符号修正的 v2 公式](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#按-v1-符号修正的-v2-公式) · [变更日志](changes/2026-11-21-ws-ifm-v2-v1-symbols_v1.md) |
 | 2026-11-21 | 补全 WS-IFM v2 的八项展开式，集中列出几何符号与 CAD 取值。 | [新旧公式与八项展开](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#v1-原式逐项核对) · [几何参数表](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#几何参数表) · [变更日志](changes/2026-11-21-ws-ifm-v2-symbolic-expansion_v1.md) |
