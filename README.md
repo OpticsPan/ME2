@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 比较同批八路光程下 C0 与附件 v7 C3 的逐组六自由度误差。 | [六自由度误差对照](outputs/reports/WS-IFM-C0-v7C3%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%AF%AF%E5%B7%AE_v1.md#six-pose-summary) · [变更日志](changes/2026-11-21-ws-ifm-c0-v7-c3-six-dof-errors_v1.md) |
 | 2026-11-21 | 验证本次附件 C3 与 MATLAB v7，复跑 121 帧原扫描和 81 个历史位姿。 | [附件 C3 的 FreeCAD 验证](outputs/reports/WS-IFM%E9%99%84%E4%BB%B6C3-FreeCAD%E9%AA%8C%E8%AF%81_v1.md#attached-c3-result) · [变更日志](changes/2026-11-21-ws-ifm-attached-c3-freecad_v1.md) |
 | 2026-11-21 | 用同一批 81 组 FreeCAD 八路读数逐组复算 C0/C3，归档位姿、误差与共同输入。 | [C0/C3 的 81 组复算](outputs/reports/WS-IFM-C0-C3-81%E7%BB%84FreeCAD%E5%A4%8D%E7%AE%97_v1.md#c0-c3-81-result) · [变更日志](changes/2026-11-21-ws-ifm-c0-c3-freecad-81-cases_v1.md) |
 | 2026-11-21 | 并排归档 C0 与 C3 六条完整公式，原位保留 47 项并标注待确认内容。 | [C0 与 C3 六式对照](outputs/reports/WS-IFM-C0-C3%E5%85%AD%E5%BC%8F%E5%AF%B9%E7%85%A7_v1.md#c0-c3-formulas) · [变更日志](changes/2026-11-21-ws-ifm-c0-c3-formula-table_v1.md) |
