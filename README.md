@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 为 MEtrology.md 增加项目分节与图、表、公式编号规范，并应用到 SWZS。 | [报告规范](outputs/reports/MEtrology.md#report-format) · [第 1 节 SWZS](outputs/reports/MEtrology.md#swzs) · [变更日志](changes/2026-11-21-metrology-section-numbering_v1.md) |
 | 2026-11-21 | 整合 SWZS 的 IFM 回波、PSD 增益与初始零位图，并标注 MEtrology.md 的来源层级。 | [整合后的图 3](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [报告规范](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-swzs-integrated-zeroing-and-source-levels_v1.md) |
 | 2026-11-21 | 补充 SWZS 的 IFM 回波寻峰、相位测位和六轴零位关系。 | [IFM 信号与零位](outputs/reports/MEtrology.md#swzs-ifm-signal) · [变更日志](changes/2026-11-21-swzs-ifm-signal-and-zero_v1.md) |
 | 2026-11-21 | 按 MEtrology.md 的图示规范更新 SWZS 现有四张图的编号和公式排版。 | [SWZS 校准原理与配图](outputs/reports/MEtrology.md#swzs-principle) · [变更日志](changes/2026-11-21-metrology-existing-figure-format_v1.md) |
