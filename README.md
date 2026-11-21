@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 将 IFM 技术说明替换为用户附件生成的 v10 原稿。 | [v10 原稿](outputs/reports/ifm_model_v10.pdf) · [技术说明入口](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-manuscript-v10_v1.md) |
 | 2026-11-21 | 归档 ifm_raw 和 ifm_corr，按附件重写 IFM 技术文档、撤下旧模型。 | [IFM 技术文档](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-model-consolidation_v1.md) |
 | 2026-11-21 | 比较同批八路光程下 C0 与附件 v7 C3 的逐组六自由度误差。 | [六自由度误差对照](outputs/reports/WS-IFM-C0-v7C3%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%AF%AF%E5%B7%AE_v1.md#six-pose-summary) · [变更日志](changes/2026-11-21-ws-ifm-c0-v7-c3-six-dof-errors_v1.md) |
 | 2026-11-21 | 验证本次附件 C3 与 MATLAB v7，复跑 121 帧原扫描和 81 个历史位姿。 | [附件 C3 的 FreeCAD 验证](outputs/reports/WS-IFM%E9%99%84%E4%BB%B6C3-FreeCAD%E9%AA%8C%E8%AF%81_v1.md#attached-c3-result) · [变更日志](changes/2026-11-21-ws-ifm-attached-c3-freecad_v1.md) |
