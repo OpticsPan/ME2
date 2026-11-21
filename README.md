@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 说明 WS-IFM 如何从八路光程解算六自由度，核对 C0 中 Ry 的输入来源。 | [六自由度解算](outputs/reports/WS-IFM%E5%85%AB%E8%B7%AF%E5%85%89%E7%A8%8B%E4%B8%8E%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%A7%A3%E7%AE%97_v1.md#me2-channels) · [变更日志](changes/2026-11-21-ws-ifm-six-dof-observability_v1.md) |
 | 2026-11-21 | 逐项解读 C0 的 Ryz 公式，核对 Z 差分和校准常数。 | [Ryz 原式及逐项说明](outputs/reports/WS-IFM-C0-Ryz%E5%85%AC%E5%BC%8F%E9%80%90%E9%A1%B9%E8%A7%A3%E8%AF%BB_v1.md#ryz-terms) · [变更日志](changes/2026-11-21-ws-ifm-c0-ryz-terms_v1.md) |
 | 2026-11-21 | 推导 WS-IFM-C3 的 Rx 与八通道解算，核对 C0 和 Level 1–3 标定常数并复算。 | [C3 模型与标定](outputs/reports/WS-IFM-C3%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%A0%87%E5%AE%9A%E6%A0%B8%E5%AF%B9_v1.md#c3-equations) · [变更日志](changes/2026-11-21-ws-ifm-c3-model-calibration_v1.md) |
 | 2026-11-21 | 将 MATLAB v6 修正式命名为 C2，整理 C0 → C1 → C2 的八项公式变更与推导。 | [公式修正过程](outputs/reports/WS-IFM-C0-C1-C2%E5%85%AC%E5%BC%8F%E4%BF%AE%E6%AD%A3%E8%BF%87%E7%A8%8B_v1.md#equation-comparison) · [变更日志](changes/2026-11-21-ws-ifm-c0-c1-c2-formula-derivation_v1.md) |
