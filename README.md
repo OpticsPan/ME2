@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 核对 C0 在 ZXY 两种约定下的偏航、Abbe 项和 Ryz 高度增益。 | [C0 的 ZXY 转序核对](outputs/reports/WS-IFM-C0-ZXY%E8%BD%AC%E5%BA%8F%E6%A0%B8%E5%AF%B9_v1.md#c0-zxy-conventions) · [变更日志](changes/2026-11-21-ws-ifm-c0-zxy-review_v1.md) |
 | 2026-11-21 | 复核 ASML 公开专利、Level 1–3 与 C0 的 WS-IFM 旋转顺序证据。 | [旋转顺序核对](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v2.md#rotation-order) · [变更日志](changes/2026-11-21-ws-ifm-rotation-order-evidence_v1.md) |
 | 2026-11-21 | 调研八轴 IFM 的公开布局和解算公式，核对其与 C0 的对应关系。 | [八轴解算调研](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v1.md#findings) · [变更日志](changes/2026-11-21-ws-ifm-eight-axis-public-research_v1.md) |
 | 2026-11-21 | 说明 WS-IFM 如何从八路光程解算六自由度，核对 C0 中 Ry 的输入来源。 | [六自由度解算](outputs/reports/WS-IFM%E5%85%AB%E8%B7%AF%E5%85%89%E7%A8%8B%E4%B8%8E%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%A7%A3%E7%AE%97_v1.md#me2-channels) · [变更日志](changes/2026-11-21-ws-ifm-six-dof-observability_v1.md) |
