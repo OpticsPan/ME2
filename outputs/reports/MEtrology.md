@@ -1,6 +1,16 @@
 # MEtrology 校准项目报告
 
-[项目目录](#calibration-index) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
+[项目目录](#calibration-index) · [本报告的整理范式](#report-format) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
+
+<a name="report-format"></a>
+
+## 本报告的整理范式
+
+以下范式仅适用于 `MEtrology.md` 收录的校准项目。
+
+1. **目的与机器常数**。说明校准目的、适用工位和涉及的机器常数。
+2. **校准原理**。说明物理原理和测量关系。资料中有相关物理原图时，将原图附在原理正文，并注明原文件名、页码和图号。
+3. **操作流程**。按执行顺序说明具体步骤，配抽象物理示意图，解释台体运动、测量信号和基准建立过程。
 
 <a name="calibration-index"></a>
 
