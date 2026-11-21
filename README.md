@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 按 MEtrology.md 的图示规范更新 SWZS 现有四张图的编号和公式排版。 | [SWZS 校准原理与配图](outputs/reports/MEtrology.md#swzs-principle) · [变更日志](changes/2026-11-21-metrology-existing-figure-format_v1.md) |
 | 2026-11-21 | 在 MEtrology.md 增加图示编号和图内公式排版要求。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-diagram-format_v1.md) |
 | 2026-11-21 | 在 SWZS 图 1 后补充 PSD 光路、工作原理和 u/v 信号含义。 | [PSD 原理及配图](outputs/reports/MEtrology.md#swzs-psd-readout) · [变更日志](changes/2026-11-21-swzs-psd-optics-and-signals_v1.md) |
 | 2026-11-21 | 补绘 SWZS 的 PSD 电压、六轴位姿偏差与初始零位关系。 | [电压到零位示意图](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [变更日志](changes/2026-11-21-swzs-voltage-to-zero-diagram_v1.md) |
