@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 补绘 SWZS 的 PSD 电压、六轴位姿偏差与初始零位关系。 | [电压到零位示意图](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [变更日志](changes/2026-11-21-swzs-voltage-to-zero-diagram_v1.md) |
 | 2026-11-21 | 将 Level 3 原图 1.68 放在 SWZS 图 1 左侧，右侧保留 PSD 光斑示意。 | [图 1](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-principle-figure-layout_v1.md) |
 | 2026-11-21 | 明确校准项目的图文整理范式仅适用于 MEtrology.md。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-report-format-scope_v1.md) |
 | 2026-11-21 | 在 SWZS 校准原理正文嵌入 Level 3 原图 1.68，并注明原文件与页码。 | [SWZS 原图](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-original-figure_v1.md) |
