@@ -1,6 +1,6 @@
 # MEtrology 校准项目报告
 
-[项目目录](#calibration-index) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v3.md#initial-zero) · [成果索引](../README.md)
+[项目目录](#calibration-index) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
 
 <a name="calibration-index"></a>
 
@@ -8,19 +8,21 @@
 
 | 项目 | 定位 | 快速跳转 |
 | --- | --- | --- |
-| [SZWS — WS 初步归零](#szws) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#szws-constants) · [校准原理](#szws-principle) · [操作流程](#szws-procedure) · [原图](#szws-source-figures) |
+| [SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#swzs-constants) · [校准原理](#swzs-principle) · [操作流程](#swzs-procedure) · [原图](#swzs-source-figures) |
 
 <a name="szws"></a>
+<a name="swzs"></a>
 
-## SZWS — WS 初步归零
+## SWZS — WS 初步归零
 
-本报告采用 **SZWS** 作为项目名。Level 3 培训资料将对应的零传感器校准写为 **SWZS（Calibrate Zero Sensor）**。在本次查阅的 Level 1–3 中，尚未找到以 `SZWS` 拼写的测试编号。实机查测试项时可用 `SWZS` 或 **Zero Sensor Calibration** 检索。出处为《09-TT-L3-WSbook.pdf》文件第 111–115 页（印刷第 103–107 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 97–108 张。
+Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Sensor）**。实机查测试项时可用 `SWZS` 或 **Zero Sensor Calibration** 检索。出处为《09-TT-L3-WSbook.pdf》文件第 111–115 页（印刷第 103–107 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 97–108 张。
 
 <a name="szws-constants"></a>
+<a name="swzs-constants"></a>
 
 ### 目的与机器常数
 
-装片或换台时，晶圆台（WS）会离开干涉仪（IFM）控制范围。台体返回后，IFM 测得的是光程变化，需要一个相对计量框架（MF）的已知位姿才能恢复连续位置测量。SZWS 校准这个参考，使零传感器能为 IFM 提供 **X、Y、Z、Rx、Ry、Rz** 的初始位姿。测量侧（M）和曝光侧（E）各有一套零传感器，分别与两个 Chuck 配对，形成 **四组独立标定**。资料中的典型归零复现性为平移约 1 µm、转动约 ±2.5 µrad，属于捕获阶段的说明值。出处为《09_AP-L1-Production_Metrology_in-line.pdf》第 13、24 页、《TT-L2-ME-3v0.pdf》第 10–11、19 页（印刷第 4–5、13 页）、《09-TT-L3-WSbook.pdf》第 62–63、111 页（印刷第 54–55、103 页）。
+装片或换台时，晶圆台（WS）会离开干涉仪（IFM）控制范围。台体返回后，IFM 测得的是光程变化，需要一个相对计量框架（MF）的已知位姿才能恢复连续位置测量。SWZS 校准这个参考，使零传感器能为 IFM 提供 **X、Y、Z、Rx、Ry、Rz** 的初始位姿。测量侧（M）和曝光侧（E）各有一套零传感器，分别与两个 Chuck 配对，形成 **四组独立标定**。资料中的典型归零复现性为平移约 1 µm、转动约 ±2.5 µrad，属于捕获阶段的说明值。出处为《09_AP-L1-Production_Metrology_in-line.pdf》第 13、24 页、《TT-L2-ME-3v0.pdf》第 10–11、19 页（印刷第 4–5、13 页）、《09-TT-L3-WSbook.pdf》第 62–63、111 页（印刷第 54–55、103 页）。
 
 | 机器常数或中间量 | 物理含义 | 归属和报表核对 |
 | --- | --- | --- |
@@ -36,12 +38,13 @@
 机器常数名称与单位见《09-TT-L3-WSbook.pdf》第 111–115 页（印刷第 103–107 页），图 2.34–2.35。初始化倾角与 WZIM 更新关系见《12-TT-L3-L3-ME_book.pdf》第 26–29 页（印刷第 18–21 页）及《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9–10 张。
 
 <a name="szws-principle"></a>
+<a name="swzs-principle"></a>
 
 ### 校准原理
 
-固定计量框架上每侧装三只零传感器，镜块上装三个对应的角锥反射器。每只传感器发出光束并测回波光斑在 PSD 上的两个方向。台体移动或转动时，三个光斑以不同的组合偏离中心。用标定得到的六轴灵敏度，把六路光斑电压换算成参考位置附近的位姿。原件图 1.68 直接标注了三只框架传感器和三个镜块角锥，图 1.69 从框架底面给出了 M/E 两侧布置。[原图位置与解读](#szws-source-figures)
+固定计量框架上每侧装三只零传感器，镜块上装三个对应的角锥反射器。每只传感器发出光束并测回波光斑在 PSD 上的两个方向。台体移动或转动时，三个光斑以不同的组合偏离中心。用标定得到的六轴灵敏度，把六路光斑电压换算成参考位置附近的位姿。原件图 1.68 直接标注了三只框架传感器和三个镜块角锥，图 1.69 从框架底面给出了 M/E 两侧布置。[原图位置与解读](#swzs-source-figures)
 
-![SZWS 零传感器原理，框架上的三只 PSD 测量镜块角锥的六路光斑信号](../images/SZWS零传感器原理_v1.png)
+![SWZS 零传感器原理，框架上的三只 PSD 测量镜块角锥的六路光斑信号](../images/SWZS零传感器原理_v1.png)
 
 **图 1　零传感器测量关系。** 左图表示固定框架与移动镜块的出射、回波关系，右图放大一个光斑的二维读数。入射角和传感器间距为示意。结构依据《09-TT-L3-WSbook.pdf》第 62–63 页（印刷第 54–55 页），图 1.68–1.69。
 
@@ -56,12 +59,13 @@
 在生产归零中，测量链的用法反过来。进入捕获范围后，PSD 给出台体相对框架的六轴参考，IFM 加载校准零位并接管，从该参考继续跟踪位移。Level 2 图 1.4–1.5 对照同一位置下编码器和 IFM 控制两个阶段。来源为《TT-L2-ME-3v0.pdf》第 10–11 页（印刷第 4–5 页）及《TT-MA-WS-Calibrations-3v1.ppt》第 97–98、104 张。
 
 <a name="szws-procedure"></a>
+<a name="swzs-procedure"></a>
 
 ### 操作流程
 
 **准备。** 培训资料要求 BF 标定已完成，空气支承（AM）已启动且稳定，换台校准 `SWSW`、IFM 调整和诊断 `SWHP`、差分传感器校准 `SWDC` 已完成。在 Zero Sensor Calibration 界面选择需标定的卡盘和工位。全量标定选 `PSD Calibration`，界面会自动选中 `IFM-align`，并禁用独立的 `Update FZP`。出处为《09-TT-L3-WSbook.pdf》第 111–113 页（印刷第 103–105 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 99–104 张。
 
-![SZWS 四步校准流程，从 IFM 捕获、PSD 粗标定、工作点精标定到生成零位常数](../images/SZWS归零校准流程_v1.png)
+![SWZS 四步校准流程，从 IFM 捕获、PSD 粗标定、工作点精标定到生成零位常数](../images/SWZS归零校准流程_v2.png)
 
 **图 2　归零校准与生产使用。** 四格分别画出光束捕获、IFM/PSD 同步观测、局部增益复测，以及从中间结果到归零位置的关系。依据《09-TT-L3-WSbook.pdf》第 112 页（印刷第 104 页）和《TT-MA-WS-Calibrations-3v1.ppt》第 104 张。
 
@@ -76,9 +80,10 @@
 | **PSD Calibration** | 完整标定，包括新机设定或更换零传感器部件后。包含 IFM-align，并重新计算 FZP。 | 写入新 MC 后需要复做部分 Metrology setup。 |
 | **Update FZP** | 快归零失败且需补偿 BF 偏置时，按维修流程运行。 | 单独修正 FZP。写入后复核并重做资料要求的基座和晶圆搬运校准。 |
 
-模式及其影响见《09-TT-L3-WSbook.pdf》第 111–113 页（印刷第 103–105 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 99–105 张。后接高度基准时参见 [WZIM](WS-IFM机器常数校准项目_v3.md#mc-wzim) 和 [BMWZ](WS-IFM机器常数校准项目_v3.md#mc-bmwz)。
+模式及其影响见《09-TT-L3-WSbook.pdf》第 111–113 页（印刷第 103–105 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 99–105 张。后接高度基准时参见 [WZIM](WS-IFM机器常数校准项目_v4.md#mc-wzim) 和 [BMWZ](WS-IFM机器常数校准项目_v4.md#mc-bmwz)。
 
 <a name="szws-source-figures"></a>
+<a name="swzs-source-figures"></a>
 
 ### 原图与出处
 
@@ -92,4 +97,4 @@
 | 《TT-MA-WS-Calibrations-3v1.ppt》第 102 张 | 全 PSD 模式包含 IFM-align。两卡盘 M/E 共四组合可选择，图示进度为 0%。 | `assets/56ea2737208dfc3a/images/page_101_image_4_v1.jpg` |
 | 《09-TT-L3-WSbook.pdf》第 115 页（印刷第 107 页），**图 2.35** | FZP、MI:SZP、`u0/v0` 和 PSD 增益分别列项，可核对单位和报表字段。 | `assets/b4514b4ae5eb86cb/images/page_114_image_4_v1.jpg` |
 
-[返回项目目录](#calibration-index) · [WS-IFM 清单的初步归零条目](WS-IFM机器常数校准项目_v3.md#initial-zero)
+[返回项目目录](#calibration-index) · [WS-IFM 清单的初步归零条目](WS-IFM机器常数校准项目_v4.md#initial-zero)
