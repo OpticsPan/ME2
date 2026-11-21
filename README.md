@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 复核 ASML 公开专利、Level 1–3 与 C0 的 WS-IFM 旋转顺序证据。 | [旋转顺序核对](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v2.md#rotation-order) · [变更日志](changes/2026-11-21-ws-ifm-rotation-order-evidence_v1.md) |
 | 2026-11-21 | 调研八轴 IFM 的公开布局和解算公式，核对其与 C0 的对应关系。 | [八轴解算调研](outputs/reports/WS-IFM%E5%85%AB%E8%BD%B4%E8%A7%A3%E7%AE%97%E5%85%AC%E5%BC%80%E8%B5%84%E6%96%99%E8%B0%83%E7%A0%94_v1.md#findings) · [变更日志](changes/2026-11-21-ws-ifm-eight-axis-public-research_v1.md) |
 | 2026-11-21 | 说明 WS-IFM 如何从八路光程解算六自由度，核对 C0 中 Ry 的输入来源。 | [六自由度解算](outputs/reports/WS-IFM%E5%85%AB%E8%B7%AF%E5%85%89%E7%A8%8B%E4%B8%8E%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%A7%A3%E7%AE%97_v1.md#me2-channels) · [变更日志](changes/2026-11-21-ws-ifm-six-dof-observability_v1.md) |
 | 2026-11-21 | 逐项解读 C0 的 Ryz 公式，核对 Z 差分和校准常数。 | [Ryz 原式及逐项说明](outputs/reports/WS-IFM-C0-Ryz%E5%85%AC%E5%BC%8F%E9%80%90%E9%A1%B9%E8%A7%A3%E8%AF%BB_v1.md#ryz-terms) · [变更日志](changes/2026-11-21-ws-ifm-c0-ryz-terms_v1.md) |
