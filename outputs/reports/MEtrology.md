@@ -36,7 +36,7 @@
 
 ## 1. SWZS — WS 初步归零
 
-[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
+[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
 
 <a name="szws-constants"></a>
 <a name="swzs-constants"></a>
@@ -212,6 +212,12 @@ $$
 $$
 \Delta\mathbf{s} \simeq \mathbf{G}\,\Delta\mathbf{q} \qquad (1.3)
 $$
+
+<a name="swzs-gain-calibration-figure"></a>
+
+![图 1.5，左上和右上为 WS 移动前后的三只 PSD 光斑与六路电压，以及 IFM 各路相位和回波强度。下方用六路电压变化和实测 X 位移确定灵敏度矩阵的 X 列。](../images/SWZS灵敏度矩阵标定_v1.png)
+
+**图 1.5　PSD 灵敏度矩阵的标定示意。** （1）和（2）比较两次采样的光斑和电压，下标依次表示 PSD 编号与采样编号。（3）用 IFM 相位变化得到的实测位移和六路电压差计算 X 列，适用于参考点附近且其余自由度变化可忽略的情形。（4）对其余方向做同类采样，得到矩阵的其他列。回波强度可用于对准和检查信号质量。图按 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）的以 IFM 为参照标定增益步骤绘制。光斑变化和单轴差分用来说明测量原理，该页未给出实机的采样与拟合算法。
 
 每行对应一条 PSD 电压通道，每列对应一个台体自由度。平移列单位为 V/m，角度列单位为 V/rad，非主通道的斜率也保留在矩阵中。完整流程还用 PSD 中心与粗增益求 `OZP`，在该工作点复测增益和校准偏置，然后求 `FZP`、传感器位置及 `MI:SZP`。`G` 描述局部灵敏度，参考零位及其坐标由中心、偏置与位置标定确定。出处为L3-《09-TT-L3-WSbook.pdf》文件第 111–115 页（印刷第 103–107 页）、L3-《TT-MA-WS-Calibrations-3v1.ppt》第 97–98、104 张。
 
