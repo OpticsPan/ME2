@@ -22,7 +22,7 @@
 ## 任务开始前的资料学习
 
 - 根据当次任务的语境和实际需求，判断是否需要查阅本机 Level 1–3 资料，以及需要查阅的层级与章节。用户对当次任务的明确指示优先。
-- 晶圆台 IFM 的正式模型仅有 [ifm_raw](outputs/reports/ifm_raw.md) 和 [ifm_corr](outputs/reports/ifm_corr.md)。历史手稿和原式查 ifm_raw，当前解算、光路及机台常数查 [IFM 技术文档](outputs/reports/ifm_model.md) 和 ifm_corr。三份文档沿用固定文件名，调整记录保存在变更日志。
+- 晶圆台 IFM 统一用 [ifm_raw](outputs/reports/ifm_raw.md) 指原始 C0，用 [ifm_corr](outputs/reports/ifm_corr.md) 指 C3 工程扩展版。当前代码与仿真使用 ifm_corr，见 [MATLAB v9](outputs/code/sim_ws_ifm_6dof_animation_v9.m)。[技术手稿](outputs/reports/ifm_model.md) 的引用保留来源版本。三份文档沿用固定文件名，调整记录保存在变更日志。
 - 需要查阅时，从本机 Level 1–3 索引定位相关资料。可结合不同 Level、同义词、子系统、测试编号和软件版本查找，核对任务所需的原理、步骤和适用条件。
 - 查阅资料时，阅读与任务相关的原图、照片、流程图和图表，结合原页说明识别部件、测量路径、坐标、单位和前后关系。记录图像提供的证据，涉及结论时核对原文件名、页码与版本。资料未说明或图像无法辨认的内容标明待核对。
 - 整理测校项目时逐项记录目的、更新的机器常数、校准流程与出处。按资料证据区分实际写入的 MC、输入参考值、生产设定和验证结果。

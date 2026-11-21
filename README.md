@@ -1,11 +1,12 @@
 # ME2
 
-本仓库归档 ME2 的项目成果与变更记录。晶圆台 IFM 以 [技术文档](outputs/reports/ifm_model.md)、[原始模型](outputs/reports/ifm_raw.md) 和 [修正模型](outputs/reports/ifm_corr.md) 为入口。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
+本仓库归档 ME2 的项目成果与变更记录。晶圆台 IFM 以 [技术文档](outputs/reports/ifm_model.md)、[ifm_raw 原始参考](outputs/reports/ifm_raw.md)、[ifm_corr 工程扩展式](outputs/reports/ifm_corr.md) 和 [MATLAB v9 仿真](outputs/code/sim_ws_ifm_6dof_animation_v9.m) 为入口。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
 
 ## 更新历史
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 统一 IFM 模型命名，归档使用 ifm_corr 工程扩展式的 MATLAB v9 仿真。 | [模型说明](outputs/reports/ifm_corr.md#corr-runtime) · [MATLAB v9](outputs/code/sim_ws_ifm_6dof_animation_v9.m) · [变更日志](changes/2026-11-21-ifm-corr-matlab-v9-archive_v1.md) |
 | 2026-11-21 | 将附件 v10 完整技术说明迁入 ifm_model.md，归档 Python 附件和原始 IFM 模型。 | [网页技术说明](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-manuscript-web-archive_v1.md) |
 | 2026-11-21 | 将 IFM 技术说明替换为用户附件生成的 v10 原稿。 | [v10 原稿](outputs/reports/ifm_model_v10.pdf) · [技术说明入口](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-manuscript-v10_v1.md) |
 | 2026-11-21 | 归档 ifm_raw 和 ifm_corr，按附件重写 IFM 技术文档、撤下旧模型。 | [IFM 技术文档](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-model-consolidation_v1.md) |

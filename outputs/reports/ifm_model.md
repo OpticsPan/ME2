@@ -13,6 +13,8 @@
 
 [光路布局](#ifm-geometry) · [八路读数](#ifm-readout) · [公式对照](#ifm-differences) · [工程扩展](#ifm-extensions) · [Rx/Ryx 标定](#ifm-solver) · [机器常数](#ifm-constants) · [原稿勘误](#ifm-errata) · [装调验证](#ifm-validation) · [原稿参考文献](#ifm-sources) · [PDF 原稿](ifm_model_v10.pdf)
 
+**仓库命名与代码。** 原始 C0 统一称为 [ifm_raw](ifm_raw.md)，C3 工程扩展版统一称为 [ifm_corr](ifm_corr.md)。当前仿真采用 [MATLAB v9 扩展式](../code/sim_ws_ifm_6dof_animation_v9.m)。以下 v10 技术手稿保留附件原有术语和版本标识。
+
 <a name="ifm-geometry"></a>
 
 ## 一、IFM 光路布局与核心几何常数标注
