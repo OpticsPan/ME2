@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 对原始 WS-IFM v1 作零位一阶展开，用 FreeCAD 验证 35 组位姿和单轴斜率。 | [原始 v1 一阶验证](outputs/reports/WS-IFM%E5%8E%9F%E5%A7%8Bv1%E4%B8%80%E9%98%B6FreeCAD%E9%AA%8C%E8%AF%81_v1.md#first-order-result) · [变更日志](changes/2026-11-21-ws-ifm-original-v1-first-order-freecad_v1.md) |
 | 2026-11-21 | 修正 WS-IFM 附件六式，核对 50 项参数并复验原 29 组工况。 | [附件修正与复验](outputs/reports/WS-IFM%E9%99%84%E4%BB%B6%E4%BF%AE%E6%AD%A3%E4%B8%8E%E5%A4%8D%E9%AA%8C_v1.md#result) · [变更日志](changes/2026-11-21-ws-ifm-attachment-revision_v1.md) |
 | 2026-11-21 | 用 FreeCAD 重跑 29 组位姿，验证新附件的 WS-IFM 六式并定位解算误差。 | [附件公式验证报告](outputs/reports/WS-IFM%E9%99%84%E4%BB%B6%E5%85%AC%E5%BC%8FFreeCAD%E9%AA%8C%E8%AF%81_v1.md#verdict) · [变更日志](changes/2026-11-21-ws-ifm-attachment-freecad-validation_v1.md) |
 | 2026-11-21 | 从 Level 1–3 资料核对 WS-IFM 机器常数校准项目、工位及报表参数。 | [机器常数校准项目](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v1.md#core-calibrations) · [变更日志](changes/2026-11-21-ws-ifm-machine-constant-calibrations_v1.md) |
