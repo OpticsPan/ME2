@@ -6,20 +6,21 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
-| 2026-11-22 | 补充图 1.3（4）的 PSD 光斑位置—电压示意，并链接 Hamamatsu 输出特性原图。 | [图 1.3 与供应商原图](outputs/reports/MEtrology.md#swzs-psd-output-characteristic) · [变更日志](changes/2026-11-22-swzs-psd-position-voltage-curve_v1.md) |
-| 2026-11-22 | 补齐图 1.3（5）中 PSD 电流比到位置电压的读出关系。 | [图 1.3 与公式](outputs/reports/MEtrology.md#swzs-psd-readout) · [变更日志](changes/2026-11-22-swzs-psd-voltage-readout_v1.md) |
-| 2026-11-22 | 补充 SWZS 灵敏度矩阵标定图，展示两次采样、IFM 信号用途和矩阵 X 列的计算。 | [图 1.5](outputs/reports/MEtrology.md#swzs-gain-calibration-figure) · [变更日志](changes/2026-11-22-swzs-gain-calibration-figure_v1.md) |
+| 2026-11-22 | 合并 SWZS 的零传感器安装、回波光路与 PSD 电压读出图，同步更新图号与导航。 | [合并后的图 1.2](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-22-swzs-merge-optics-and-readout_v1.md) |
+| 2026-11-22 | 补充图 1.3（4）的 PSD 光斑位置—电压示意，并链接 Hamamatsu 输出特性原图。 | [PSD 位置—电压与供应商原图](outputs/reports/MEtrology.md#swzs-psd-output-characteristic) · [变更日志](changes/2026-11-22-swzs-psd-position-voltage-curve_v1.md) |
+| 2026-11-22 | 补齐图 1.3（5）中 PSD 电流比到位置电压的读出关系。 | [PSD 读出与公式](outputs/reports/MEtrology.md#swzs-psd-readout) · [变更日志](changes/2026-11-22-swzs-psd-voltage-readout_v1.md) |
+| 2026-11-22 | 补充 SWZS 灵敏度矩阵标定图，展示两次采样、IFM 信号用途和矩阵 X 列的计算。 | [灵敏度矩阵标定图](outputs/reports/MEtrology.md#swzs-gain-calibration-figure) · [变更日志](changes/2026-11-22-swzs-gain-calibration-figure_v1.md) |
 | 2026-11-21 | 按 Purpose、How、Principle 重整 SWZS，补齐原文 13 步译文及前置和后续项目。 | [SWZS 第 1 节](outputs/reports/MEtrology.md#swzs) · [资料汇整](outputs/reports/SWZS%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [变更日志](changes/2026-11-21-swzs-purpose-how-principle_v1.md) |
 | 2026-11-21 | 为指定条目或关键词增加 Level 1–3 通读、独立 Markdown 汇整与回读规则。 | [协作规则](AGENTS.md#keyword-reference-study) · [变更日志](changes/2026-11-21-keyword-reference-study_v1.md) |
 | 2026-11-21 | 将 MEtrology.md 校准项目范式更新为 Purpose、How、Principle。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-purpose-how-principle_v1.md) |
 | 2026-11-21 | 为 MEtrology.md 增加项目分节与图、表、公式编号规范，并应用到 SWZS。 | [报告规范](outputs/reports/MEtrology.md#report-format) · [第 1 节 SWZS](outputs/reports/MEtrology.md#swzs) · [变更日志](changes/2026-11-21-metrology-section-numbering_v1.md) |
-| 2026-11-21 | 整合 SWZS 的 IFM 回波、PSD 增益与初始零位图，并标注 MEtrology.md 的来源层级。 | [整合后的图 3](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [报告规范](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-swzs-integrated-zeroing-and-source-levels_v1.md) |
+| 2026-11-21 | 整合 SWZS 的 IFM 回波、PSD 增益与初始零位图，并标注 MEtrology.md 的来源层级。 | [初始零位测量原理图](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [报告规范](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-swzs-integrated-zeroing-and-source-levels_v1.md) |
 | 2026-11-21 | 补充 SWZS 的 IFM 回波寻峰、相位测位和六轴零位关系。 | [IFM 信号与零位](outputs/reports/MEtrology.md#swzs-ifm-signal) · [变更日志](changes/2026-11-21-swzs-ifm-signal-and-zero_v1.md) |
 | 2026-11-21 | 按 MEtrology.md 的图示规范更新 SWZS 现有四张图的编号和公式排版。 | [SWZS 校准原理与配图](outputs/reports/MEtrology.md#swzs-principle) · [变更日志](changes/2026-11-21-metrology-existing-figure-format_v1.md) |
 | 2026-11-21 | 在 MEtrology.md 增加图示编号和图内公式排版要求。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-diagram-format_v1.md) |
 | 2026-11-21 | 在 SWZS 图 1 后补充 PSD 光路、工作原理和 u/v 信号含义。 | [PSD 原理及配图](outputs/reports/MEtrology.md#swzs-psd-readout) · [变更日志](changes/2026-11-21-swzs-psd-optics-and-signals_v1.md) |
 | 2026-11-21 | 补绘 SWZS 的 PSD 电压、六轴位姿偏差与初始零位关系。 | [电压到零位示意图](outputs/reports/MEtrology.md#swzs-voltage-to-zero) · [变更日志](changes/2026-11-21-swzs-voltage-to-zero-diagram_v1.md) |
-| 2026-11-21 | 将 Level 3 原图 1.68 放在 SWZS 图 1 左侧，右侧保留 PSD 光斑示意。 | [图 1](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-principle-figure-layout_v1.md) |
+| 2026-11-21 | 将 Level 3 原图 1.68 放在 SWZS 图 1 左侧，右侧保留 PSD 光斑示意。 | [计量框架与镜块原图](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-principle-figure-layout_v1.md) |
 | 2026-11-21 | 明确校准项目的图文整理范式仅适用于 MEtrology.md。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-report-format-scope_v1.md) |
 | 2026-11-21 | 在 SWZS 校准原理正文嵌入 Level 3 原图 1.68，并注明原文件与页码。 | [SWZS 原图](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-21-swzs-original-figure_v1.md) |
 | 2026-11-21 | 统一 WS 初步归零项目编号为 SWZS，更新专题报告、清单与配图。 | [SWZS 专题](outputs/reports/MEtrology.md#swzs) · [校准清单 v4](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#initial-zero) · [变更日志](changes/2026-11-21-metrology-swzs-rename_v1.md) |
