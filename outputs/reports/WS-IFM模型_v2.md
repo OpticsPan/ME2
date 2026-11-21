@@ -331,6 +331,8 @@ v2 的 Ryz 最大绝对误差是 **0.932 nrad**（C07）。v2 两组最大绝对
 
 ## 实机数据对接
 
+各工位、卡盘的校准项目、机器常数和报表字段见 [WS-IFM 机器常数校准项目 v1](WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v1.md#core-calibrations)。
+
 将机台读数转换为报告规定的单位、正号和零点，再使用对应工位的校准参数。当前验证范围为给定的理想 FreeCAD 光路。机台的尺度、束线失配和面形补偿需结合实测。校准流程见 [WTAF](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wtaf)、[WGIM](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wgim)、[WZTD](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wztd) 和 [WGTD](TWINSCAN%E6%B5%8B%E6%A0%A1%E9%A1%B9%E7%9B%AE%E6%B8%85%E5%8D%95_v2.md#wgtd)。
 
 原式和字段释义见本机《ifm模型.docx》第 1–5 页。字段轴向另对照本机《12-TT-L3-L3-ME_book.pdf》文件第 92 页（印刷第 84 页）表 2.2。布局依据本机《ws-ifm-agent.FCStd》。

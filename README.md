@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 从 Level 1–3 资料核对 WS-IFM 机器常数校准项目、工位及报表参数。 | [机器常数校准项目](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v1.md#core-calibrations) · [变更日志](changes/2026-11-21-ws-ifm-machine-constant-calibrations_v1.md) |
 | 2026-11-21 | 用同一批 20 组 FreeCAD 读数逐组对比 WS-IFM v1 和 v2 的位姿解算及误差。 | [六自由度与误差对照](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#逐项解算的-20-组-freecad-验证) · [变更日志](changes/2026-11-21-ws-ifm-v1-v2-freecad-comparison_v1.md) |
 | 2026-11-21 | 将 WS-IFM v2 改为左右栏新旧对照，正文保留按 v1 参数定义的修正式。 | [新旧公式对照](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#v1-原式逐项核对) · [变更日志](changes/2026-11-21-ws-ifm-v2-side-by-side_v1.md) |
 | 2026-11-21 | 按 v1 的参数定义重写 WS-IFM v2 主式，并验证参考点换算和转角二阶解算。 | [按 v1 符号修正的 v2 公式](outputs/reports/WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#按-v1-符号修正的-v2-公式) · [变更日志](changes/2026-11-21-ws-ifm-v2-v1-symbols_v1.md) |
