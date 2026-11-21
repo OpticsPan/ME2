@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 将 MATLAB v6 修正式命名为 C2，整理 C0 → C1 → C2 的八项公式变更与推导。 | [公式修正过程](outputs/reports/WS-IFM-C0-C1-C2%E5%85%AC%E5%BC%8F%E4%BF%AE%E6%AD%A3%E8%BF%87%E7%A8%8B_v1.md#equation-comparison) · [变更日志](changes/2026-11-21-ws-ifm-c0-c1-c2-formula-derivation_v1.md) |
 | 2026-11-21 | 比较 WS-IFM C0、C1 和修正 C1，复现 MATLAB 扫描残差并以 FreeCAD 交叉验证。 | [仿真报告](outputs/reports/WS-IFM-C0-C1%20MATLAB%E4%BB%BF%E7%9C%9F%E6%8A%A5%E5%91%8A_v1.md#simulation-results) · [修正 MATLAB v6](outputs/code/sim_ws_ifm_6dof_animation_v6.m) · [变更日志](changes/2026-11-21-ws-ifm-c0-c1-matlab-simulation_v1.md) |
 | 2026-11-21 | 对原始 WS-IFM v1 作零位一阶展开，用 FreeCAD 验证 35 组位姿和单轴斜率。 | [原始 v1 一阶验证](outputs/reports/WS-IFM%E5%8E%9F%E5%A7%8Bv1%E4%B8%80%E9%98%B6FreeCAD%E9%AA%8C%E8%AF%81_v1.md#first-order-result) · [变更日志](changes/2026-11-21-ws-ifm-original-v1-first-order-freecad_v1.md) |
 | 2026-11-21 | 修正 WS-IFM 附件六式，核对 50 项参数并复验原 29 组工况。 | [附件修正与复验](outputs/reports/WS-IFM%E9%99%84%E4%BB%B6%E4%BF%AE%E6%AD%A3%E4%B8%8E%E5%A4%8D%E9%AA%8C_v1.md#result) · [变更日志](changes/2026-11-21-ws-ifm-attachment-revision_v1.md) |
