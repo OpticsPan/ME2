@@ -1,11 +1,12 @@
 # ME2
 
-本仓库归档 ME2 的项目成果与变更记录。晶圆台 IFM 以 [技术文档](outputs/reports/ifm_model.md)、[ifm_raw 原始参考](outputs/reports/ifm_raw.md)、[ifm_corr 工程扩展式](outputs/reports/ifm_corr.md) 和 [MATLAB v9 仿真](outputs/code/sim_ws_ifm_6dof_animation_v9.m) 为入口。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。
+本仓库归档 ME2 的项目成果与变更记录。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。晶圆台 IFM 可查阅 [校准项目清单](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v2.md#core-calibrations) 和 [模型与仿真参考存档](outputs/README.md#ifm-reference-archive)。
 
 ## 更新历史
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 按 Level 1–3 复核 WS-IFM 校准项目、机器常数、流程与原图，更新任务前资料学习和 IFM 模型存档规则。 | [校准项目 v2](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v2.md#core-calibrations) · [协作规则](AGENTS.md#任务开始前的资料学习) · [变更日志](changes/2026-11-21-ws-ifm-calibrations-and-reference-rules_v1.md) |
 | 2026-11-21 | 统一 IFM 模型命名，归档使用 ifm_corr 工程扩展式的 MATLAB v9 仿真。 | [模型说明](outputs/reports/ifm_corr.md#corr-runtime) · [MATLAB v9](outputs/code/sim_ws_ifm_6dof_animation_v9.m) · [变更日志](changes/2026-11-21-ifm-corr-matlab-v9-archive_v1.md) |
 | 2026-11-21 | 将附件 v10 完整技术说明迁入 ifm_model.md，归档 Python 附件和原始 IFM 模型。 | [网页技术说明](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-manuscript-web-archive_v1.md) |
 | 2026-11-21 | 将 IFM 技术说明替换为用户附件生成的 v10 原稿。 | [v10 原稿](outputs/reports/ifm_model_v10.pdf) · [技术说明入口](outputs/reports/ifm_model.md) · [变更日志](changes/2026-11-21-ifm-manuscript-v10_v1.md) |
