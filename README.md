@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 按 Purpose、How、Principle 重整 SWZS，补齐原文 13 步译文及前置和后续项目。 | [SWZS 第 1 节](outputs/reports/MEtrology.md#swzs) · [资料汇整](outputs/reports/SWZS%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [变更日志](changes/2026-11-21-swzs-purpose-how-principle_v1.md) |
 | 2026-11-21 | 为指定条目或关键词增加 Level 1–3 通读、独立 Markdown 汇整与回读规则。 | [协作规则](AGENTS.md#keyword-reference-study) · [变更日志](changes/2026-11-21-keyword-reference-study_v1.md) |
 | 2026-11-21 | 将 MEtrology.md 校准项目范式更新为 Purpose、How、Principle。 | [报告范式](outputs/reports/MEtrology.md#report-format) · [变更日志](changes/2026-11-21-metrology-purpose-how-principle_v1.md) |
 | 2026-11-21 | 为 MEtrology.md 增加项目分节与图、表、公式编号规范，并应用到 SWZS。 | [报告规范](outputs/reports/MEtrology.md#report-format) · [第 1 节 SWZS](outputs/reports/MEtrology.md#swzs) · [变更日志](changes/2026-11-21-metrology-section-numbering_v1.md) |
