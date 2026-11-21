@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 补充图 1.3（4）的 PSD 光斑位置—电压示意，并链接 Hamamatsu 输出特性原图。 | [图 1.3 与供应商原图](outputs/reports/MEtrology.md#swzs-psd-output-characteristic) · [变更日志](changes/2026-11-22-swzs-psd-position-voltage-curve_v1.md) |
 | 2026-11-22 | 补齐图 1.3（5）中 PSD 电流比到位置电压的读出关系。 | [图 1.3 与公式](outputs/reports/MEtrology.md#swzs-psd-readout) · [变更日志](changes/2026-11-22-swzs-psd-voltage-readout_v1.md) |
 | 2026-11-22 | 补充 SWZS 灵敏度矩阵标定图，展示两次采样、IFM 信号用途和矩阵 X 列的计算。 | [图 1.5](outputs/reports/MEtrology.md#swzs-gain-calibration-figure) · [变更日志](changes/2026-11-22-swzs-gain-calibration-figure_v1.md) |
 | 2026-11-21 | 按 Purpose、How、Principle 重整 SWZS，补齐原文 13 步译文及前置和后续项目。 | [SWZS 第 1 节](outputs/reports/MEtrology.md#swzs) · [资料汇整](outputs/reports/SWZS%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [变更日志](changes/2026-11-21-swzs-purpose-how-principle_v1.md) |
