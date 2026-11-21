@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-21 | 用同一批 81 组 FreeCAD 八路读数逐组复算 C0/C3，归档位姿、误差与共同输入。 | [C0/C3 的 81 组复算](outputs/reports/WS-IFM-C0-C3-81%E7%BB%84FreeCAD%E5%A4%8D%E7%AE%97_v1.md#c0-c3-81-result) · [变更日志](changes/2026-11-21-ws-ifm-c0-c3-freecad-81-cases_v1.md) |
 | 2026-11-21 | 并排归档 C0 与 C3 六条完整公式，原位保留 47 项并标注待确认内容。 | [C0 与 C3 六式对照](outputs/reports/WS-IFM-C0-C3%E5%85%AD%E5%BC%8F%E5%AF%B9%E7%85%A7_v1.md#c0-c3-formulas) · [变更日志](changes/2026-11-21-ws-ifm-c0-c3-formula-table_v1.md) |
 | 2026-11-21 | 保留 C0 六式 47 项，逐项核对符号、下标和幂次，并用 81 组 FreeCAD 工况验算。 | [C0 符号与下标核对](outputs/reports/WS-IFM-C0-%E5%85%AC%E5%BC%8F%E7%AC%A6%E5%8F%B7%E4%B8%8E%E4%B8%8B%E6%A0%87%E6%A0%B8%E5%AF%B9_v1.md#c0-sign-result) · [变更日志](changes/2026-11-21-ws-ifm-c0-sign-index-review_v1.md) |
 | 2026-11-21 | 核对 C0 在 ZXY 两种约定下的偏航、Abbe 项和 Ryz 高度增益。 | [C0 的 ZXY 转序核对](outputs/reports/WS-IFM-C0-ZXY%E8%BD%AC%E5%BA%8F%E6%A0%B8%E5%AF%B9_v1.md#c0-zxy-conventions) · [变更日志](changes/2026-11-21-ws-ifm-c0-zxy-review_v1.md) |
