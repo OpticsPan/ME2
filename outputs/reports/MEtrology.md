@@ -23,7 +23,7 @@
 
 | 项目 | 定位 | 快速跳转 |
 | --- | --- | --- |
-| [SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#swzs-constants) · [校准原理](#swzs-principle) · [PSD 工作原理](#swzs-psd-readout) · [电压到零位](#swzs-voltage-to-zero) · [操作流程](#swzs-procedure) · [图 1（1） Level 3 原图](#swzs-figure-168) |
+| [SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [目的与机器常数](#swzs-constants) · [校准原理](#swzs-principle) · [PSD 工作原理](#swzs-psd-readout) · [电压到零位](#swzs-voltage-to-zero) · [IFM 寻峰与零位](#swzs-ifm-signal) · [操作流程](#swzs-procedure) · [图 1（1） Level 3 原图](#swzs-figure-168) |
 
 <a name="szws"></a>
 <a name="swzs"></a>
@@ -99,6 +99,22 @@ Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Se
 
 `FZP` 用于快归零捕获。按图 3（8），PSD 找回参考位姿后，IFM 用校准的 `MI:SZP` 作为六轴起点，随后跟踪相对位移。图中的 `Δs ≈ 0` 表示电压接近其参考值，此时赋给 IFM 的六轴坐标可以是非零。这个关系用于解释局部灵敏度和零位如何找回。实机的完整解算、动作轨迹和判据未在课件中给出。Level 2 图 1.4–1.5 对照同一台体位置在编码器和 IFM 控制下的状态。来源为《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页）。
 
+<a name="swzs-ifm-signal"></a>
+
+#### IFM 的回波寻峰与 WS 六自由度零位
+
+**回波寻峰用于选初始化倾角。** 旋转和倾斜 WS，观察各 IFM 通道的回波强度或信号质量。图 4（1）是课件的 `Rx` 扫描曲线。光束接近镜面法向时，接收回波耦合较好。Level 3 将这一步得到的 `Rx0/Ry0/Rz0` 用于建立初始化角度参考，并按卡盘、工位保存。这三项中，M 侧的 `Ry0` 后续可在 WZIM 重新确定。出处为《12-TT-L3-L3-ME_book.pdf》文件第 26–29 页（印刷第 18–21 页）、《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张。
+
+对多通道，可将工作姿态理解为让参与解算的 IFM 通道都有足够的信号。图 4（2）示意各通道因装调或光束方向差异而出现不同峰位，同时仍有良好信号的重叠区。课件只给出寻峰原理，未给出逐通道峰位实测数据、通道联合寻峰准则或通过门限。
+
+![图 4，IFM 回波寻峰原图、多通道回波示意、相位变化测位及 MI:SZP 示例](../images/SWZS-IFM信号与零位_v1.png)
+
+**图 4　IFM 信号与 WS 六轴归零。** 图 4（1）取自《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张，图 4（2）是多通道强度示意，图 4（3）是相位读数示意，图 4（4）为《TT-L2-ME-3v0.pdf》文件第 11 页（印刷第 5 页）图 1.5 的 `MI:SZP` 示例。
+
+**位移由相位变化得到。** 图 4（3）中等幅的两段信号有相位差。接收器对测量信号和参考信号进行处理，跟踪相位随运动的变化。图中 `Δℓ_i` 是第 `i` 路测量相对于参考的光程差变化，已包含该通道的传播路径与往返次数。`λ₀` 为真空波长。各路光程变化通过几何解算得到 WS 位姿增量。实机信号链见《09-TT-L3-WSbook.pdf》文件第 60–61 页（印刷第 52–53 页），图 1.66，以及《TT-L2-WS-3v0.pdf》文件第 27 页（印刷第 21 页），图 1.30。
+
+**六轴零位是已标定的参考位姿。** 生产归零中，PSD 用于重定位镜块相对计量框架的六轴参考。IFM 接管时载入该参考的六轴坐标 `MI:SZP`，从这里开始跟踪位姿变化。以这个位姿为本次相对测量的原点时，六轴**增量**可在该点记为零。图 4（4）的六轴**机器坐标**可以是非零值，称作 WS 的归零参考坐标。流程见 [从 PSD 电压到初始零位](#swzs-voltage-to-zero)、[操作流程](#swzs-procedure)。出处为《09_AP-L1-Production_Metrology_in-line.pdf》第 13、24 页、《09-TT-L3-WSbook.pdf》文件第 62、111–115 页（印刷第 54、103–107 页）、《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页）。
+
 <a name="szws-procedure"></a>
 <a name="swzs-procedure"></a>
 
@@ -108,9 +124,9 @@ Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Se
 
 ![SWZS 四步校准流程，从 IFM 捕获、PSD 粗标定、工作点精标定到生成零位常数](../images/SWZS归零校准流程_v3.png)
 
-**图 4　归零校准与生产使用。** 图 4（1）至（4）对应下文四个校准步骤，图 4（5）说明生产中的归零使用。依据《09-TT-L3-WSbook.pdf》第 112 页（印刷第 104 页）和《TT-MA-WS-Calibrations-3v1.ppt》第 104 张。
+**图 5　归零校准与生产使用。** 图 5（1）至（4）对应下文四个校准步骤，图 5（5）说明生产中的归零使用。依据《09-TT-L3-WSbook.pdf》第 112 页（印刷第 104 页）和《TT-MA-WS-Calibrations-3v1.ppt》第 104 张。
 
-1. **捕获 IFM 光束。** 执行 IFM 对准，装载默认设置，初始化短行程至 IFM 六自由度闭环。初始化倾角测试的物理方法是改变 `Rx/Ry/Rz` 并跟踪 IFM 信号质量，利用接近镜面法向入射时的信号峰定位姿态。出处为《12-TT-L3-L3-ME_book.pdf》第 26 页（印刷第 18 页）。
+1. **捕获 IFM 光束。** 执行 IFM 对准，装载默认设置，初始化短行程至 IFM 六自由度闭环。初始化倾角测试的物理方法是改变 `Rx/Ry/Rz` 并跟踪 IFM 信号质量，利用接近镜面法向入射时的信号峰定位姿态，见 [图 4（1）和（2）](#swzs-ifm-signal)。出处为《12-TT-L3-L3-ME_book.pdf》第 26 页（印刷第 18 页）。
 2. **找 PSD 中心并标定粗增益。** 初找各传感器光斑中心。以 IFM 测得的台体运动为基准，同步读取 PSD 电压，求粗增益。用粗增益重找中心，检查零传感器光强、电子学、IFM 及差分传感器量程、光斑位置。
 3. **在工作点求精增益与偏置。** 由中心与粗增益计算 `OZP`，在该工作点附近再次激励和采集，求精增益并校准 ZSO。多个自由度的响应共同确定电压到位姿的映射。
 4. **计算零位并核对保存结果。** 用 OZP 和偏置求 FZP，再求传感器位置和 MI:SZP。按选定组合检查是否成功、光强和电子学是否合格，以及报表的 `old/new` 和 MC 保存状态。完整 PSD 校准保存后，资料要求复做相关 Metrology setup。实机复现性和通过条件按对应版本的 Coach 流程核对。出处为《09-TT-L3-WSbook.pdf》第 112–115 页（印刷第 104–107 页）、《TT-MA-WS-Calibrations-3v1.ppt》第 104–108 张。
@@ -134,6 +150,7 @@ Level 3 培训资料将零传感器校准编号写为 **SWZS（Calibrate Zero Se
 | --- | --- | --- |
 | 《09-TT-L3-WSbook.pdf》第 62 页（印刷第 54 页），**图 1.68 Zero Sensors** | 三只传感器固定在 MF，三个对应角锥位于镜块。 | `assets/b4514b4ae5eb86cb/images/page_61_image_8_v1.jpg` |
 | 同书第 63 页（印刷第 55 页），**图 1.69** | 从计量框架底面看，M/E 各圈出三个零传感器。 | `assets/b4514b4ae5eb86cb/images/page_62_image_5_v1.jpg` |
+| 《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张，**Interferometer strength–Rx 曲线** | 扫描初始化倾角时，回波强度在中间出现峰。 | 见原 PPT 第 9 张及 [正文图 4（1）](#swzs-ifm-signal)。 |
 | 《TT-L2-ME-3v0.pdf》第 11 页（印刷第 5 页），**图 1.4、1.5** | 两图中的台体处于同一归零位置。图 1.5 在 IFM 控制下列出六轴 MI:SZP 参考值。 | `assets/e9dff352e800b276/images/page_10_image_4_v1.jpg`、`assets/e9dff352e800b276/images/page_10_image_9_v1.jpg` |
 | 《TT-MA-WS-Calibrations-3v1.ppt》第 102 张 | 全 PSD 模式包含 IFM-align。两卡盘 M/E 共四组合可选择，图示进度为 0%。 | `assets/56ea2737208dfc3a/images/page_101_image_4_v1.jpg` |
 | 《09-TT-L3-WSbook.pdf》第 115 页（印刷第 107 页），**图 2.35** | FZP、MI:SZP、`u0/v0` 和 PSD 增益分别列项，可核对单位和报表字段。 | `assets/b4514b4ae5eb86cb/images/page_114_image_4_v1.jpg` |
