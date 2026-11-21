@@ -36,7 +36,7 @@
 
 ## 1. SWZS — WS 初步归零
 
-[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
+[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [回波峰定位图](#swzs-ifm-peak-location) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
 
 <a name="szws-constants"></a>
 <a name="swzs-constants"></a>
@@ -200,7 +200,7 @@ $$
 
 ![图 1.3，校准时用 IFM 回波与相位确定工作姿态并标定 PSD；生产归零时比较六路当前与参考电压，用增益矩阵求六轴偏差。](../images/SWZS-PSD至IFM初始零位_v3.png)
 
-**图 1.3　SWZS 初始零位的测量原理。** 图 1.3（1）和（2）解释 IFM 对准及如何给出实际运动，图 1.3（3）和（4）对应 PSD 增益与参考零位标定，[图 1.3（5）](#swzs-psd-reference-recovery)用参考和当前的六路电压求偏差，并以 Rx 为例示意修正方向。图 1.3（6）给出 IFM 接管的坐标示例。图 1.3（1）的寻峰曲线截自L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张。图 1.3（6）的机器坐标示例取自L2-《TT-L2-ME-3v0.pdf》文件第 11 页（印刷第 5 页），图 1.5。
+**图 1.3　SWZS 初始零位的测量原理。** 图 1.3（1）和（2）解释 IFM 对准及如何给出实际运动，图 1.3（3）和（4）对应 PSD 增益与参考零位标定，[图 1.3（5）](#swzs-psd-reference-recovery)用参考和当前的六路电压求偏差，并以 Rx 为例示意修正方向。[图 1.5](#swzs-ifm-peak-location) 展开单路回波的定位与恢复过程。图 1.3（6）给出 IFM 接管的坐标示例。图 1.3（1）的寻峰曲线截自L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张。图 1.3（6）的机器坐标示例取自L2-《TT-L2-ME-3v0.pdf》文件第 11 页（印刷第 5 页），图 1.5。
 
 **（1）IFM 回波强度和相位各有用途，见图 1.3（1）与（2）。** 扫描 `Rx/Ry/Rz` 并记录 IFM 的回波强度，从峰附近选取初始化倾角 `Rx0/Ry0/Rz0`。以图 1.3（1）的 Rx 曲线为例，峰的横坐标给出对应的 Rx 姿态。参与测量的通道需要有效的回波，各通道峰位可能不同。课件未给出多通道联合寻峰和通过门限。建立有效回波后，IFM 跟踪测量信号相对参考的相位变化，从各路光程增量解算台体实际六轴位姿增量 `Δq = [ΔX, ΔY, ΔZ, ΔRx, ΔRy, ΔRz]`。出处为L3-《12-TT-L3-L3-ME_book.pdf》文件第 26–29 页（印刷第 18–21 页）、L3-《09-TT-L3-WSbook.pdf》文件第 60–61 页（印刷第 52–53 页），图 1.66。
 
@@ -248,9 +248,33 @@ $$
 
 这里的偏差是**当前位姿减去参考位姿**。若算出的 `ΔRx` 大于零，就应向负 Rx 方向修正。图 1.3（5）只画 Rx 这一分量，实际含义是将六路电压差一起代入，得到六轴偏差。靠近参考位姿时，电压差与位姿偏差一起趋近于零。找回参考后，IFM 加载 `MI:SZP` 继续测位，所加载的机器坐标可以为非零值。出处为 L1-《09_AP-L1-Production_Metrology_in-line.pdf》第 13、24 页及 L2-《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页）。
 
-**怎么和强回波姿态联系起来。** 假设 `G` 已标定，若要找回某一路 IFM 在扫描中回波最强的姿态，可以在每个扫描点同步记录该路的回波强度与三只 PSD 的六路电压。用 `G` 从电压求各采样点相对扫描基准的位姿，用实际回波强度选出最强的采样点。把该点对应的六路电压设为示例的目标电压，再用图 1.3（5）的计算找回这个姿态。`G` 提供位姿信息，回波强度数据提供寻峰依据。
+<a name="swzs-ifm-peak-location"></a>
 
-这个例子说明怎样关联两种观测。Level 3 给出的正式流程先做 IFM 对准，再标定 PSD 增益、中心、偏置和参考位置。课件未公布多路 IFM 的联合寻峰规则，也未给出生产归零的控制细节。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张和 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
+##### 单路 IFM 回波最强采样点的定位与恢复
+
+![图 1.5，沿 Rx 扫描五个样点，同步记录 PSD 电压和单路 IFM 回波强度。用灵敏度矩阵给各样点定位，再按实测回波选出最强点并恢复其位姿。](../images/SWZS-PSD辅助IFM回波峰定位_v1.png)
+
+**图 1.5　用 PSD 观测定位和找回 IFM 单路回波最强采样点。** 这是[图 1.3（5）](#swzs-psd-reference-recovery)的计算示例，使用[图 1.4](#swzs-gain-calibration-figure)说明的已标定矩阵 `G`。图中 C 是扫描基准，D 是示意中回波强度最高的采样点。
+
+**采样与定位见图 1.5（1）和（2）。** 同一卡盘、同一工位和参考位姿附近，以 C 点的已知位姿 `q0` 及六路 PSD 电压 `s0` 为基准。其余自由度保持不变时扫描 `Rx`，每个采样点同时记录当前六路电压 `s_k` 和同一路 IFM 的回波强度 `I_k`。若局部的 `G` 满秩，用六路电压差联立得到该点相对 C 的六轴位姿增量。强度图的横轴取这个增量的 `Rx` 分量。
+
+$$
+\Delta\mathbf{q}_k \simeq \mathbf{G}^{-1}(\mathbf{s}_k-\mathbf{s}_0) \qquad (1.6a)
+$$
+
+**选点与恢复见图 1.5（3）和（4）。** 对比同一路 IFM 的实测强度，选出这组采样中的最高点。用该点的位姿增量加上基准位姿，得到它的六轴位姿估计。
+
+$$
+k_\star = \operatorname*{arg\,max}_{k} I_k \qquad (1.6b)
+$$
+
+$$
+\mathbf{q}_\star \simeq \mathbf{q}_0+\Delta\mathbf{q}_{k_\star} \qquad (1.6c)
+$$
+
+需要再次找回 D 点时，把 D 对应的六路电压设为此示例的目标 `s_ref`。当前六路电压与这个目标作差，再按[式（1.4）](#swzs-eq-voltage-difference)和[式（1.5）](#swzs-eq-pose-difference)求偏差并反向修正。C 点电压用于定位扫描样点，D 点电压用于恢复目标姿态。
+
+图 1.5 用设定样点说明计算关系。Level 3 给出的正式流程先做 IFM 对准，再标定 PSD 增益、中心、偏置和参考位置。课件未公布多路 IFM 的联合寻峰规则，也未给出生产归零的控制细节。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张和 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
 
 <a name="szws-source-figures"></a>
 <a name="swzs-source-figures"></a>
