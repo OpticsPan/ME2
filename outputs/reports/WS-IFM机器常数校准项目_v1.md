@@ -2,7 +2,7 @@
 
 [核心项目](#core-calibrations) · [WGTD 的 23 个报表字段](#wgtd-fields) · [归零、镜面图和精调](#related-calibrations) · [实机参数核对入口](#parameter-evidence) · [成果索引](../README.md)
 
-本清单以 TWINSCAN IFM 配置、AT3.4 无 CS 的 Level 3 流程为主，并用 Level 1 旧流程和 Level 2 的 TRIM 验证交叉核对。M 为测量侧，E 为曝光侧。项目按 Chuck 1/2 与工位记录，`szya` 是资料明确指出的同一卡盘跨侧共用项。模型公式及机台字段分别见 [WS-IFM 原式 v1](WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#标定项目与模型项的关系) 和 [WS-IFM 修正式 v2](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#实机数据对接)。
+本清单以 TWINSCAN IFM 配置、AT3.4 无 CS 的 Level 3 流程为主，并用 Level 1 旧流程和 Level 2 的 TRIM 验证交叉核对。M 为测量侧，E 为曝光侧。项目按 Chuck 1/2 与工位记录，`szya` 是资料明确指出的同一卡盘跨侧共用项。模型公式及机台字段分别见 [ifm_model 参数与标定](ifm_model.md#ifm-constants) 和 [ifm_corr 的读数和接口](ifm_corr.md#corr-input)。
 
 <a name="core-calibrations"></a>
 
@@ -50,9 +50,9 @@
 
 ## 实机参数核对入口
 
-- **识别 Z 平移与 Ry 冗余的参数来源。** `szxa X`、`szya Y` 是 Z 的行走倾斜项，`srxa X` 是 Ryz 的位置项，`sfz` 是 Z 的尺度。TRIM 复查段原文写 “srxa (X contribution to Ryz)”。课件备注写 “Parameter sfz has been determined by the TRIM test.”出处为《12-TT-L3-L3-ME_book.pdf》文件第 27、57 页（印刷第 19、49 页）和《TT-MA-ME_setupblock_6-8_1v3.ppt》第 35 张。公式见 [v1 的 Z IFM 原式](WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#z-ifm-原式) 和 [v2 的 Z 解算](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#z-解算对比)、[Ryz 解算](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#ryz-解算对比)。
-- **分清已报告字段和待核字段。** WGTD 提供明确的 E 侧字段组及单位。WTAF 的 10 项参数中除 Abbe 臂之外的字段、WZTD 的逐项常数和 WGIM 全部键名，需要目标版本的报告。现有资料还未给出 `kze`、`sfryz`、`ux`、`wy`、第三束方向误差字段的独立写入记录。v2 中 `hx`、`hy`、`δy_X`、`δx_Y` 来自当前 CAD，应追溯机型的装调量或实测定义。见 [v2 的几何参数和基准说明](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#v1-字段怎么代入)。
-- **对照相同卡盘、工位、坐标基准和单位。** `K/L` 报表释义采用 TIS 参考，M 侧 AA 与 E 侧 TIS 参考需分别核对，与 v2 晶圆中心 O 的距离需做端点换算。后续比对需同时核查字段如何进入公式及保存状态。见 [WGTD 参数表](#wgtd-fields) 与 [v2 的实机数据对接](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#实机数据对接)。
+- **识别 Z 平移与 Ry 冗余的参数来源。** `szxa X`、`szya Y` 是 Z 的行走倾斜项，`srxa X` 是 Ryz 的位置项，`sfz` 是 Z 的尺度。TRIM 复查段原文写 “srxa (X contribution to Ryz)”。课件备注写 “Parameter sfz has been determined by the TRIM test.”出处为《12-TT-L3-L3-ME_book.pdf》文件第 27、57 页（印刷第 19、49 页）和《TT-MA-ME_setupblock_6-8_1v3.ppt》第 35 张。公式见 [ifm_raw 的 Z 原式](ifm_raw.md#z-ifm-原式) 和 [ifm_corr 的 Z/Ryz 公式](ifm_corr.md#corr-z)。
+- **分清已报告字段和待核字段。** WGTD 提供明确的 E 侧字段组及单位。WTAF 的 10 项参数中除 Abbe 臂之外的字段、WZTD 的逐项常数和 WGIM 全部键名，需要目标版本的报告。现有资料还未给出 `kze`、`sfryz`、`ux`、`wy`、第三束方向误差字段的独立写入记录。v2 中 `hx`、`hy`、`δy_X`、`δx_Y` 来自当前 CAD，应追溯机型的装调量或实测定义。见 [几何常数和参考点](ifm_model.md#ifm-constants)。
+- **对照相同卡盘、工位、坐标基准和单位。** `K/L` 报表释义采用 TIS 参考，M 侧 AA 与 E 侧 TIS 参考需分别核对，与当前 CAD 晶圆中心 O 的距离需做端点换算。后续比对需同时核查字段如何进入公式及保存状态。见 [WGTD 参数表](#wgtd-fields) 与 [ifm_corr 的读数和接口](ifm_corr.md#corr-input)。
 
 ### 原页图表索引
 

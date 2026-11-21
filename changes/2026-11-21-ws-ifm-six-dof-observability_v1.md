@@ -2,4 +2,4 @@
 
 - 说明工业六自由度的多通道解算流程、可观测性和冗余区别，并区分公开方案与 ME2 的具体光路。
 - 用当前名义光路核对八路灵敏度矩阵、纯 Ry 读数和 C0 Ryz 右端角度的来源。
-- 成果为 [八路光程与六自由度解算](../outputs/reports/WS-IFM%E5%85%AB%E8%B7%AF%E5%85%89%E7%A8%8B%E4%B8%8E%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%A7%A3%E7%AE%97_v1.md#me2-channels)。
+- 成果为 [撤下记录](2026-11-21-ifm-model-consolidation_v1.md#retired-ifm)。

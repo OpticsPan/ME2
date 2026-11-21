@@ -1,4 +1,6 @@
-# 同一批八路 IFM 读数下 C0 与附件 C3 的 WS 六自由度误差 v1
+# 同一批八路 IFM 读数下 ifm_raw 与 ifm_corr 的六自由度误差 v1
+
+本历史试验使用的 C0 和附件 v7 C3 分别对应 [ifm_raw](ifm_raw.md) 和 [ifm_corr](ifm_corr.md)。
 
 [误差汇总](#six-pose-summary) · [输入与解算口径](#six-pose-method) · [单组计算示例](#six-pose-example) · [注入 121 帧](#six-pose-injected-scan) · [注入 81 位姿](#six-pose-injected-81) · [理想 121 帧](#six-pose-ideal-scan) · [理想 81 位姿](#six-pose-ideal-81) · [成果索引](../README.md)
 
@@ -85,7 +87,7 @@ mz1 = (z1+z2)/2         mz2 = z1-z2
 | Z 参数 | 共享 v7 早先标定的 `sfz`。C0 括号中其余 13 项取 v7 对应有效系数除以 `sfz`，使外乘后系数相同。C0 保留 `+1*X*Rx*Rz`，其中 X 使用 C0 从光程解得的值。 | 按 v7 用 `Phi_Z*theta_Z` 求高度。在本批标定中 `sfz=0.999996240`，`czxrz=3.001366`。 |
 | 求法与比较 | 固定输入角，按 X/Y 原式右端对各自位移的仿射关系求解。四条原式逐工况回代，最大残差为 `1.42e-14`，单位依公式。 | 采用 v7 四次迭代和既有标定参数。预设只用于计算误差。 |
 
-两版 Z 式均用共用的 `Ryx` 作为俯仰输入，直接对齐 v7 实际接口。C0 原件关于生产 Z 使用冗余 `Ryz` 的文字在原式中没有展开。若要独立对照那条接口，需要先明确原式 Z 差分增益和单位。C0 主表按原文的台体 X 尺寸计算。作为几何敏感性检查，将 C0 的 `kx` 改用与 v7 相同的 400 mm，404 条中 X 解算变化最大 **63.781 nm**，远小于该组 X 的 µm 级残差。其余参数保持相同。 [C0 原式与轴定义](WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#xy-ifm-原式) · [C0 的 Z 原式](WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#z-ifm-原式) · [附件 C3 的实现范围](WS-IFM%E9%99%84%E4%BB%B6C3-FreeCAD%E9%AA%8C%E8%AF%81_v1.md#attached-c3-scope)
+两版 Z 式均用共用的 `Ryx` 作为俯仰输入，直接对齐 v7 实际接口。C0 原件关于生产 Z 使用冗余 `Ryz` 的文字在原式中没有展开。若要独立对照那条接口，需要先明确原式 Z 差分增益和单位。C0 主表按原文的台体 X 尺寸计算。作为几何敏感性检查，将 C0 的 `kx` 改用与 v7 相同的 400 mm，404 条中 X 解算变化最大 **63.781 nm**，远小于该组 X 的 µm 级残差。其余参数保持相同。 [ifm_raw 的 XY 原式](ifm_raw.md#xy-ifm-原式) · [ifm_raw 的 Z 原式](ifm_raw.md#z-ifm-原式) · [附件 C3 的实现范围](WS-IFM%E9%99%84%E4%BB%B6C3-FreeCAD%E9%AA%8C%E8%AF%81_v1.md#attached-c3-scope)
 
 ### 误差来源
 

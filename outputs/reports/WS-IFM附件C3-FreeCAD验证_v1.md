@@ -1,4 +1,4 @@
-# 附件 WS-IFM C3 的 FreeCAD 验证 v1
+# ifm_corr 的 FreeCAD 验证 v1
 
 [结论](#attached-c3-result) · [FreeCAD 验证方法](#attached-c3-method) · [121 帧扫描](#attached-c3-scan) · [装调标定与有效镜面](#attached-c3-alignment) · [81 个历史位姿与高度外推](#attached-c3-old81) · [附件公式与 v7 实现](#attached-c3-scope) · [逐帧数据](#attached-c3-rows) · [成果索引](../README.md)
 
@@ -8,13 +8,13 @@
 
 用附件 `sim_ws_ifm_6dof_animation_v7.m` 的原解算函数处理独立 FreeCAD 八路光程。默认装调误差下，121 帧 +Y 扫描中，**X/Y/Z 的最大绝对误差为 0.362、0.026、0.706 nm，主控角 Rx/Ryx/Rzx 为 0.000402、0.001553、0.001454 µrad**。冗余 `Ryz` 的最大误差为 **0.374164 µrad**。FreeCAD 与 v7 对同一位姿算出的十条原始路径差异不超过 **1.82e-12 mm**。当前附件复现了这一名义光学模型的主控位姿性能。附件中部分基准数值与实际 v7 有差异，按同一工况列出差异。
 
-重新追迹以前 81 个位姿，包含附件标定范围外的 `Z=±5 mm`。这时最大 Z 和 Ryz 误差分别为 **18.800 nm、3.475659 µrad**。此前 81 组报告采用 `p_world=R*p_local+T` 与另一套读数追迹。本报告按附件 `p_world=R*(p_local+T)` 重测同一批六个坐标值。 [旧报告的坐标与输入](WS-IFM-C0-C3-81%E7%BB%84FreeCAD%E5%A4%8D%E7%AE%97_v1.md#c0-c3-81-inputs)
+重新追迹以前 81 个位姿，包含附件标定范围外的 `Z=±5 mm`。这时最大 Z 和 Ryz 误差分别为 **18.800 nm、3.475659 µrad**。此前 81 个位姿的记录采用 `p_world=R*p_local+T` 与另一套读数追迹。本报告按附件 `p_world=R*(p_local+T)` 重测同一批六个坐标值。 [坐标与八路读数口径](ifm_model.md#ifm-readout)
 
 <a name="attached-c3-method"></a>
 
 ## FreeCAD 路径与 MATLAB 解算
 
-- **输入与模型。** 使用附件 `ws_ifm_c3_agent_spec.md` 第 1–5 节与 `sim_ws_ifm_6dof_animation_v7.m` 第 383–642、744–786 行。CAD 几何来自本机只读 `ws-ifm-agent.FCStd`。FreeCAD 0.21.2 设置旋转 `R=RotZ(Rz)*RotX(Rx)*RotY(Ry)`，原点的世界位移设为 `R*T`。X/Y 光学镜面间距按附件使用 400、380 mm。 [CAD 光路和几何约定](WS-IFM%E6%A8%A1%E5%9E%8B_v2.md#坐标与观测量)
+- **输入与模型。** 使用附件 `ws_ifm_c3_agent_spec.md` 第 1–5 节与 `sim_ws_ifm_6dof_animation_v7.m` 第 383–642、744–786 行。CAD 几何来自本机只读 `ws-ifm-agent.FCStd`。FreeCAD 0.21.2 设置旋转 `R=RotZ(Rz)*RotX(Rx)*RotY(Ry)`，原点的世界位移设为 `R*T`。X/Y 光学镜面间距按附件使用 400、380 mm。 [IFM 模型整理记录](../../changes/2026-11-21-ifm-model-consolidation_v1.md#retired-ifm)
 - **实体镜面追迹。** 从 FreeCAD 的实际台镜和固定 Z 镜取面法向及位置。每路 XY 计算台镜、读数头平面、角锥映射、台镜、读数头的四个传播段。开启装调误差时头面法向跟随光束方向。每路 Z 分别追迹两段直返和四段折返。每段由 FreeCAD 的 Part 边建立并读取长度，另查交点是否落在实体面内。
 - **光程归一。** 两种装调状态分别以零位扣零。XY 每路变化除以 4，Z 每路用直返变化减折返变化后除以 2，得到八路。直接调用附件 `solve_8dof_from_ifm`，沿用四次迭代和各通道次序。`Rzx` 用为主偏航，`Ryx` 用为主俯仰，`Rzy、Ryz` 为冗余。
 - **标定与验证。** 复用 v7 的 `rng(7)`。每种装调状态各有 250 个 Rx/Ryx 标定位姿、250 个 Z/Ryz 标定位姿、121 帧原扫描、81 个历史位姿和 1 个零位。四组最小二乘均与测试帧独立。主表用附件自己的标定系数和 FreeCAD 读数，另外用 FreeCAD 重标定并核验有效镜面筛选影响。
@@ -94,7 +94,7 @@ Ryz 最大误差位于 `ZB_1_1`。用同高度、正负 `Ry=±800 µrad` 的 `mz
 
 | 项目 | 本次验证口径 |
 | --- | --- |
-| 模型身份 | 采用本次附件的 C3 及 v7 的运行实现。此前的 47 项校核式使用世界平移 T 和不同的封闭回程模型，两套结果需各按自身输入约定解释。 |
+| 模型身份 | 采用本次附件的 C3 及 v7 的运行实现。此前的 47 项校核式使用世界平移 T 和不同的封闭回程模型，比较数值时以各自的输入约定为准。 |
 | XY 扩展和上束失配 | 说明书 `4.1 写出 dd、ee、sxy、独立比例因子和上束差分校准。附件 v7 主求解函数未加入这些可调项。验证涵盖 v7 已实现的平均偏斜、X3/Y3 不平行与偏置，额外实机字段尚未通过此试验核验。 |
 | Z 的角输入 | 说明书 `4 的文字将 Ryz 列作 Z 输入。v7 第 475–488 行实际是先用 Ryx 计算 Z，再用已算 Z 和 Ryx 求 Ryz。报告沿用实际调用顺序。 |
 | 求解范围 | 121 帧和 81 位姿的光学几何被实际追迹。结果代表几何与标定可复现性，实际设备还需轴定义、计数倍率和标定数据。 |
@@ -321,4 +321,4 @@ Ryz 最大误差位于 `ZB_1_1`。用同高度、正负 `Ry=±800 µrad` 的 `mz
 
 - 模型说明 `ws_ifm_c3_agent_spec.md` SHA-256 为 `2583315a14e18b12e53b57d528e0219881350413c0a93194765832bce913db4f`。MATLAB 附件 `sim_ws_ifm_6dof_animation_v7.m` SHA-256 为 `56c4a0f45d8c39010e14c7e70c94af57a960b96720294303652b03945931b75e`。本次取其原计算函数运行，关闭了外层图形与循环播放。
 - 原始 CAD `ws-ifm-agent.FCStd` SHA-256 为 `cd5220b6cb33831a25589c57b4f8e474267373854cb13f6f1063c158b54240ec`。验证副本保存在本机 `work/ws-ifm-attached-c3-freecad-v1/WS-IFM附件C3-FreeCAD验证_v1.FCStd`，已重开核对摆位和全部路径长度。临时 FreeCAD 文档已退出。
-- 同一工作目录含 `freecad_c3_paths_v1.json`、`validate_attached_c3_v1.m`、`c3_validation_results_v1.json` 和运行记录。原始追迹 JSON SHA-256 为 `cb1d8bd3b7dae9896894e92de2d2cdade78f4b11d259359730b4b546c3fca526`；包括 1406 组路径和所有镜面越界检查。 [旧 81 工况及几何基线](WS-IFM-C0-C3-81%E7%BB%84FreeCAD%E5%A4%8D%E7%AE%97_v1.md#c0-c3-81-xyz)
+- 同一工作目录含 `freecad_c3_paths_v1.json`、`validate_attached_c3_v1.m`、`c3_validation_results_v1.json` 和运行记录。原始追迹 JSON SHA-256 为 `cb1d8bd3b7dae9896894e92de2d2cdade78f4b11d259359730b4b546c3fca526`；包括 1406 组路径和所有镜面越界检查。 [坐标与八路读数口径](ifm_model.md#ifm-readout)

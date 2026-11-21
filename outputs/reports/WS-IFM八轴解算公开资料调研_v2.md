@@ -25,7 +25,7 @@
 | --- | --- |
 | `US6020964.pdf` 文件第 14 页图 18，正文在文件第 31 页印刷第 29 栏。可在图中直接逐条辨认 `X1E–X3E、Y1E–Y3E、Z1E/Z2E` 和对应的 M 侧标签。两侧 Z 照向台体相对边，三路 X/Y 分别接相应侧镜。 [图 18 原页](https://patentimages.storage.googleapis.com/0d/af/b8/b6403797303521/US6020964.pdf#page=14) | 同文件第 5 页图 6，正文在文件第 24 页印刷第 16 栏。图中两侧为斜面 `R3/R4` 与上方固定反射面 `164/168`，另有侧镜直返参考束。正文将两 Z 测量轴记为 `MAX,7/MAX,8`，轴号也可与图 18 互查。 [图 6 原页](https://patentimages.storage.googleapis.com/0d/af/b8/b6403797303521/US6020964.pdf#page=5) |
 
-本机 Level 3《09-TT-L3-WSbook.pdf》文件第 58 页（印刷第 50 页）图 1.60、1.61 也画出 E 与 M 的测量光路。正文说明 X/Y 各三束，两个 Z 干涉仪各含一支折返测量束和一支直返参考束。这里的八轴是八个可用于解算的测量轴；按实体光路逐条追迹时，Z 的两支参考束还需各自计算。两份原图能交叉确认束组与测量功能。第三束高度、X/Y 侧选择、光程倍率和姿态转序按各自图纸和读数协议使用。 [ME2 光路与约定](WS-IFM-C3%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%A0%87%E5%AE%9A%E6%A0%B8%E5%AF%B9_v1.md#c3-convention)
+本机 Level 3《09-TT-L3-WSbook.pdf》文件第 58 页（印刷第 50 页）图 1.60、1.61 也画出 E 与 M 的测量光路。正文说明 X/Y 各三束，两个 Z 干涉仪各含一支折返测量束和一支直返参考束。这里的八轴是八个可用于解算的测量轴；按实体光路逐条追迹时，Z 的两支参考束还需各自计算。两份原图能交叉确认束组与测量功能。第三束高度、X/Y 侧选择、光程倍率和姿态转序按各自图纸和读数协议使用。 [ifm_corr 修正模型](ifm_corr.md)
 
 <a name="published-equations"></a>
 
@@ -40,7 +40,7 @@ X 侧偏航 = (I1 - I2) / d4
 X 侧 Ry  = ((I1 + I2)/2 - I3) / d3
 ```
 
-这是 C0 缺少的 `Ryx` 的可核对一阶原理。ME2 的 X3 有横向偏移，实际公式还要先消除相应的 Rz 串扰。该专利用三束均值给出 X，而 C0 的 `mx1` 是上两束均值。换用光程组合会改变平移参考点和 Abbe 几何。 [专利原式](https://patentimages.storage.googleapis.com/8e/53/50/5ca8d0ec153924/US6084673.pdf#page=26) · [ME2 的 Rx/Ryx 符号与高阶项](WS-IFM-C3%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%A0%87%E5%AE%9A%E6%A0%B8%E5%AF%B9_v1.md#rx-derivation)
+这是 C0 缺少的 `Ryx` 的可核对一阶原理。ME2 的 X3 有横向偏移，实际公式还要先消除相应的 Rz 串扰。该专利用三束均值给出 X，而 C0 的 `mx1` 是上两束均值。换用光程组合会改变平移参考点和 Abbe 几何。 [专利原式](https://patentimages.storage.googleapis.com/8e/53/50/5ca8d0ec153924/US6084673.pdf#page=26) · [ifm_corr 修正模型](ifm_corr.md)
 
 **原页中的 Y 组需要独立核对。** 第 27 栏正文说量测 Y、绕 X 倾斜和绕 Z 偏航，但印刷式把 Y 均值第三项写成 `I3`，把倾斜标成 `φ_y`，其分子写成 `I4 + I5 - I6`。用纯 Y 平移回代，三路 Y 读数同时增加 `t`，这一分子仍增加 `t`。因此该式按字面会把公共 Y 平移混入角度输出。按图 17 做几何差分，Y 的名义倾角应使用第三束与前两束平均值之间的差，再除以高度基线。最终正负号取决于束号与坐标方向。此处的几何判断来自共模平移检验，原件照原样保留。 [图 17](https://patentimages.storage.googleapis.com/8e/53/50/5ca8d0ec153924/US6084673.pdf#page=10) · [原件印刷公式](https://patentimages.storage.googleapis.com/8e/53/50/5ca8d0ec153924/US6084673.pdf#page=26)
 
@@ -60,13 +60,13 @@ X 侧 Ry  = ((I1 + I2)/2 - I3) / d3
 | 右端为何可以出现 `Ry` | 另一束组得到的姿态可以用于补偿。ASML 单 Z 式 (9)–(10) 已公开一个类似的逐步计算实例。 | C0 的原控制器如何给 Ryz 右端的 `Ry` 赋值，以及它和 Z 的耦合计算顺序。 |
 | 高阶补偿与实时性 | ASML 的 X/Y 专利讨论用两路偏航辨认镜面形状及通道相对延迟。Gao 等通过改变测量布局，把其六自由度反解化成不需迭代的形式。 | C0 全部高阶项、装调常数的原始定义以及实时周期。不同布局上的闭式可提供方法参考。 |
 
-本机 Level 2《TT-L2-ME-3v0.pdf》文件第 58 页（印刷第 52 页）给出两组冗余的 TRIM 测量。《12-TT-L3-L3-ME_book.pdf》文件第 32 页（印刷第 24 页）图 2.12 示意固定 Z 镜不平行造成 Ryz 随 X 变化，文件第 57 页（印刷第 49 页）明确点名 `srxa`。这些资料把公开的差分测角几何与本机 C0 的校准目的连起来。 [机器常数校准项目](WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v1.md#mc-wgim) · [C0 的 Ryz 原式](WS-IFM-C0-Ryz%E5%85%AC%E5%BC%8F%E9%80%90%E9%A1%B9%E8%A7%A3%E8%AF%BB_v1.md#ryz-terms)
+本机 Level 2《TT-L2-ME-3v0.pdf》文件第 58 页（印刷第 52 页）给出两组冗余的 TRIM 测量。《12-TT-L3-L3-ME_book.pdf》文件第 32 页（印刷第 24 页）图 2.12 示意固定 Z 镜不平行造成 Ryz 随 X 变化，文件第 57 页（印刷第 49 页）明确点名 `srxa`。这些资料把公开的差分测角几何与本机 C0 的校准目的连起来。 [机器常数校准项目](WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v1.md#mc-wgim) · [IFM 模型整理记录](../../changes/2026-11-21-ifm-model-consolidation_v1.md#retired-ifm)
 
 <a name="rotation-order"></a>
 
 ## 旋转矩阵顺序核对
 
-**本次核对的 ASML 专利与本机 Level 1–3 资料均未明确给出 WS-IFM 三个有限转角的矩阵乘法顺序。** `R = Rx(a) · Ry(b) · Rz(c)` 是 ME2 MATLAB v5/v6 和 C3 光程模型采用的约定。按右手系、主动旋转、列向量写法，固定轴依次作用为 Z → Y → X。专利中的坐标轴定义、测量分组和单角差分可与这套模型核对。 [C3 模型约定](WS-IFM-C3%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%A0%87%E5%AE%9A%E6%A0%B8%E5%AF%B9_v1.md#c3-convention) · [MATLAB 第 613 行的乘法](../code/sim_ws_ifm_6dof_animation_v6.m)
+**本次核对的 ASML 专利与本机 Level 1–3 资料均未明确给出 WS-IFM 三个有限转角的矩阵乘法顺序。** `R = Rx(a) · Ry(b) · Rz(c)` 是 ME2 MATLAB v5/v6 和 C3 光程模型采用的约定。按右手系、主动旋转、列向量写法，固定轴依次作用为 Z → Y → X。专利中的坐标轴定义、测量分组和单角差分可与这套模型核对。 [ifm_corr 修正模型](ifm_corr.md) · [IFM 模型整理记录](../../changes/2026-11-21-ifm-model-consolidation_v1.md#retired-ifm)
 
 | 核对来源 | 原页能确认的定义 |
 | --- | --- |
@@ -83,7 +83,7 @@ X 侧 Ry  = ((I1 + I2)/2 - I3) / d3
 | `Rx(a) · Ry(b) · Rz(c)` | `c + a*b` | `c` | `a + b*c` |
 | `Rx(a) · Rz(c) · Ry(b)` | `c + a*b` | `c` | `a` |
 
-C0 第 1 页中的 `Rzx` 有 `−Rx*Ry`，两种候选都能给出这一补偿。二者在 Y 组的 `Ry*Rz` 耦合上不同，而 C0 缺少独立的 Rx 逆解式。因此该交叉项与 ME2 的选择相容，还需要明确的坐标变换定义或带已知软件姿态的组合倾转数据来确认原机顺序。上表的三列已用符号展开交叉验算，结论限定为上述资料及当前模型的差分号。 [C0 两路偏航原式](WS-IFM%E6%A8%A1%E5%9E%8B_v1.md#xy-ifm-原式) · [C3 的角度二阶展开](WS-IFM-C3%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%A0%87%E5%AE%9A%E6%A0%B8%E5%AF%B9_v1.md#rx-derivation)
+C0 第 1 页中的 `Rzx` 有 `−Rx*Ry`，两种候选都能给出这一补偿。二者在 Y 组的 `Ry*Rz` 耦合上不同，而 C0 缺少独立的 Rx 逆解式。因此该交叉项与 ME2 的选择相容，还需要明确的坐标变换定义或带已知软件姿态的组合倾转数据来确认原机顺序。上表的三列已用符号展开交叉验算，结论限定为上述资料及当前模型的差分号。 [ifm_raw 的 XY 原式](ifm_raw.md#xy-ifm-原式) · [ifm_corr 修正模型](ifm_corr.md)
 
 <a name="source-pages"></a>
 
