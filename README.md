@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 在 WZIM 图 2.10 补画校正前后 Z1、Z2 经 45° 镜到固定 Zmirror 的光束。 | [XTZ 闭环光路](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-closed-loop-z-rays_v1.md) |
 | 2026-11-22 | 新增 WZIM 图 2.10，解释旧 IFM 闭环的 XTZ 偏差、固定 LS 标定和修正后的等高运动。 | [XTZ 闭环与补偿](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-closed-loop-correction_v1.md) |
 | 2026-11-22 | 新增 WZIM 图 2.9，在 X–Z 剖面展示 XTZ 高度变化与 Z-IFM 经 45° 镜到固定 Zmirror 的折返光路。 | [XTZ 光路剖面](outputs/reports/MEtrology.md#wzim-xtz-ifm-section) · [变更日志](changes/2026-11-22-wzim-xtz-ifm-xz-section_v1.md) |
 | 2026-11-22 | 修正 WZIM 图 2.8 的大地坐标，LS 固定在同一位置，WS 依次把 A、B 送到 M4 下。 | [图 2.8 固定光斑](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-fixed-ground-coordinate_v1.md) |
