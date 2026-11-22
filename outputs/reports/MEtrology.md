@@ -252,9 +252,9 @@ $$
 
 ##### 单路 IFM 回波最强采样点的定位与恢复
 
-![图 1.5，沿 Rx 扫描五个样点，同步记录 PSD 电压和单路 IFM 回波强度。用灵敏度矩阵给各样点定位，再按实测回波选出最强点并恢复其位姿。](../images/SWZS-PSD辅助IFM回波峰定位_v1.png)
+![图 1.5，自上而下为 WS 的 Rx 转角、六路 PSD 电压差和同一路 IFM 回波强度。三层按 A 到 E 的采样点对齐，D 点对应最高回波。](../images/SWZS-PSD辅助IFM回波峰定位_v2.png)
 
-**图 1.5　用 PSD 观测定位和找回 IFM 单路回波最强采样点。** 这是[图 1.3（5）](#swzs-psd-reference-recovery)的计算示例，使用[图 1.4](#swzs-gain-calibration-figure)说明的已标定矩阵 `G`。图中 C 是扫描基准，D 是示意中回波强度最高的采样点。
+**图 1.5　同一次 Rx 扫描中的 WS 转角、PSD 电压和 IFM 回波。** 自上而下依次展示 WS 的角位移、相对于 C 点的六路 PSD 电压差、同步观测的单路 IFM 回波强度。三层共用样点 A–E。C 是基准，D 在本组样点中回波最高，对应示意角位移 +1 µrad。这是[图 1.3（5）](#swzs-psd-reference-recovery)的计算示例，使用[图 1.4](#swzs-gain-calibration-figure)说明的已标定矩阵 `G`。
 
 **采样与定位见图 1.5（1）和（2）。** 同一卡盘、同一工位和参考位姿附近，以 C 点的已知位姿 `q0` 及六路 PSD 电压 `s0` 为基准。其余自由度保持不变时扫描 `Rx`，每个采样点同时记录当前六路电压 `s_k` 和同一路 IFM 的回波强度 `I_k`。若局部的 `G` 满秩，用六路电压差联立得到该点相对 C 的六轴位姿增量。强度图的横轴取这个增量的 `Rx` 分量。
 
@@ -274,7 +274,24 @@ $$
 
 需要再次找回 D 点时，把 D 对应的六路电压设为此示例的目标 `s_ref`。当前六路电压与这个目标作差，再按[式（1.4）](#swzs-eq-voltage-difference)和[式（1.5）](#swzs-eq-pose-difference)求偏差并反向修正。C 点电压用于定位扫描样点，D 点电压用于恢复目标姿态。
 
-图 1.5 用设定样点说明计算关系。Level 3 给出的正式流程先做 IFM 对准，再标定 PSD 增益、中心、偏置和参考位置。课件未公布多路 IFM 的联合寻峰规则，也未给出生产归零的控制细节。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张和 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
+<a name="swzs-ifm-peak-least-squares"></a>
+
+**这里是不是最小二乘？** 式（1.6a）是六路电压解六轴偏差的线性方程。当六乘六的 `G` 满秩时，直接联立可得到唯一解。把同一问题写成最小二乘时，解与方阵解相同，模型内的残差为零。
+
+像图 1.5 这样固定其余五轴时，六路电压只需估计一个未知的 `ΔRx`。取 `G` 的 `Rx` 列为 `g_Rx`，并对六路电压采用相同权重。最小化 $\lVert\Delta\mathbf{s}_k-\mathbf{g}_{R_x}\Delta R_{x,k}\rVert_2^2$，得到[式（1.7）](#swzs-eq-rx-least-squares)。带噪声时，它求的是对六路电压最吻合的单轴转角。
+
+<a name="swzs-eq-rx-least-squares"></a>
+
+$$
+\widehat{\Delta R}_{x,k}
+=\frac{\mathbf{g}_{R_x}^{\mathsf{T}}\Delta\mathbf{s}_k}
+       {\mathbf{g}_{R_x}^{\mathsf{T}}\mathbf{g}_{R_x}}
+\qquad (1.7)
+$$
+
+回波峰的选取仍按式（1.6b）比较实际观测强度。图 1.5 的 IFM 曲线连接示意采样点，选出的 D 是这些样点中的最大值。
+
+Level 3 给出的正式流程先做 IFM 对准，再标定 PSD 增益、中心、偏置和参考位置。课件未公布多路 IFM 的联合寻峰规则，也未给出生产归零的控制细节。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张和 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
 
 <a name="szws-source-figures"></a>
 <a name="swzs-source-figures"></a>

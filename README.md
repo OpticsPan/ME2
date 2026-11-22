@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 将 SWZS 图 1.5 改为对齐的 WS 转角、PSD 电压与 IFM 回波三层图，补充单轴最小二乘的说明。 | [图 1.5](outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-aligned-peak-signals_v1.md) |
 | 2026-11-22 | 新增 SWZS 图 1.5，单独解释如何用已标定的灵敏度矩阵与回波观测定位最强采样点并找回该位姿。 | [图 1.5](outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-ifm-peak-location-figure_v1.md) |
 | 2026-11-22 | 扩展 SWZS 图 1.3（5），说明六路 PSD 电压与增益矩阵如何恢复参考位姿，以及回波强度如何用于寻峰。 | [子图（5）的原理与示意](outputs/reports/MEtrology.md#swzs-psd-reference-recovery) · [变更日志](changes/2026-11-22-swzs-psd-reference-recovery_v1.md) |
 | 2026-11-22 | 合并 SWZS 的零传感器安装、回波光路与 PSD 电压读出图，同步更新图号与导航。 | [合并后的图 1.2](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-22-swzs-merge-optics-and-readout_v1.md) |
