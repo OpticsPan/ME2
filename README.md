@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 修正 WZIM 图 2.12（1），用 Y–Z 剖面区分长条镜安装倾角和 WS 的 Rx 叠加。 | [YTZ 长条镜倾斜](outputs/reports/MEtrology.md#wzim-ytz-single-m4) · [变更日志](changes/2026-11-23-wzim-ytz-strip-mounting-and-rx_v1.md) |
 | 2026-11-23 | 新增 WZIM 图 2.12，说明固定 Ry 时单 M4 怎样用两轮 Y 向测量求 YTZ，以及结果的适用条件。 | [YTZ 两轮取样](outputs/reports/MEtrology.md#wzim-ytz-single-m4) · [变更日志](changes/2026-11-23-wzim-ytz-single-m4-two-orientations_v1.md) |
 | 2026-11-23 | 新增 WZIM 图 2.11，展示两轮三光斑找平后用 IFM 的 Z、Ry 分别求台体初始倾斜、晶圆楔角与 XTZ。 | [三光斑找平与 Ry 均值](outputs/reports/MEtrology.md#wzim-three-spot-ifm-ry) · [变更日志](changes/2026-11-23-wzim-three-spot-ifm-ry-mean_v1.md) |
 | 2026-11-23 | 在 WZIM 图 2.10 的四幅取样剖面标记 WS 台体高度参考点。 | [WS 高度参考点](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-23-wzim-xtz-ws-height-reference-point_v1.md) |
