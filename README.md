@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 新增 WZIM 测量侧初始高度与倾角，整理网格定高、转片消楔、零点及线性修正常数。 | [WZIM 正文](outputs/reports/MEtrology.md#wzim) · [Level 1–3 汇整](outputs/reports/WZIM%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [变更日志](changes/2026-11-22-wzim-measure-side-calibration_v1.md) |
 | 2026-11-22 | 规定 MEtrology 先总流程后技术细节，按此重整 SWZS，并重新排版八条公式。 | [SWZS 正文](outputs/reports/MEtrology.md#swzs) · [正文公式](outputs/reports/MEtrology.md#swzs-eq-psd-position) · [变更日志](changes/2026-11-22-swzs-concise-report-and-equations_v1.md) |
 | 2026-11-22 | 核查 SWZS 步骤 04–08 的两次 PSD 中心定位、粗增益、信号检查与 OZP 计算。 | [逐步证据](outputs/reports/SWZS%E6%AD%A5%E9%AA%A404%E8%87%B308-PSD%E4%B8%AD%E5%BF%83%E5%AE%9A%E4%BD%8D%E6%A0%B8%E6%9F%A5_v1.md#step-evidence) · [校准流程](outputs/reports/MEtrology.md#swzs-how-find-psd-center) · [变更日志](changes/2026-11-22-swzs-center-steps-04-to-08_v1.md) |
 | 2026-11-22 | 核查 SWZS 第 12 步的 FZP 输入和 PSD 基座位姿输出，并在 MEtrology 中规定如何写清步骤动作与观测。 | [步骤 12 核查](outputs/reports/SWZS%E6%AD%A5%E9%AA%A412-PSD%E5%9F%BA%E5%BA%A7%E4%BD%8D%E5%A7%BF%E6%A0%B8%E6%9F%A5_v1.md#conclusion) · [步骤说明规范](outputs/reports/MEtrology.md#step-description) · [变更日志](changes/2026-11-22-swzs-step12-and-procedure-writing_v1.md) |

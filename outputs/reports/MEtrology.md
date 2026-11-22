@@ -51,6 +51,7 @@
 | 项目 | 定位 | 快速跳转 |
 | --- | --- | --- |
 | [1. SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [初始零位测量原理](#swzs-voltage-to-zero) · [资料汇整](SWZS资料汇整_v1.md) |
+| [2. WZIM — 测量侧初始高度与倾角](#wzim) | 用 LS 定初始高度和倾角，校正 Z-IFM 的线性行走倾斜 | [总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [资料汇整](WZIM资料汇整_v1.md) |
 
 <a name="szws"></a>
 <a name="swzs"></a>
@@ -84,7 +85,7 @@ SWZS 校准零传感器，使晶圆台装片或换台后能重复找回同一个
 
 #### 完成后可以开展的项目
 
-计量设定进入 BMAA 支路及 [WZIM](WS-IFM机器常数校准项目_v4.md#mc-wzim) → [WGIM／WS TRIM](WS-IFM机器常数校准项目_v4.md#mc-wgim) → CLPL 支路。SWZS 也是 SWCR 范围检查和 SWSM 短行程电机校准的前提之一。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14–15 页（印刷第 6–7 页），图 1.3；L3-《TT-MA-WS-Calibrations-3v1.ppt》第 79、144、211 张。[完整的上下游项目](SWZS资料汇整_v1.md#dependencies)
+计量设定进入 BMAA 支路及 [WZIM](#wzim) → [WGIM／WS TRIM](WS-IFM机器常数校准项目_v4.md#mc-wgim) → CLPL 支路。SWZS 也是 SWCR 范围检查和 SWSM 短行程电机校准的前提之一。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14–15 页（印刷第 6–7 页），图 1.3；L3-《TT-MA-WS-Calibrations-3v1.ppt》第 79、144、211 张。[完整的上下游项目](SWZS资料汇整_v1.md#dependencies)
 
 #### 机器常数及用途
 
@@ -289,3 +290,108 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 | L3-《09-TT-L3-WSbook.pdf》第 115 页（印刷第 107 页），**图 2.35** | FZP、MI:SZP、`u0/v0` 和 PSD 增益分别列项，可核对单位和报表字段。 | `assets/b4514b4ae5eb86cb/images/page_114_image_4_v1.jpg` |
 
 [返回项目目录](#calibration-index) · [WS-IFM 清单的初步归零条目](WS-IFM机器常数校准项目_v4.md#initial-zero)
+
+<a name="wzim"></a>
+
+## 2. WZIM — 测量侧初始高度与倾角
+
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+
+晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
+
+<a name="wzim-procedure-diagram"></a>
+
+![图 2.1，准备 IFM 与 LS，每卡盘装裸片，在测量侧逐个网格点用 M4 定高并读取 Z-IFM，原卡盘转片复测，更新零点和行走倾斜常数。](../images/WZIM-总流程_v1.png)
+
+**图 2.1　WZIM 总流程。** （01）[准备基准](#wzim-purpose)，（02）[网格定高和取样](#wzim-grid)，（03）[同卡盘转片消楔](#wzim-wedge)，（04）[确定常数与查看结果](#wzim-zero-refs)。图中四段按 L3-《12-TT-L3-L3-ME_book.pdf》文件第 23–29 页（印刷第 15–21 页）归纳。
+
+<a name="wzim-purpose"></a>
+
+### Purpose（目的）
+
+**为什么做。** 光学几何误差会使 WS 沿 X、Y 水平移动时出现随位置变化的 Z 读数，课件分别称为 XTZ、YTZ。WZIM 校正其中的线性项，并给两卡盘各自建立 LS 参考下的名义高度和绕 Y 倾角。它为后续 [WGIM／WS TRIM](WS-IFM机器常数校准项目_v4.md#mc-wgim) 提供合适的测量高度与倾角。完成 TRIM 后再做 CLPL 基准板高度与倾角标定。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14、23–28 页（印刷第 6、15–20 页）。
+
+**前置条件。** 已建立 WS 初步归零及 IFM 初始化倾角。确认设备洁净度和温度状态，初始化 LS 并检查测高重复性，确认两卡盘都能正常装载裸片。LS 完整线性化在后续进行，WZIM 用中心光斑 M4 的零输出作高度参考。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14、23、26–27 页，L1-《13_AP-L1-ME_rel_3.2.pdf》第 23–24 页。
+
+**表 2.1　WZIM 校准的机器常数**
+
+| 每卡盘的常数 | 从什么测量得到 | 用途 |
+| --- | --- | --- |
+| `Z0` | 用裸片建立高度零点，以名义厚度晶圆表面位于 M4 零高度定义参考。 | M 侧初始高度零偏，课件列名为 `z0_chuck1_measure_side`、`z0_chuck2_measure_side`。 |
+| `Ry0` | 以 LS 光斑 M0、M4、M8 的高度关系定名义倾角。 | 更新 M 侧初始化角，两卡盘以同一 LS 倾角为基准。 |
+| `szxa` | 两轮测得的 X 向 Z 斜率中，分离出对转片不变的部分。 | 修正 M 侧 Z 模型的线性 XTZ。 |
+| `szya` | 两轮测得的 Y 向 Z 斜率中，分离出对转片不变的部分。 | 修正线性 YTZ。同一卡盘的曝光侧（E）沿用 M 侧结果。 |
+
+曝光侧的 BMWZ 用两只透射像传感器（TIS）的高度建立参考，仅由这两点无法同时分离 X/Y 行走倾斜。WZIM 的 `szya` 按卡盘共用。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 27–29、63 页（印刷第 19–21、55 页），L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 8、10、15–17 张。[机器常数证据](WZIM资料汇整_v1.md#constants)
+
+<a name="wzim-procedure"></a>
+
+### How（操作流程）
+
+<a name="wzim-translation"></a>
+
+#### 原文操作译文
+
+译自 L3-《12-TT-L3-L3-ME_book.pdf》文件第 27–29 页（印刷第 19–21 页）的 Method、Z0 设置和测试界面。原文按段落说明，图 2.1 按动作归纳。
+
+> 台体沿 X 和 Y 移动时也会在 Z 方向移动，分别简称 XTZ 和 YTZ。校准通过调整干涉仪模型的参数去除这种不需要的 Z 运动。干涉仪归零时使用 Ry0 归零角，使镜块相对于计量框架处在名义姿态。此角度最初由晶圆台初始化倾角试验确定，其值在本测试中被覆盖。
+>
+> 每个卡盘用一片裸片。在每片晶圆的 XY 网格上，用 Z 干涉仪测量高度。每一点都先使晶圆处于 `LS_M4 = 0`，再记录 Z 干涉仪读数。两个卡盘都只在测量侧测量。
+>
+> 裸片只测一次时，可能存在的晶圆楔角会叠加到测得的 XTZ 和 YTZ。为避免楔角影响机器常数，两片晶圆绕 Z 旋转 180°，仍装回各自原来的卡盘，在测量侧重复测量。晶圆楔角转向后，测得的 XTZ 和 YTZ 会变化，因此可以从结果中去除楔角。更新测量侧每个卡盘的 Z 干涉仪模型。X 和 Y 干涉仪值分别乘以 `szx0` 和 `szy0`，得到线性 XTZ 和 YTZ 修正项。`szya` 与卡盘有关，与工位无关，测量侧确定的值也用于曝光侧。
+>
+> 对每个卡盘，测试用的晶圆也设定该卡盘的 Z 等于零的平面。结果暂存为 Z0 归零偏置。后续晶圆台基准板标定通过确定参考高度和光栅高度，精确定义这一平面。以卡盘 1 的测量侧为例，设定偏置，使 Z 干涉仪建立参考并读零时，名义厚度晶圆的表面恰在 `LS_M4 = 0` 高度。除 IFM 参数外，标定 `z0_chuck1_measure_side` 和 `z0_chuck2_measure_side`。本测试还重定 Ry0，使 LS 各光斑的高度偏置与卡盘无关。
+>
+> 原图 2.7 是测试输入界面的示例。界面显示卡盘、晶圆来源、测量网格的 X/Y 范围及点数等输入。
+
+**按总图操作。** 测每个卡盘时，先完成准备，再在 M 侧逐点把 M4 调到零并保存 Z-IFM 读数。将裸片转 180° 后装回原卡盘，用同一规则再采一轮。用两轮数据分离楔角，求 X/Y 线性修正，再按 LS 基准确定高度和倾角零点。资料给出测量方法，未列各参数的内部执行先后或通用验收阈值。
+
+**侧别核对。** L3 专节和 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 15 张正文都写两卡盘在 M 侧测量。该张讲义备注有“两侧”的不同表述，本章按专节流程和 BMWZ 的曝光侧分工整理。[版本差异](WZIM资料汇整_v1.md#source-differences)
+
+<a name="wzim-principle"></a>
+
+### Principle（校准原理）
+
+<a name="wzim-grid"></a>
+
+#### 步骤 02　用 M4 定高，用 Z-IFM 读数
+
+台体移到一个 XY 点后，调 Z，使晶圆表面到达 M4 的零高度，再记录 Z-IFM。换下一个 XY 点时，M4 的目标仍是同一零输出。若晶圆有楔角，换点会改变实际所需的 Z 调节。若镜块或框架 Z 镜有倾斜，Z-IFM 光程也会随 XY 变化。两种影响都进入网格读数，所以还需要转片复测。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–27 页（印刷第 16–19 页），L2-《TT-L2-ME-3v0.pdf》文件第 36 页（印刷第 30 页），图 1.39。
+
+![图 2.2，L3 原图 2.5 显示校准前后与 LS 平面的关系，右侧示意选取 XY 网格点后先令 M4 零输出再记录 Z-IFM。](../images/WZIM-网格定高取样_v1.png)
+
+**图 2.2　从一个 XY 点取得 Z 观测。** 对应[总图步骤 02](#wzim-procedure-diagram)。（1）为 L3-《12-TT-L3-L3-ME_book.pdf》文件第 27 页（印刷第 19 页）原图 2.5，虚线是 LS 平面。（2）和（3）示意定点、定高、读数。
+
+<a name="wzim-wedge"></a>
+
+#### 步骤 03　转片后分离晶圆楔角
+
+楔角是晶圆厚度沿面内方向的整体变化。把裸片绕 Z 转 180°，它在固定 XY 坐标中的坡度反向，原卡盘及计量系统的贡献保持。两轮分别从网格读数取 X/Y 方向的一阶斜率。平均保留固定斜率，半差给出晶圆楔角对读数的贡献。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 27 页（印刷第 19 页）。
+
+![图 2.3，同一卡盘转片 180° 前后的晶圆楔角方向与两轮 Z-IFM 读数斜率示意。](../images/WZIM-转片消楔_v1.png)
+
+**图 2.3　两轮测量怎样分离楔角。** 对应[总图步骤 03](#wzim-procedure-diagram)。曲线取 X 方向作示例，Y 方向同理。
+
+两轮的斜率向量分别记为 `s₀°` 和 `s₁₈₀°`，各含 X、Y 两个分量。式（2.1）给出固定斜率 `b` 和楔角贡献 `w`。式（2.2）是更新后的 Z 模型写法，`Z_other` 代表其余项。前者用于理解消楔，后者采用 L3 第 8 张的 `szxa/szya` 命名。实机拟合细节及斜率到写入常数的符号约定未在课件中给出。[公式与证据边界](WZIM资料汇整_v1.md#source-differences)
+
+<a name="wzim-equations"></a>
+
+![式（2.1）固定斜率是两轮斜率的平均，晶圆楔角贡献是半差。式（2.2）Z 等于其他项，加 szxa 乘 X 干涉仪读数，再加 szya 乘 Y 干涉仪读数。](../images/WZIM-equations_v1.png)
+
+<a name="wzim-zero-refs"></a>
+
+#### 步骤 04　建立高度与倾角零点，并核对线性修正
+
+**高度零点 `Z0`。** 用 M4 零高度定义名义晶圆表面的位置，据此设定每卡盘的 Z-IFM 起读偏置。**倾角零点 `Ry0`。** 用三点的相对高度确定晶圆面在 X 方向的倾角，以共同的 LS 倾角基准更新每卡盘的 M 侧初始化角。网格斜率用于 `szxa/szya`，三光斑的高度关系用于 `Ry0`。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 28–29、34 页（印刷第 20–21、26 页），L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张。
+
+![图 2.4，左侧示意 M4 零高度与名义厚度晶圆表面的关系，右侧示意用三光斑设定共同的 LS 倾角基准。](../images/WZIM-高度与倾角零点_v1.png)
+
+**图 2.4　Z0 和 Ry0 的参考量。** 对应[总图步骤 04](#wzim-procedure-diagram)。（1）用 M4 定初始高度，（2）用 M0、M4、M8 建立倾角基准。三点算法及取样细节在课件中未列出。
+
+<a name="wzim-results"></a>
+
+![图 2.5，L3 原图对照校准前后的高度图。左侧线性倾斜明显，右侧残存曲率，两侧 Z 标度不同。](../images/WZIM-校准前后原图对比_v1.png)
+
+**图 2.5　线性校正前后的高度图。** 对应[总图步骤 04](#wzim-procedure-diagram)。原图为 L3-《12-TT-L3-L3-ME_book.pdf》文件第 28 页（印刷第 20 页）图 2.6。两图 Z 标度不同，校正后线性斜率减小，图中仍有弯曲，后续结合 TRIM 和 Z 残差标定处理。生产中的单次归零还会有小的 Z/Ry 复现误差，由 Stage Align 用基准板参考高度测出。见同书文件第 29、33–35 页（印刷第 21、25–27 页）。
+
+[回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
