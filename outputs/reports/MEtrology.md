@@ -1,6 +1,6 @@
 # MEtrology 校准项目报告
 
-[项目目录](#calibration-index) · [本报告的整理范式](#report-format) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
+[项目目录](#calibration-index) · [本报告的整理范式](#report-format) · [步骤说明怎么写](#step-description) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
 
 <a name="report-format"></a>
 
@@ -11,6 +11,14 @@
 1. **Purpose（目的）**。说明项目要解决什么问题、为什么要做、执行前需满足哪些条件，以及完成后可以开展哪些校准项目。列出本项目涉及校准的机器常数及其用途。
 2. **How（操作流程）**。先按源文完整翻译具体操作流程，保留原有步骤顺序、操作条件和原文列出的注意事项及判据，并注明来源及页码。译文之后，根据对流程的理解绘制带编号的示意图，解释各步骤如何衔接。
 3. **Principle（校准原理）**。具体说明测量基准和物理原理，解释校准如何由观测量得到机器常数。资料中有相关物理原图时，将原图附在本节正文并注明来源层级、原文件名、页码和图号。
+
+<a name="step-description"></a>
+
+### 步骤说明
+
+- 在原文译文之后，用短句说明每一步从什么状态或输入开始、操作什么、读取或检查什么，以及得到什么结果。资料给出判据时，写清怎样判断完成。结果有明确的后续用途时，指出交给哪一步。
+- 优先写清动作和信号怎样衔接。公式仅在有助于理解量之间的关系时补充，详细推导可链接到原理或资料汇整。
+- 资料只给输入和输出时，按已确认的信息写。为解释原理而补充的操作或算法标为工程示意，并注明实机细节待查。
 
 ### 章节、图表与公式编号
 
@@ -43,7 +51,7 @@
 
 ## 1. SWZS — WS 初步归零
 
-[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [IF Align 三轴姿态与八路回波](#swzs-if-align) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
+[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [IF Align 三轴姿态与八路回波](#swzs-if-align) · [步骤 12 的 PSD 位姿](#swzs-step12) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
 
 <a name="szws-constants"></a>
 <a name="swzs-constants"></a>
@@ -181,7 +189,7 @@ L3-《TT-MA-WS-Calibrations-3v1.ppt》第 100–101 张给出相同条件。课�
 ##### 图 1.1（4）把标定结果用于快归零和 IFM 接管
 
 - **原文第 11 步，求 `FZP`。** 用中间工作位姿 `OZP` 和零传感器偏置求出快归零位置，供初始化时的快归零捕获使用。
-- **原文第 12 步，计算零传感器位置。** 以 `FZP` 为输入，求出各只 PSD 在基座坐标系中的标定位置。报告按卡盘、工位及 PSD 编号记录这些结果。
+- <a name="swzs-step12"></a>**原文第 12 步，计算零传感器位置。** 软件用第 11 步算出的 `FZP`，计算三只 PSD 在基座坐标系里的位置和姿态。报表按卡盘、工位和 PSD 编号列六轴结果，可同时查看找到传感器、光强和电子学的检查标志。零传感器固定在计量框架上，位姿结果以基座坐标表示。L3 列出了 `FZP` 这一输入，未说明第 12 步的取样运动、所用轨迹和解算方法。见 L3-《09-TT-L3-WSbook.pdf》文件第 62–63、112、114 页（印刷第 54–55、104、106 页）。[Level 1–3 步骤 12 核查](SWZS步骤12-PSD基座位姿核查_v1.md#source-evidence)
 - **原文第 13 步，求 `MI:SZP`。** 为实际找回的归零参考位姿确定 IFM 使用的 `X/Y/Z/Rx/Ry/Rz` 机器坐标。生产归零时，PSD 帮助台体找回参考，IFM 接管时载入 `MI:SZP`，再从这组坐标继续测量位姿变化。示例里的坐标可为非零，见[图 1.3（6）](#swzs-voltage-to-zero)。
 
 `FZP` 回答“快归零先到哪里”，`MI:SZP` 回答“到达参考后，IFM 从哪组坐标开始读数”。两者在示例报告中各有独立的六轴字段。Level 3 只给出这些量的计算依赖，具体的偏置符号和坐标变换未在课件中给出。见 L3-《09-TT-L3-WSbook.pdf》文件第 111–115 页（印刷第 103–107 页，图 2.34–2.35）及 L2-《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页，图 1.4–1.5）。

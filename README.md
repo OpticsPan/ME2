@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 核查 SWZS 第 12 步的 FZP 输入和 PSD 基座位姿输出，并在 MEtrology 中规定如何写清步骤动作与观测。 | [步骤 12 核查](outputs/reports/SWZS%E6%AD%A5%E9%AA%A412-PSD%E5%9F%BA%E5%BA%A7%E4%BD%8D%E5%A7%BF%E6%A0%B8%E6%9F%A5_v1.md#conclusion) · [步骤说明规范](outputs/reports/MEtrology.md#step-description) · [变更日志](changes/2026-11-22-swzs-step12-and-procedure-writing_v1.md) |
 | 2026-11-22 | 将 IF Align 三轴姿态选点图纳入 MEtrology 作为图 1.5，补明 X1 下限与八路归一化，撤下两张旧图。 | [图 1.5](outputs/reports/MEtrology.md#swzs-if-align) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-if-align-report-integration_v1.md) |
 | 2026-11-22 | 更新 IF Align 草图，补充 X1 回波随 Rx 的曲线，并比较按回波余量和按最近姿态选点。 | [IF Align 草图 v2](outputs/images/IF-Align%E4%B8%89%E8%BD%B4%E5%A7%BF%E6%80%81%E9%80%89%E7%82%B9%E8%8D%89%E5%9B%BE_v2.png) · [变更日志](changes/2026-11-22-swzs-if-align-echo-and-nearest-pose_v1.md) |
 | 2026-11-22 | 归档 SWZS 步骤 01 的 IF Align 草图，示意三轴候选姿态与八路回波选点。 | [IF Align 草图](outputs/images/IF-Align%E4%B8%89%E8%BD%B4%E5%A7%BF%E6%80%81%E9%80%89%E7%82%B9%E8%8D%89%E5%9B%BE_v1.png) · [变更日志](changes/2026-11-22-swzs-if-align-pose-selection-preview_v1.md) |
