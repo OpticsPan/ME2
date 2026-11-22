@@ -24,7 +24,7 @@
 ### 图件布局
 
 - **总流程图**。紧凑布局要求仅适用于[图 1.1](#swzs-procedure-diagram)这类展示项目完整流程的总览图。按各阶段的内容分配版面，收紧边距和模块间距，减少无用途的留白，同时保持步骤编号和文字清晰。
-- **原理图与分析图**。沿用[图 1.2–1.6](#swzs-figure-168)的风格，按光路、公式、坐标轴及标注的阅读需要安排空间。
+- **原理图与分析图**。沿用[图 1.2–1.5](#swzs-figure-168)的风格，按光路、公式、坐标轴及标注的阅读需要安排空间。
 
 ### 来源标注
 
@@ -43,7 +43,7 @@
 
 ## 1. SWZS — WS 初步归零
 
-[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [回波峰定位图](#swzs-ifm-peak-location) · [多路 IFM 工作区间](#swzs-ifm-common-working-window) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
+[Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [灵敏度矩阵标定图](#swzs-gain-calibration-figure) · [怎样用 PSD 找回参考位姿](#swzs-psd-reference-recovery) · [IF Align 三轴姿态与八路回波](#swzs-if-align) · [Level 1–3 资料汇整](SWZS资料汇整_v1.md)
 
 <a name="szws-constants"></a>
 <a name="swzs-constants"></a>
@@ -63,7 +63,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页（印刷第 103 页）列五项条
 1. 已完成基座（BF）校准。
 2. 空气支承（AM）已开启并处于稳定状态。
 3. 已完成卡盘交换校准 SWSW。
-4. 已完成干涉仪调整与诊断试验 SWHP。多路信号不满足条件时的诊断关系见[图 1.6](#swzs-ifm-common-working-window)。
+4. 已完成干涉仪调整与诊断试验 SWHP。多路回波不足时的处理见 [IF Align 信号诊断](#swzs-if-align-diagnostics)。
 5. 已完成差分传感器校准 SWDC。
 
 L3-《TT-MA-WS-Calibrations-3v1.ppt》第 100–101 张给出相同条件。课件列无需额外工具，预计 30 分钟。
@@ -148,21 +148,21 @@ L3-《TT-MA-WS-Calibrations-3v1.ppt》第 100–101 张给出相同条件。课�
 
 #### 流程图与报告核对
 
-![图 1.1，逐条解释 SWZS 的 13 个软件步骤，在右侧示意回波质量、PSD 光斑、位姿与电压采样、复测和两个归零常数的作用。](../images/SWZS归零校准流程_v6.png)
+![图 1.1，逐条解释 SWZS 的 13 个软件步骤，在右侧示意回波质量、PSD 光斑、位姿与电压采样、复测和两个归零常数的作用。](../images/SWZS归零校准流程_v7.png)
 
-**图 1.1　SWZS 的 13 个软件步骤及生产使用。** 图中步骤 01–13 与[原文译文](#swzs-how-translation)逐条对应。阶段（1）[建立 IFM 测量基准](#swzs-how-establish-ifm)，阶段（2）[找中心并标定粗增益](#swzs-how-find-psd-center)，阶段（3）[确定 OZP、复测增益并标定偏置](#swzs-how-ozp-and-gain)，阶段（4）[计算快归零和 IFM 接管常数](#swzs-how-fzp-and-szp)。阶段（5）展示装片或换台后[怎样用这些结果归零](#swzs-psd-reference-recovery)。可按步骤跳转到 [图 1.2 的 PSD 读出](#swzs-figure-168)、[图 1.3 的归零测量链](#swzs-voltage-to-zero)、[图 1.4 的增益标定](#swzs-gain-calibration-figure)、[图 1.5 的单路回波示例](#swzs-ifm-peak-location)及[图 1.6 的多路回波条件](#swzs-ifm-common-working-window)。流程顺序见 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
+**图 1.1　SWZS 的 13 个软件步骤及生产使用。** 图中步骤 01–13 与[原文译文](#swzs-how-translation)逐条对应。阶段（1）[建立 IFM 测量基准](#swzs-how-establish-ifm)，阶段（2）[找中心并标定粗增益](#swzs-how-find-psd-center)，阶段（3）[确定 OZP、复测增益并标定偏置](#swzs-how-ozp-and-gain)，阶段（4）[计算快归零和 IFM 接管常数](#swzs-how-fzp-and-szp)。阶段（5）展示装片或换台后[怎样用这些结果归零](#swzs-psd-reference-recovery)。可按步骤跳转到 [图 1.2 的 PSD 读出](#swzs-figure-168)、[图 1.3 的归零测量链](#swzs-voltage-to-zero)、[图 1.4 的增益标定](#swzs-gain-calibration-figure)、[图 1.5 的 IF Align 三轴姿态选点](#swzs-if-align)。流程顺序见 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
 
 <a name="swzs-how-establish-ifm"></a>
 
 ##### 图 1.1（1）先建立 IFM 六轴测量基准
 
-第 1 步做 `IF Align`。转动 WS 看回波的原理来自初始化倾角试验，[图 1.6](#swzs-ifm-common-working-window)示意所需通道怎样获得共同的可用信号。软件单独运行 `IFM-align` 时只做检查。第 2 步载入默认参数，第 3 步初始化到短行程由 IFM 提供六轴反馈。完成后，IFM 的相位变化可用来测出下一阶段标定所需的实际位姿变化。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张及 L3-《09-TT-L3-WSbook.pdf》文件第 112–113 页（印刷第 104–105 页）。[回波与相位测位](#swzs-ifm-signal)
+第 1 步做 `IF Align`。转动 WS 看回波的原理来自初始化倾角试验。[图 1.5](#swzs-if-align)示意如何比较不同三轴姿态下的八路回波，筛出所需通道同时可用的姿态。软件单独运行 `IFM-align` 时只做检查。第 2 步载入默认参数，第 3 步初始化到短行程由 IFM 提供六轴反馈。完成后，IFM 的相位变化可用来测出下一阶段标定所需的实际位姿变化。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张及 L3-《09-TT-L3-WSbook.pdf》文件第 112–113 页（印刷第 104–105 页）。[回波与相位测位](#swzs-ifm-signal)
 
 <a name="swzs-how-find-psd-center"></a>
 
 ##### 图 1.1（2）找 PSD 中心并标定粗增益
 
-第 4 步初找中心，可以理解为在 IFM 跟踪台体的同时观察[PSD 光斑对应的电压](#swzs-psd-readout)，找到用于粗标定的工作区域。第 5 步把 IFM 实测的位姿变化与六路电压变化配对，求第一版 `G`。第 6 步利用粗 `G` 再找一次中心，把新的中心结果交给第 8 步。第 7 步核对 PSD 光强与读出、HP 和差分传感器的量程以及零传感器的光束位置。Level 3 给出了两次找中心的顺序，找中心的轨迹和判据未在该页详述。见 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。[图 1.4 同步采样并求 G](#swzs-gain-calibration-figure) · [图 1.5 对齐运动和观测信号](#swzs-ifm-peak-location)
+第 4 步初找中心，可以理解为在 IFM 跟踪台体的同时观察[PSD 光斑对应的电压](#swzs-psd-readout)，找到用于粗标定的工作区域。第 5 步把 IFM 实测的位姿变化与六路电压变化配对，求第一版 `G`。第 6 步利用粗 `G` 再找一次中心，把新的中心结果交给第 8 步。第 7 步核对 PSD 光强与读出、HP 和差分传感器的量程以及零传感器的光束位置。Level 3 给出了两次找中心的顺序，找中心的轨迹和判据未在该页详述。见 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。[图 1.4 同步采样并求 G](#swzs-gain-calibration-figure)
 
 <a name="swzs-how-ozp-and-gain"></a>
 
@@ -256,7 +256,7 @@ $$
 
 图 1.3（1）的寻峰曲线截自 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张。图 1.3（6）的机器坐标示例取自 L2-《TT-L2-ME-3v0.pdf》文件第 11 页（印刷第 5 页），图 1.5。
 
-**（1）IFM 回波强度和相位各有用途，见图 1.3（1）与（2）。** 扫描 `Rx/Ry/Rz` 并记录 IFM 的回波强度，从峰附近选取初始化倾角 `Rx0/Ry0/Rz0`。以图 1.3（1）的 Rx 曲线为例，峰的横坐标给出对应的 Rx 姿态。参与测量的通道需要有效的回波，各通道峰位可能不同。课件未给出多通道联合寻峰和通过门限。建立有效回波后，IFM 跟踪测量信号相对参考的相位变化，从各路光程增量解算台体实际六轴位姿增量 `Δq = [ΔX, ΔY, ΔZ, ΔRx, ΔRy, ΔRz]`。出处为L3-《12-TT-L3-L3-ME_book.pdf》文件第 26–29 页（印刷第 18–21 页）、L3-《09-TT-L3-WSbook.pdf》文件第 60–61 页（印刷第 52–53 页），图 1.66。
+**（1）IFM 回波强度和相位各有用途，见图 1.3（1）与（2）。** 扫描 `Rx/Ry/Rz` 并记录 IFM 的回波强度，从峰附近选取初始化倾角 `Rx0/Ry0/Rz0`。以图 1.3（1）的 Rx 曲线为例，峰的横坐标给出对应的 Rx 姿态。各通道的回波峰位可能不同。[图 1.5](#swzs-if-align)用八路回波说明怎样在同一姿态核对信号条件。建立有效回波后，IFM 跟踪测量信号相对参考的相位变化，从各路光程增量解算台体实际六轴位姿增量 `Δq = [ΔX, ΔY, ΔZ, ΔRx, ΔRy, ΔRz]`。出处为L3-《12-TT-L3-L3-ME_book.pdf》文件第 26–29 页（印刷第 18–21 页）、L3-《09-TT-L3-WSbook.pdf》文件第 60–61 页（印刷第 52–53 页），图 1.66。
 
 **（2）用同一次运动的 IFM 位姿和 PSD 电压求增益矩阵，见图 1.3（3）与（4）。** 以 IFM 测得的运动为基准，同步记录三只 PSD 的六路电压。参考位置附近，单独改变 X 时，第 `j` 路电压变化对实测 X 位移的斜率是 `G` 的 X 列中的一项，见[式（1.2）](#swzs-eq-gain-element)。
 
@@ -306,90 +306,39 @@ $$
 
 这里的偏差是**当前位姿减去参考位姿**。若算出的 `ΔRx` 大于零，就应向负 Rx 方向修正。图 1.3（5）只画 Rx 这一分量，实际含义是将六路电压差一起代入，得到六轴偏差。靠近参考位姿时，电压差与位姿偏差一起趋近于零。找回参考后，IFM 加载 `MI:SZP` 继续测位，所加载的机器坐标可以为非零值。出处为 L1-《09_AP-L1-Production_Metrology_in-line.pdf》第 13、24 页及 L2-《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页）。
 
-<a name="swzs-ifm-peak-location"></a>
+<a name="swzs-if-align"></a>
 
-##### 单路 IFM 回波最强采样点的定位与恢复
+#### IF Align 三轴姿态采样与八路回波选点
 
-![图 1.5，自上而下为 WS 的 Rx 转角、六路 PSD 电压差和同一路 IFM 回波强度。三层按 A 到 E 的采样点对齐，D 点对应最高回波。](../images/SWZS-PSD辅助IFM回波峰定位_v3.png)
+![图 1.5，左上展示镜面转动如何改变回光，右上展示每组三轴姿态对应的八路回波。下方用 X1 随 Rx 的曲线说明表格读数，再比较回波余量最大和离参考姿态最近两种选点判据。](../images/IF-Align三轴姿态选点_v3.png)
 
-**图 1.5　同一次 Rx 扫描中的 WS 转角、PSD 电压和 IFM 回波。**
+**图 1.5　IF Align 三轴姿态采样与八路回波选点。** 对应[图 1.1 的步骤 01](#swzs-how-establish-ifm)，说明回波如何随姿态变化，以及怎样用同一姿态下的八路回波筛选工作姿态。
 
-**对应图 1.1 的[步骤 01](#swzs-how-establish-ifm)、步骤 [05](#swzs-how-find-psd-center) 和 [09](#swzs-how-ozp-and-gain)的同步观测，以及[生产归零阶段](#swzs-procedure-diagram)的位姿恢复原理。** 步骤 01 对应单路回波随转角变化的观察。对齐 WS 运动和 PSD 电压采样，可对照步骤 05、09 的观测关系。图中的反算使用[已标定的矩阵 `G`](#swzs-gain-calibration-figure)，以单路最强样点 D 为示例目标，演示[图 1.3（5）如何从电压找回姿态](#swzs-psd-reference-recovery)。实机归零参考由 SWZS 的中心、偏置和位置标定确定。
+- **（1）改变镜面角度。** 以一路平面镜光路为例，镜面倾斜会改变回光方向，进而改变接收信号强度。
+- **（2）按候选姿态记录信号。** 每个候选点是一组 `Rx、Ry、Rz`，记录该姿态下的八路回波。
+- **（3a）把曲线上的读数对应到表格。** 固定 `Ry、Rz` 为 C 姿态的值，沿 `Rx` 画 X1 的回波曲线。归一化纵轴的 **1.00 虚线**表示 X1 的最低可用回波强度。C 点 **1.42** 表示 X1 回波高于本路下限 **42%**，对应（3b）的 **C 行、X1 列**。
+- **（3b）逐路采用各自的下限。** 表格每一行对应一个 WS 姿态。八路回波分别除以该路的最低可用回波强度，各列都以 1.00 表示刚好达标。
 
-三层共用样点 A–E。C 是计算电压差的基准，D 在这组示意样点中回波最高，对应角位移 +1 µrad。
+<a name="swzs-if-align-selection"></a>
 
-**采样与定位见图 1.5（1）和（2）。** 同一卡盘、同一工位和参考位姿附近，以 C 点的已知位姿 `q0` 及六路 PSD 电压 `s0` 为基准。其余自由度保持不变时扫描 `Rx`，每个采样点同时记录当前六路电压 `s_k` 和同一路 IFM 的回波强度 `I_k`。若局部的 `G` 满秩，用六路电压差联立得到该点相对 C 的六轴位姿增量。强度图的横轴取这个增量的 `Rx` 分量。
-
-$$
-\Delta\mathbf{q}_k \simeq \mathbf{G}^{-1}(\mathbf{s}_k-\mathbf{s}_0) \qquad (1.6a)
-$$
-
-**选点见图 1.5（3），图下方的式（1.7）给出单轴位姿估计。** 对比同一路 IFM 的实测强度，选出这组采样中的最高点。用该点的位姿增量加上基准位姿，得到它的六轴位姿估计。
+**（3c）先筛信号，再按目标选点。** 在这个八路示例中，候选姿态 $\theta$ 的最弱通道比值为 $m(\theta)$。当 $m(\theta)\geq1$ 时，八路都达到各自的示意下限。
 
 $$
-k_\star = \operatorname*{arg\,max}_{k} I_k \qquad (1.6b)
+m(\theta)=\min_{i=1,\ldots,8}\left(\frac{I_i(\theta)}{I_{i,\min}}\right)\qquad (1.6)
 $$
 
-$$
-\mathbf{q}_\star \simeq \mathbf{q}_0+\Delta\mathbf{q}_{k_\star} \qquad (1.6c)
-$$
-
-需要再次找回 D 点时，把 D 对应的六路电压设为此示例的目标 `s_ref`。当前六路电压与这个目标作差，再按[式（1.4）](#swzs-eq-voltage-difference)和[式（1.5）](#swzs-eq-pose-difference)求偏差并反向修正。C 点电压用于定位扫描样点，D 点电压用于恢复目标姿态。
-
-<a name="swzs-ifm-peak-least-squares"></a>
-
-**这里是不是最小二乘？** 式（1.6a）是六路电压解六轴偏差的线性方程。当六乘六的 `G` 满秩时，直接联立可得到唯一解。把同一问题写成最小二乘时，解与方阵解相同，模型内的残差为零。
-
-像图 1.5 这样固定其余五轴时，六路电压只需估计一个未知的 `ΔRx`。取 `G` 的 `Rx` 列为 `g_Rx`，并对六路电压采用相同权重。最小化 $\lVert\Delta\mathbf{s}_k-\mathbf{g}_{R_x}\Delta R_{x,k}\rVert_2^2$，得到[式（1.7）](#swzs-eq-rx-least-squares)。带噪声时，它求的是对六路电压最吻合的单轴转角。
-
-<a name="swzs-eq-rx-least-squares"></a>
+- **按回波余量选。** 在达标姿态中取 $m(\theta)$ 最大的点。示例 C 的最弱通道比值为 1.18，高于 B 的 1.04。
+- **按离参考姿态的距离选。** 先指定一组参考角，再在达标姿态中取 $d(\theta)$ 最小的点。式中三个角度差分别为候选角减参考角。图中的参考角取示意值，B 离它最近，角度距离为 0.25 µrad。
 
 $$
-\widehat{\Delta R}_{x,k}
-=\frac{\mathbf{g}_{R_x}^{\mathsf{T}}\Delta\mathbf{s}_k}
-       {\mathbf{g}_{R_x}^{\mathsf{T}}\mathbf{g}_{R_x}}
-\qquad (1.7)
+d(\theta)=\sqrt{(\Delta R_x)^2+(\Delta R_y)^2+(\Delta R_z)^2}\qquad (1.7)
 $$
 
-回波峰的选取仍按式（1.6b）比较实际观测强度。图 1.5 的 IFM 曲线连接示意采样点，选出的 D 是这些样点中的最大值。多路峰位分开时，可对照[图 1.6](#swzs-ifm-common-working-window)理解共同工作区间。
+L3 课件记载了转动、倾斜 WS 并记录 IFM 信号质量，以及把合适的 `Rx0、Ry0、Rz0` 存为机器常数。图 1.5 的候选点、回波、门限、参考角和联合选点规则均为工程示意。资料出处为 L3-《12-TT-L3-L3-ME_book.pdf》文件第 26 页（印刷第 18 页）、L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张。八路通道标记参考 L3-《09-TT-L3-WSbook.pdf》文件第 57–58 页（印刷第 49–50 页），图 1.60–1.61。
 
-Level 3 给出的正式流程先做 IFM 对准，再标定 PSD 增益、中心、偏置和参考位置。课件未公布多路 IFM 的联合寻峰规则，也未给出生产归零的控制细节。见 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9 张和 L3-《09-TT-L3-WSbook.pdf》文件第 112 页（印刷第 104 页）。
+<a name="swzs-if-align-diagnostics"></a>
 
-<a name="swzs-ifm-common-working-window"></a>
-
-##### 多路 IFM 峰位不重合时的工作姿态与诊断
-
-**工程示意。** 图 1.6 按同一卡盘、同一工位的一维 `Rx` 截面画出八条设定曲线，其他自由度固定。通道标记参考晶圆台 IFM 布置。所需反馈通道、有效量程和信号门限按实际机型及工位确定。L3-《09-TT-L3-WSbook.pdf》文件第 57–58 页（印刷第 49–50 页，图 1.60–1.61）给出 IFM 布置。
-
-![图 1.6，左侧八路峰位不同但有效区间有交集，示意在区间内部选候选姿态；右侧两条限制通道的区间分离，示意核对允许姿态范围后回查 SWHP；下方列课件明确的实机流程。](../images/SWZS-IFM多通道共同有效区间_v2.png)
-
-**图 1.6　八路 IFM 峰位不重合时的共同有效区间。**
-
-**对应[图 1.1（1）](#swzs-how-establish-ifm)的步骤 01 和 03，并关联[前置项目 SWHP](#swzs-prerequisites)。** 步骤 01 涉及回波对准。用示意的共同有效区间，理解为什么步骤 03 启用六轴 IFM 反馈前，所需通道须同时提供可用信号。如果核对允许姿态和量程后仍无法取得共同可用信号，回查 SWHP 的诊断与维护。
-
-上方曲线纵轴是回波强度除以各路的示意下限，圆点标出各路峰顶。下方色条与上方使用同一转角尺度，色条两端对应各路曲线穿过下限的位置。（1）青色带是八条有效区间的交集，虚线是取该区间中点的示意工作姿态。（2）X1 的有效区间已经结束，Z2 的有效区间仍未开始，橙色带标出两者之间的间隔。（3）蓝色栏列出 Level 3 明确的步骤。图中的曲线、下限和中点选法均为工程示意。
-
-令 `r` 为图中的扫描转角，$\mathcal R$ 为所核对的转角范围，$\mathcal A$ 为所需通道集合。图 1.6 只示意各路有强度下限时的判定。把每路达到本路下限的区间求交，得到[式（1.8）](#swzs-eq-common-ifm-window)的共同区间。实际验收还应核对机型规定的全部信号、量程和反馈条件。
-
-<a name="swzs-eq-common-ifm-window"></a>
-
-$$
-\mathcal W =
-\bigcap_{i\in\mathcal A}
-\left\{r\in\mathcal R:\ I_i(r)\ge I_{i,\min}\right\}
-\qquad (1.8)
-$$
-
-- **有共同区间时。** 可以在交集内部选候选姿态，尽量给限制通道留出余量，并验证所需通道能同时提供有效信号以及 IFM 六轴反馈可用。这个候选是光学工作姿态。生产用六轴归零参考仍按 [SWZS 的 PSD 标定流程](#swzs-how-translation)建立。
-- **本截面无共同区间时。** 先确认测试是否覆盖允许的 `Rx/Ry/Rz` 和有效量程。若按机型要求检查后，所需通道仍没有共同可用姿态，则回查 [SWHP 前置诊断](#swzs-prerequisites)及相应维护程序，按故障定位决定调整项目，复查 IFM 条件后再继续归零标定。
-- **与最小二乘的关系。** [图 1.5 的最小二乘](#swzs-ifm-peak-least-squares)用 PSD 电压估计位姿。也可以用最小二乘拟合单路回波曲线来估计峰顶。对多路回波选择一个共同工作姿态还需定义通过条件或综合目标。Level 1–3 未给出实机这一环的通道优先级、权重、门限或联合选点公式。
-
-**Level 1–3 明确的实机流程。**
-
-- **L1 生产中使用六轴粗参考。** 两个工位均由零传感器为 IFM 提供 `X/Y/Z/Rx/Ry/Rz` 粗参考。见 L1-《09_AP-L1-Production_Metrology_in-line.pdf》文件第 13、24 页。
-- **L2 进入参考后交接给 IFM。** 装片或换台后，晶圆台返回 IFM 量程，零传感器提供起始参考。接管前后可处在同一物理位姿，IFM 接管后使用 `MI:SZP` 的六轴机器坐标。见 L2-《TT-L2-ME-3v0.pdf》文件第 10–11 页（印刷第 4–5 页，图 1.4–1.5）。
-- **L3 先做 IFM 对准，再标定归零参考。** 初始化倾角试验转动和倾斜 WS，记录回波质量，保存两只卡盘在测量侧和曝光侧的 `Rx0/Ry0/Rz0`。测量侧 `Ry0` 后续还由 WZIM 按调平传感器参考重定。完整 SWZS 在 IFM 对准及六轴反馈就绪后标定 PSD 中心、增益和偏置，经 `OZP`、`FZP` 和传感器位置计算 `MI:SZP`。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 26–28 页（印刷第 18–20 页）、L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 9–10 张及 L3-《09-TT-L3-WSbook.pdf》文件第 111–115 页（印刷第 103–107 页）。
-- **L3 以诊断结果区分电子增益与光学调整。** SWHP 列为 SWZS 前置项目，单独运行 `IFM-align` 只做检查。旧 B-spec 的 SWHP 示例用接收器增益把监视电压调入规定区间，若调整仍不足则升级排查。AOM 光纤耦合属于独立的供光光路维护。见 L3-《TT-MA-WS-Calibrations-3v1.ppt》第 100–104、186–195 张及 L3-《09-TT-L3-WSbook.pdf》文件第 131–134 页（印刷第 123–126 页）。[SWZS 资料汇整与前置关系](SWZS资料汇整_v1.md#dependencies)
+**多路回波不足时。** 先核对候选姿态是否覆盖机型允许的 `Rx、Ry、Rz` 及相应量程。确认所需通道仍没有共同可用姿态时，回查前置项目 [SWHP](#swzs-prerequisites) 及相应维护流程。有效信号为[步骤 03 建立 IFM 六轴反馈](#swzs-how-establish-ifm)提供测量条件。SWHP 前置要求与 IF Align 的顺序见 L3-《09-TT-L3-WSbook.pdf》文件第 111–113 页（印刷第 103–105 页）及 L3-《TT-MA-WS-Calibrations-3v1.ppt》第 100–104 张。[前置项目资料汇整](SWZS资料汇整_v1.md#dependencies)
 
 <a name="szws-source-figures"></a>
 <a name="swzs-source-figures"></a>

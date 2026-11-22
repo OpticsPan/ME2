@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 将 IF Align 三轴姿态选点图纳入 MEtrology 作为图 1.5，补明 X1 下限与八路归一化，撤下两张旧图。 | [图 1.5](outputs/reports/MEtrology.md#swzs-if-align) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-if-align-report-integration_v1.md) |
 | 2026-11-22 | 更新 IF Align 草图，补充 X1 回波随 Rx 的曲线，并比较按回波余量和按最近姿态选点。 | [IF Align 草图 v2](outputs/images/IF-Align%E4%B8%89%E8%BD%B4%E5%A7%BF%E6%80%81%E9%80%89%E7%82%B9%E8%8D%89%E5%9B%BE_v2.png) · [变更日志](changes/2026-11-22-swzs-if-align-echo-and-nearest-pose_v1.md) |
 | 2026-11-22 | 归档 SWZS 步骤 01 的 IF Align 草图，示意三轴候选姿态与八路回波选点。 | [IF Align 草图](outputs/images/IF-Align%E4%B8%89%E8%BD%B4%E5%A7%BF%E6%80%81%E9%80%89%E7%82%B9%E8%8D%89%E5%9B%BE_v1.png) · [变更日志](changes/2026-11-22-swzs-if-align-pose-selection-preview_v1.md) |
 | 2026-11-22 | 为 SWZS 图 1.2–1.6 增加对应图 1.1 的步骤标注和双向跳转。 | [总流程与原理图](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-figure-step-cross-references_v1.md) |
@@ -13,9 +14,9 @@
 | 2026-11-22 | 在 MEtrology.md 增加紧凑绘图规范，并将 SWZS 图 1.1 改为紧凑版。 | [报告图件规范](outputs/reports/MEtrology.md#compact-figures) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-metrology-compact-figures_v1.md) |
 | 2026-11-22 | 重绘 SWZS 图 1.1，逐条解释 13 个软件步骤，结合图 1.2–1.6 说明相关信号与结果。 | [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-detailed-calibration-flow_v1.md) |
 | 2026-11-22 | 补充 SWZS 图 1.1（3）和（4）的说明，解释从 OZP 到 FZP 与 MI:SZP 的计算依赖。 | [图 1.1（3）和（4）](outputs/reports/MEtrology.md#swzs-how-ozp-and-gain) · [变更日志](changes/2026-11-22-swzs-flow-steps-3-and-4_v1.md) |
-| 2026-11-22 | 新增 SWZS 图 1.6，对照八路 IFM 峰位不一致时的共同有效区间与 SWHP 诊断分支。 | [图 1.6](outputs/reports/MEtrology.md#swzs-ifm-common-working-window) · [变更日志](changes/2026-11-22-swzs-ifm-common-working-window_v1.md) |
-| 2026-11-22 | 将 SWZS 图 1.5 改为对齐的 WS 转角、PSD 电压与 IFM 回波三层图，补充单轴最小二乘的说明。 | [图 1.5](outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-aligned-peak-signals_v1.md) |
-| 2026-11-22 | 新增 SWZS 图 1.5，单独解释如何用已标定的灵敏度矩阵与回波观测定位最强采样点并找回该位姿。 | [图 1.5](outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-ifm-peak-location-figure_v1.md) |
+| 2026-11-22 | 新增 SWZS 图 1.6，对照八路 IFM 峰位不一致时的共同有效区间与 SWHP 诊断分支。 | [图 1.6](https://github.com/OpticsPan/ME2/blob/9b9d854427c8f127e0ccc96b5748335202acc086/outputs/reports/MEtrology.md#swzs-ifm-common-working-window) · [变更日志](changes/2026-11-22-swzs-ifm-common-working-window_v1.md) |
+| 2026-11-22 | 将 SWZS 图 1.5 改为对齐的 WS 转角、PSD 电压与 IFM 回波三层图，补充单轴最小二乘的说明。 | [图 1.5](https://github.com/OpticsPan/ME2/blob/d11617900ad2d5f1e2163d98ad4183c9cd22fb5d/outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-aligned-peak-signals_v1.md) |
+| 2026-11-22 | 新增 SWZS 图 1.5，单独解释如何用已标定的灵敏度矩阵与回波观测定位最强采样点并找回该位姿。 | [图 1.5](https://github.com/OpticsPan/ME2/blob/950945e89c4ff8c1a978e8dfe201906fd5db94d1/outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-ifm-peak-location-figure_v1.md) |
 | 2026-11-22 | 扩展 SWZS 图 1.3（5），说明六路 PSD 电压与增益矩阵如何恢复参考位姿，以及回波强度如何用于寻峰。 | [子图（5）的原理与示意](outputs/reports/MEtrology.md#swzs-psd-reference-recovery) · [变更日志](changes/2026-11-22-swzs-psd-reference-recovery_v1.md) |
 | 2026-11-22 | 合并 SWZS 的零传感器安装、回波光路与 PSD 电压读出图，同步更新图号与导航。 | [合并后的图 1.2](outputs/reports/MEtrology.md#swzs-figure-168) · [变更日志](changes/2026-11-22-swzs-merge-optics-and-readout_v1.md) |
 | 2026-11-22 | 补充图 1.3（4）的 PSD 光斑位置—电压示意，并链接 Hamamatsu 输出特性原图。 | [PSD 位置—电压与供应商原图](outputs/reports/MEtrology.md#swzs-psd-output-characteristic) · [变更日志](changes/2026-11-22-swzs-psd-position-voltage-curve_v1.md) |
