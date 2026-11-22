@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 归档 SWZS 步骤 01 的 IF Align 草图，示意三轴候选姿态与八路回波选点。 | [IF Align 草图](outputs/images/IF-Align%E4%B8%89%E8%BD%B4%E5%A7%BF%E6%80%81%E9%80%89%E7%82%B9%E8%8D%89%E5%9B%BE_v1.png) · [变更日志](changes/2026-11-22-swzs-if-align-pose-selection-preview_v1.md) |
 | 2026-11-22 | 为 SWZS 图 1.2–1.6 增加对应图 1.1 的步骤标注和双向跳转。 | [总流程与原理图](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-figure-step-cross-references_v1.md) |
 | 2026-11-22 | 将 MEtrology.md 的紧凑布局要求限定于总流程图，原理图与分析图以图 1.2–1.6 的风格为参考。 | [图件布局规范](outputs/reports/MEtrology.md#compact-figures) · [变更日志](changes/2026-11-22-metrology-overview-figure-layout_v1.md) |
 | 2026-11-22 | 在 MEtrology.md 增加紧凑绘图规范，并将 SWZS 图 1.1 改为紧凑版。 | [报告图件规范](outputs/reports/MEtrology.md#compact-figures) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-metrology-compact-figures_v1.md) |
