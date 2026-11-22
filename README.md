@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 说明 WZIM 单轮 M4 网格斜率与转片平均后固定斜率的物理含义。 | [M4 网格观测](outputs/reports/MEtrology.md#wzim-m4-scan-observable) · [变更日志](changes/2026-11-22-wzim-m4-single-spot-scan_v1.md) |
 | 2026-11-22 | 放大 WZIM 图 2.7（4）的 B→A 剖面，用贯穿虚线表示 XTZ 轨迹。 | [图 2.7 剖面对照](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-xtz-enlarged-cross-section_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.7 补画 XTZ 运动轨迹，并修正只存在 Z 偏移时的三点找平角。 | [图 2.7 XTZ 对照](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-xtz-trajectory-comparison_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.7 增加 IFM Ry 读零时的台体和晶圆倾斜对照。 | [图 2.7 起始对照](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-ry-zero-starting-pose_v1.md) |
