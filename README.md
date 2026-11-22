@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 改清 WZIM 图 2.10 的取样标签，标明 M4 读数归零和应记录的 Z-IFM 高度。 | [两轮取样标签](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-23-wzim-xtz-measurement-labels_v1.md) |
 | 2026-11-23 | 在 WZIM 图 2.10 代入两轮回零数值，说明单 M4 可分离晶圆楔角并得到 WS 初始倾斜与 XTZ 读数项的合量。 | [XTZ 数值算例](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-23-wzim-xtz-two-round-numerical-observability_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.10（3）令等效 Z-IFM 与固定 M4 上下对齐，统一在 X = X_LS 采样。 | [同横坐标取样](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-equivalent-z-ifm-aligned-with-ls_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.10（3）加入固定 IFM 测高光和等效斜底面，展示 XTZ 如何进入两轮高度记录。 | [IFM 等效测高](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-equivalent-bottom_v1.md) |
