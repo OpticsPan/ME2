@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 核对 WZIM 的三点归零假设和 LS 九光斑读数，说明刚性装片下可观测的倾角。 | [WZIM 正文](outputs/reports/MEtrology.md#wzim-ls-nulls) · [原页核查](outputs/reports/WZIM%E4%B8%89%E7%82%B9%E5%BD%92%E9%9B%B6%E4%B8%8ELS%E8%AF%BB%E6%95%B0%E6%A0%B8%E6%9F%A5_v1.md#finding) · [变更日志](changes/2026-11-22-wzim-ls-nulls-and-nine-spot-heights_v1.md) |
 | 2026-11-22 | 用图与小角度公式说明 WZIM 三光斑测到的片面坡度、XY 行走倾斜与转片消楔。 | [图 2.6 与推导](outputs/reports/MEtrology.md#wzim-three-spot-tilt) · [变更日志](changes/2026-11-22-wzim-three-spot-tilt-diagram_v1.md) |
 | 2026-11-22 | 明确 WZIM 的 Ry0 定义及晶圆楔角对 LS 测量的影响。 | [Ry0 说明](outputs/reports/MEtrology.md#wzim-ry0) · [变更日志](changes/2026-11-22-wzim-ry0-reference-and-wafer-wedge_v1.md) |
 | 2026-11-22 | 新增 WZIM 测量侧初始高度与倾角，整理网格定高、转片消楔、零点及线性修正常数。 | [WZIM 正文](outputs/reports/MEtrology.md#wzim) · [Level 1–3 汇整](outputs/reports/WZIM%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [变更日志](changes/2026-11-22-wzim-measure-side-calibration_v1.md) |
