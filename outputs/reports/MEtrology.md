@@ -303,7 +303,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [XTZ 闭环与补偿](#wzim-xtz-closed-loop) · [三光斑找平后读 Z 和 Ry](#wzim-three-spot-ifm-ry) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [XTZ 闭环与补偿](#wzim-xtz-closed-loop) · [三光斑找平后读 Z 和 Ry](#wzim-three-spot-ifm-ry) · [单 M4 的 YTZ 两轮测量](#wzim-ytz-single-m4) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -546,5 +546,45 @@ $$
 M0 和 M8 的高度差用于找平，共同的 Z 升降在这个差值中抵消。这里的高度、角度均为工程算例。MATLAB v9 旋转前平移量 $T$ 的 Z 分量须按 $R\,T$ 换算到机架坐标后再与图中高度对照。[IFM 坐标约定](ifm_corr.md#corr-input)
 
 L3-《12-TT-L3-L3-ME_book.pdf》文件第 25、27–29 页（印刷第 17、19–21 页）和 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张说明，WZIM 的实机 XTZ/YTZ 网格用单 M4 定高，三光斑用于建立 $R_{y0}$。图 2.11 的逐点三路回零、转片及 Ry 平均是工程推导，课件未披露相同的逐点实机流程。[三点原页核查](WZIM三点归零与LS读数核查_v1.md#three-spots) · [图 2.7 的坡度角推导](#wzim-two-orientation-leveling)
+
+<a name="wzim-ytz-single-m4"></a>
+
+##### 单 M4 两轮 Y 向测量怎样分离晶圆楔角和 YTZ
+
+![图 2.12，先用 X–Z 剖面说明固定 Ry 会转动 45 度镜，但 Y 方向保持为理想镜面切向。下方四个 Y–Z 剖面展示固定 X 与 WS 姿态后，两轮在相同 Y 位置使 M4 读零并记录 Z-IFM。裸片 0 度轮记录正 50 和负 50 纳米，转 180 度轮记录正 250 和负 250 纳米。两轮斜率半差为正 2 微弧度，平均为负 3 微弧度。本例 Y 向台体坡度已知为零，补偿系数 szya 为正 3 微弧度。](../images/WZIM-YTZ单M4双向取样_v1.png)
+
+**图 2.12　固定初始 Ry 时，用单 M4 做 Y 向两轮定高取样。** 沿用[图 2.11](#wzim-three-spot-ifm-ry)的固定 LS、台体参考点、相同网格和两轮装片画法。这里固定 X 及 WS 姿态，只移动 Y 和用于 M4 回零的 Z；A、B 是本算例沿 Y 布置的两处晶圆标记。
+
+**初始 Ry 会带动斜镜，沿 Y 平移时理想镜面平面保持不变。** 仓库名义 Z1、Z2 从 X 两侧水平入射，在沿 Y 延伸的两块 45° 镜上转向固定顶镜。令 $\mathbf e_Y$ 为 Y 向单位向量，$\mathbf n_{45}$ 为理想斜镜法向。绕 Y 转动只改变 X、Z 分量，因而
+
+$$
+ R_y(r)\mathbf e_Y=\mathbf e_Y,\qquad
+ \mathbf n'_{45}\cdot\mathbf e_Y
+ =(R_y(r)\mathbf n_{45})\cdot\mathbf e_Y=0.
+\tag{2.12}
+$$
+
+理想斜镜平面写成 $\mathbf n'_{45}\cdot(\mathbf p-\mathbf p_0)=0$。沿 Y 平移后，$\mathbf p_0$ 增加 $\Delta Y\,\mathbf e_Y$，点积的新增项为零。只要光束仍落在有效镜面内，理想折返和参考光的光程便保持不变。晶圆与 WS 的 Y 向几何坡度也不会因为施加**纯绕 Y 的初始倾角**而产生。图中的紫色 Y 向等效斜率由读数对 Y 的变化定义。图上方 X–Z 剖面的镜面倾角对应绕 Y 的几何姿态。初始 Ry 用沿 X 排列的 M0、M4、M8 约束，见[图 2.11](#wzim-three-spot-ifm-ry)。沿固定 X 做单 M4 的 Y 扫描无法从 Y 向斜率确定 Ry0。[IFM 光路图 3：Y–Z 切面](ifm_model.md#ifm-figure-3) · [IFM 光路图 5：俯视与 45° 镜](ifm_model.md#ifm-figure-5)
+
+**两轮能确定什么。** 在同一 Y 网格逐点使 M4 读零，记录 Z-IFM，再将裸片绕 Z 转 180° 装回原卡盘，重复相同步骤。令 $\alpha_Y$ 为台体支承面相对 LS 的 Y 向坡度，小角度下由绕 X 的倾斜贡献。$w_Y$ 为晶圆沿 Y 的楔角，$b_Y$ 为该固定姿态的 IFM 有效 Y 向补偿斜率。当前 Z 公式取单位增益，保留 $+\mathrm{szya}\,Y$ 和 $+\mathrm{czyya}\,Y\,Ry$ 时，$b_Y=\mathrm{szya}+\mathrm{czyya}\,r_{\mathrm{IFM}}$，其中 $r_{\mathrm{IFM}}$ 是**模型在这次固定姿态使用的 Ry 读数**。实际几何 Ry0 和这个模型输入的零点须用各自的定义。[Z 模型原式](ifm_model.md#ifm-table-3) · [位置与姿态交叉项](ifm_model.md#ifm-table-8)
+
+$$
+s_{0^\circ}=\alpha_Y+w_Y-b_Y,\qquad
+s_{180^\circ}=\alpha_Y-w_Y-b_Y,\qquad
+w_Y=\frac{s_{0^\circ}-s_{180^\circ}}{2},\qquad
+\overline s=\alpha_Y-b_Y .
+\tag{2.13}
+$$
+
+**图中的数值。** 取固定的几何初始角 $Ry_0=-5\,\mu\mathrm{rad}$、已知 $\alpha_Y=0$、$w_Y=+2\,\mu\mathrm{rad}$，并暂只考虑 $\mathrm{szya}=+3\,\mu\mathrm{rad}$ 这一个 Y 向补偿项。每轮两点相对中点是 $-50$、$+50\,\mathrm{mm}$。M4 归零时的实际台高由片面 Y 坡度决定。补偿前 Z-IFM 的偏差是 $-\mathrm{szya}(y_i-y_c)$。
+
+| 晶圆方位 | $y_1$ 回零后记录 | $y_2$ 回零后记录 | Z-IFM 的 Y 向斜率 |
+| --- | ---: | ---: | ---: |
+| $0^\circ$ | $+50\,\mathrm{nm}$ | $-50\,\mathrm{nm}$ | $-1\,\mu\mathrm{rad}$ |
+| $180^\circ$ | $+250\,\mathrm{nm}$ | $-250\,\mathrm{nm}$ | $-5\,\mu\mathrm{rad}$ |
+
+半差给出 $w_Y=+2\,\mu\mathrm{rad}$，平均为 $-3\,\mu\mathrm{rad}$。在本例的条件下，**单 M4 就能得到 $\mathrm{szya}=+3\,\mu\mathrm{rad}$**。若 $\alpha_Y$ 未知，两轮平均只能给出 $\alpha_Y-b_Y$。若 $\alpha_Y$ 已知、而 $Y\,Ry$ 的贡献在本次姿态未知且非零，则两轮数据给出 $b_Y$，其中同时含 $\mathrm{szya}$ 和 $\mathrm{czyya}\,r_{\mathrm{IFM}}$。
+
+L3-《12-TT-L3-L3-ME_book.pdf》文件第 25–27 页（印刷第 17–19 页），图 2.4、2.5，确认实机 WZIM 的 XTZ、YTZ 网格使用单 LS 光斑，并做原卡盘转片复测。L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张说明用三只 LS 光斑建立 $R_{y0}$。图 2.12 的分项公式与数值为工程推导。[WZIM 资料汇整](WZIM资料汇整_v1.md#procedure-evidence) · [三光斑与单 M4 的原页核查](WZIM三点归零与LS读数核查_v1.md#three-spots)
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
