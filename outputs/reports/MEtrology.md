@@ -1,6 +1,6 @@
 # MEtrology 校准项目报告
 
-[项目目录](#calibration-index) · [整理范式](#report-format) · [先画总流程再讲细节](#overview-first) · [步骤说明](#step-description) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
+[项目目录](#calibration-index) · [闭环与校准基准](#ws-ifm-calibration-reference) · [整理范式](#report-format) · [先画总流程再讲细节](#overview-first) · [步骤说明](#step-description) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
 
 <a name="report-format"></a>
 
@@ -43,6 +43,14 @@
 ### 来源标注
 
 引用 Level 1–3 的文档或原图时，在文件名前标注所属层级，例如 `L1-《文件名.pdf》`、`L2-《文件名.pdf》`、`L3-《文件名.ppt》`。非 Level 1–3 的来源标为「外部资料」。
+
+<a name="ws-ifm-calibration-reference"></a>
+
+## WS–IFM 闭环与校准基准
+
+WS–IFM 闭环比较的是运动指令和 IFM 模型解算的位姿。两者一致，只能说明 WS 在反馈坐标中跟上了指令。若 IFM 模型自身带有系统偏差，单凭这套闭环的跟踪结果无法识别该偏差引起的实际运动误差。
+
+判断运动是否走偏，先明确**相对于哪个物理基准**、**期望走出怎样的轨迹**，再用独立于该 IFM 反馈的观测来比较。以 WZIM 为例，固定 LS 的 M4 零高度定义等高基准。旧 IFM 保持 Z 读数不变时，台体相对这一基准仍可存在行走斜率。用 LS 标定相对斜率，据此确定 IFM 模型的 X 补偿项。这里的外部基准指独立于闭环反馈的基准，例如机内 LS。[XTZ 校正前后的轨迹](#wzim-xtz-closed-loop) · [WZIM 定高采样](#wzim-grid)
 
 <a name="calibration-index"></a>
 
@@ -475,7 +483,7 @@ Z1、Z2 从两侧水平入射，经 45° 镜折向上方的固定 Zmirror，再�
 
 ![图 2.10，左右两图的 Z1、Z2 都从固定位置水平入射，经 WS 的 45° 镜向上到固定 Zmirror。橙色虚线是起点光路，实线是终点光路。校正前台体向右升高，校正后等高行走。](../images/WZIM-XTZ-闭环与补偿_v2.png)
 
-**图 2.10　XTZ 校正前后的 IFM 闭环。** 沿用[图 2.9](#wzim-xtz-ifm-section)的折返布局。橙色虚线对应起点 $x_1$，实线对应终点 $x_2$。两路测量光均从固定位置水平入射，经 WS 的 45° 镜折向上方，画至固定 Zmirror 的入射点。在这个算例中，两面固定 Zmirror 沿 X 同向小倾斜，WS 姿态不变，其他误差忽略。图中的大地坐标是固定参考的示意。实机用 LS 建立独立的高度基准。
+**图 2.10　XTZ 校正前后的 IFM 闭环。** 沿用[图 2.9](#wzim-xtz-ifm-section)的折返布局。橙色虚线对应起点 $x_1$，实线对应终点 $x_2$。两路测量光均从固定位置水平入射，经 WS 的 45° 镜折向上方，画至固定 Zmirror 的入射点。在这个算例中，两面固定 Zmirror 沿 X 同向小倾斜，WS 姿态不变，其他误差忽略。图中的大地坐标是固定参考的示意。实机用 LS 建立独立的高度基准。见[闭环与校准基准](#ws-ifm-calibration-reference)。
 
 **为什么斜走也会显示等高。** 若 WS 真正等高向右走，光束在同向上倾的两面顶镜上扫到更高的位置。各通道扣除参考光后，净光程仍会增加。仓库模型对这一光程差取负号，因此旧模型会把它读成 WS 下降。记实际高度变化为 $\Delta Z_{\mathrm{true}}$，两路 Z 净读数平均为 $m_Z$，共同的等效行走斜率为 $b$。按[式（2.2）](#wzim-equations)保留一阶 X 项，假设 Z 比例已归一，有
 
