@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 将 MEtrology.md 的紧凑布局要求限定于总流程图，原理图与分析图以图 1.2–1.6 的风格为参考。 | [图件布局规范](outputs/reports/MEtrology.md#compact-figures) · [变更日志](changes/2026-11-22-metrology-overview-figure-layout_v1.md) |
 | 2026-11-22 | 在 MEtrology.md 增加紧凑绘图规范，并将 SWZS 图 1.1 改为紧凑版。 | [报告图件规范](outputs/reports/MEtrology.md#compact-figures) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-metrology-compact-figures_v1.md) |
 | 2026-11-22 | 重绘 SWZS 图 1.1，逐条解释 13 个软件步骤，结合图 1.2–1.6 说明相关信号与结果。 | [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-detailed-calibration-flow_v1.md) |
 | 2026-11-22 | 补充 SWZS 图 1.1（3）和（4）的说明，解释从 OZP 到 FZP 与 MI:SZP 的计算依赖。 | [图 1.1（3）和（4）](outputs/reports/MEtrology.md#swzs-how-ozp-and-gain) · [变更日志](changes/2026-11-22-swzs-flow-steps-3-and-4_v1.md) |
