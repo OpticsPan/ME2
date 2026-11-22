@@ -295,7 +295,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -432,5 +432,11 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 ![式（2.5）找平角、台体基准坡度、晶圆楔角及局部残差之和约为零。式（2.6）单方位的平均找平角包含固定楔角。式（2.7）在相同 IFM 角度基准下比较两个方位可消去楔角，仍有位置相关残差。](../images/WZIM-Ry网格均值公式_v1.png)
 
 例如用同一坡度角符号，台体 `+5 µrad`、楔角 `+2 µrad`，和台体 `+7 µrad`、零楔角，都会给出 `−7 µrad` 的平均找平角。**若在同一 IFM 角度基准下，转片 180° 并在同一组 XY 点重新找平**，每个点两次找平角的平均按式（2.7）消去一阶楔角。要由平均找平角反推台体基准坡度，还需考虑负号和剩余角度误差。以上为工程推导。课件确认转片用于 XTZ/YTZ 网格，未给出实机 `Ry0` 的双方向找平或写入算法。[原页与三路回零核查](WZIM三点归零与LS读数核查_v1.md#three-spots)
+
+<a name="wzim-two-orientation-leveling"></a>
+
+![图 2.7，固定同一个 XY 点分别在裸片 0 度和 180 度方位调 Z 和 Ry，使三路 LS 高度为零，并记录 IFM 找平角。先配对平均同一点的两个角度，再对全部点取平均。](../images/WZIM-双向找平反推WS倾角_v1.png)
+
+**图 2.7　同点双向找平与网格平均。** 对应[图 2.1 的倾角标定环节](#wzim-ry0)，是对[式（2.7）](#wzim-ry-grid-mean)的工程示意。以 B 点为例，0° 和 180° 分别记录 −7 和 −3 µrad，同点平均为 −5 µrad。两轮使用同一卡盘、同一组 XY 点和相同的 IFM 角度基准。若各点都有两次有效观测且等权，直接平均全部读数与先按点配对再平均等价。配对可以清楚看出哪两个读数的楔角相消，缺任一读数时该点需要补测或从两轮的均值同时剔除。剩余位置误差均值可忽略时，按图中坡度角符号取反，得到 WS 相对 LS 的基准倾斜估计。
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
