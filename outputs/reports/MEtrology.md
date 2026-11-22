@@ -295,7 +295,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -410,7 +410,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ![图 2.6，四个子图分别展示 WS 支承面和晶圆楔形，固定姿态读取 M8、M4、M0 的高度并由高度差和间距得到片面坡度，移动 WS 后以 M4 定高并读 Z-IFM，以及在同一台体倾角下转片 180° 后两次片面坡度平均可消去楔角。式（2.3a）、（2.3b）和（2.4）见图。](../images/WZIM-三光斑倾角与转片消楔_v1.png)
 
-**图 2.6　WS 倾斜、晶圆楔角和行走倾斜怎样进入测量。** （1）、（2）解释[总图步骤 04 的三光斑观测](#wzim-ry0)。（3）对应[步骤 02 定高取样](#wzim-grid)和[步骤 03 转片消楔](#wzim-wedge)。（4）为同姿态消楔的工程推导。
+**图 2.6　WS 倾斜、晶圆楔角和行走倾斜怎样进入测量。** （1）、（2）解释[总图步骤 04 的三光斑观测](#wzim-ry0)。（3）对应[步骤 02 定高取样](#wzim-grid)和[步骤 03 转片消楔](#wzim-wedge)。（4）为同一台体倾角下重复测片面坡度的工程推导。三光斑如何用于调 Ry 找平，见[图 2.7](#wzim-two-orientation-leveling)。三光斑找平和单 M4 网格测量的动作及读数见[图 2.8](#wzim-method-comparison)。
 
 1. **先看两条面。** 蓝线是卡盘支承面，X 向坡度为 `a_WS`。晶圆厚度沿 X 也在变化，坡度记为 `w_x`。两者叠加形成橙色晶圆上表面的坡度。
 2. **在同一位姿读三个高度。** 将三路高度放到同一 LS 基准，以 M4 的位置和高度作基准。式（2.3a）把每个高度写成共同高度加片面坡度乘以 X 向距离。以 M0 和 M8 的高度差除以 X 间距，就得到式（2.3b）的**晶圆上表面坡度**。这个剖面示例中，WS 整体升降会同时改变三个高度，做差后抵消。若 WS 的实际绕 Y 姿态随行走改变，三点坡度也会随之改变。
@@ -444,5 +444,16 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 **图 2.7　同点双向找平与网格平均。** 对应[图 2.1 的倾角标定环节](#wzim-ry0)，是对[式（2.7）](#wzim-ry-grid-mean)的工程示意。（1）以 B 点的裸片 0° 为例，IFM Ry 读零时，WS 支承面相对 LS 仍有 +5 µrad 的坡度，叠加 +2 µrad 的晶圆楔角，片面坡度为 +7 µrad。此时只调 Z 使 M4 回零，M8 低于零高度，M0 高于零高度。（2）和（3）分别在 0° 和 180° 调 Z 和 Ry 使三路回零，记录 −7 和 −3 µrad。（4）只画 B→A 的放大剖面。绿色虚线贯穿两处台体参考点，表示 +1 µrad 的 X–Z 轨迹。B→A 沿 X 负向移动 100 mm，A 比 B 低 100 nm。蓝色 WS 支承面和橙色晶圆上表面在两处分别保持 +5 µrad、+7 µrad。逐点用 M4 回零补偿高度差，因此（5）中的同一方位找平角在 A、B、C 一致，0° 均为 −7 µrad，180° 均为 −3 µrad。（6）用同点配对平均反推台体倾斜。
 
 两轮使用同一卡盘、同一组 XY 点和相同的 IFM 角度基准。若各点都有两次有效观测且等权，直接平均全部读数与先按点配对再平均等价。配对可以清楚看出哪两个读数的楔角相消，缺任一读数时该点需要补测或从两轮的均值同时剔除。剩余位置误差均值可忽略时，按图中坡度角符号取反，得到 WS 相对 LS 的基准倾斜估计。
+
+<a name="wzim-method-comparison"></a>
+
+##### 三光斑找平与单 M4 扫描
+
+![图 2.8，左侧在 B 点用 M0、M4、M8 找平并记录 IFM Ry，转片后配对找平角。右侧在 A、B 等网格点分别使 M4 回零，保持示意姿态并读取 Z-IFM，转片前后拟合 Z 行走斜率。](../images/WZIM-三光斑与单M4测量对照_v1.png)
+
+**图 2.8　两种测量的动作、读数和结果。** 沿用[图 2.7](#wzim-two-orientation-leveling)的卡盘、裸片和 A、B 点。
+
+- **左侧，三光斑找平。** 在同一个 XY 点读三个片面高度。调 Z 使 M4 回零，调 Ry 使 M0 与 M8 等高，记录 IFM 的找平角。图例在 B 点得到 −7 µrad 与 −3 µrad，按[式（2.7）](#wzim-ry-grid-mean)配对消楔。L3 确认用三光斑确定 Ry0，图中的记录及双向平均为工程推导。
+- **右侧，单 M4 网格。** 移动 WS 让固定的 M4 依次看到晶圆不同位置，逐点调 Z 使 M4 回零，再记录 Z-IFM。对 0° 和 180° 两组网格分别拟合 Z 对 X、Y 的斜率，按[式（2.1）](#wzim-equations)取平均，得到 XTZ/YTZ 的固定线性贡献。对应[总图步骤 02、03](#wzim-procedure-diagram)。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 25、27–29 页（印刷第 17、19–21 页），以及 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张。
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
