@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 为 SWZS 图 1.2–1.6 增加对应图 1.1 的步骤标注和双向跳转。 | [总流程与原理图](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-figure-step-cross-references_v1.md) |
 | 2026-11-22 | 将 MEtrology.md 的紧凑布局要求限定于总流程图，原理图与分析图以图 1.2–1.6 的风格为参考。 | [图件布局规范](outputs/reports/MEtrology.md#compact-figures) · [变更日志](changes/2026-11-22-metrology-overview-figure-layout_v1.md) |
 | 2026-11-22 | 在 MEtrology.md 增加紧凑绘图规范，并将 SWZS 图 1.1 改为紧凑版。 | [报告图件规范](outputs/reports/MEtrology.md#compact-figures) · [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-metrology-compact-figures_v1.md) |
 | 2026-11-22 | 重绘 SWZS 图 1.1，逐条解释 13 个软件步骤，结合图 1.2–1.6 说明相关信号与结果。 | [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-detailed-calibration-flow_v1.md) |
