@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 重绘 SWZS 图 1.1，逐条解释 13 个软件步骤，结合图 1.2–1.6 说明相关信号与结果。 | [图 1.1](outputs/reports/MEtrology.md#swzs-procedure-diagram) · [变更日志](changes/2026-11-22-swzs-detailed-calibration-flow_v1.md) |
 | 2026-11-22 | 补充 SWZS 图 1.1（3）和（4）的说明，解释从 OZP 到 FZP 与 MI:SZP 的计算依赖。 | [图 1.1（3）和（4）](outputs/reports/MEtrology.md#swzs-how-ozp-and-gain) · [变更日志](changes/2026-11-22-swzs-flow-steps-3-and-4_v1.md) |
 | 2026-11-22 | 新增 SWZS 图 1.6，对照八路 IFM 峰位不一致时的共同有效区间与 SWHP 诊断分支。 | [图 1.6](outputs/reports/MEtrology.md#swzs-ifm-common-working-window) · [变更日志](changes/2026-11-22-swzs-ifm-common-working-window_v1.md) |
 | 2026-11-22 | 将 SWZS 图 1.5 改为对齐的 WS 转角、PSD 电压与 IFM 回波三层图，补充单轴最小二乘的说明。 | [图 1.5](outputs/reports/MEtrology.md#swzs-ifm-peak-location) · [变更日志](changes/2026-11-22-swzs-aligned-peak-signals_v1.md) |
