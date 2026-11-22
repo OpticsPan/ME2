@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 在 WZIM 图 2.10（3）令等效 Z-IFM 与固定 M4 上下对齐，统一在 X = X_LS 采样。 | [同横坐标取样](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-equivalent-z-ifm-aligned-with-ls_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.10（3）加入固定 IFM 测高光和等效斜底面，展示 XTZ 如何进入两轮高度记录。 | [IFM 等效测高](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-equivalent-bottom_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.10 突出四次 LS 回零后记录的旧 IFM 高度及两轮斜率计算。 | [两轮 IFM 记录](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-ifm-readings-as-observation_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.10 加入固定 LS，展开裸片 0° 与转 180° 后的两轮 M4 回零取样。 | [XTZ 闭环与两轮标定](outputs/reports/MEtrology.md#wzim-xtz-closed-loop) · [变更日志](changes/2026-11-22-wzim-xtz-fixed-ls-two-orientations_v1.md) |
