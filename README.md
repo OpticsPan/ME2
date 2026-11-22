@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 在 WZIM 图 2.7 增加 IFM Ry 读零时的台体和晶圆倾斜对照。 | [图 2.7 起始对照](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-ry-zero-starting-pose_v1.md) |
 | 2026-11-22 | 图解 WZIM 同一点的两次找平、配对平均和台体基准倾斜估计。 | [图 2.7 双向找平](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-two-orientation-leveling-diagram_v1.md) |
 | 2026-11-22 | 推导 WZIM 三点找平时 IFM Ry 的网格均值，说明单方位偏差与转片消楔的条件。 | [Ry 均值推导](outputs/reports/MEtrology.md#wzim-ry-grid-mean) · [变更日志](changes/2026-11-22-wzim-ry-grid-mean-derivation_v1.md) |
 | 2026-11-22 | 核对 WZIM 的三点归零假设和 LS 九光斑读数，说明刚性装片下可观测的倾角。 | [WZIM 正文](outputs/reports/MEtrology.md#wzim-ls-nulls) · [原页核查](outputs/reports/WZIM%E4%B8%89%E7%82%B9%E5%BD%92%E9%9B%B6%E4%B8%8ELS%E8%AF%BB%E6%95%B0%E6%A0%B8%E6%9F%A5_v1.md#finding) · [变更日志](changes/2026-11-22-wzim-ls-nulls-and-nine-spot-heights_v1.md) |
