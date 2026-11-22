@@ -295,7 +295,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [XTZ 闭环与补偿](#wzim-xtz-closed-loop) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -468,5 +468,29 @@ LS 固定在测量侧。WS 沿 XY 移动，把晶圆上的测点送到 M4 光斑
 **图 2.9　沿 X 行走时晶圆台高度与 IFM 折返光路。** 对应[图 2.1 的步骤 02](#wzim-grid)。两幅剖面用同一计量框架坐标。WS 由 $x_1$ 移到 $x_2$，晶圆与两侧 45° 镜随 WS 整体升高 $\Delta Z$，绕 Y 的角度保持不变。虚线是起始片面高度，$\Delta Z/\Delta X$ 是这一示例中的实际行走斜率。
 
 Z1、Z2 从两侧水平入射，经 45° 镜折向上方的固定 Zmirror，再沿原路返回。WS 升高时，固定入射光与斜面的交点沿 X 移动。在图示名义几何中，各通道用自身的参考光扣除 X 平移对光程的贡献，再得到对 Z 的响应。光路依据 [IFM 模型图 2](ifm_model.md#ifm-figure-2) 和[参考光扣除关系](ifm_model.md#ifm-readout)。实机测得的 XTZ 还可包含固定 Z 镜的安装倾斜贡献，见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–25 页（印刷第 16–17 页），图 2.2–2.3。[原图定位](WZIM资料汇整_v1.md#source-figures)
+
+<a name="wzim-xtz-closed-loop"></a>
+
+##### 同一条等高指令，校正前后怎样走
+
+![图 2.10，两面固定顶镜具有相同的正向小倾斜。校正前，等高指令使未修正 IFM 读数不变，WS 在参考坐标中向右升高。用固定 LS 取得独立高度基准，转片复测后标定斜率。校正后，模型补偿抵消原读数的变化，WS 等高行走。](../images/WZIM-XTZ-闭环与补偿_v1.png)
+
+**图 2.10　XTZ 校正前后的 IFM 闭环。** 沿用[图 2.9](#wzim-xtz-ifm-section)的折返布局。在这个算例中，两面固定 Zmirror 沿 X 同向小倾斜，WS 姿态不变，其他误差忽略。图中的大地坐标是固定参考的示意。实机用 LS 建立独立的高度基准。
+
+**为什么斜走也会显示等高。** 若 WS 真正等高向右走，光束在同向上倾的两面顶镜上扫到更高的位置。各通道扣除参考光后，净光程仍会增加。仓库模型对这一光程差取负号，因此旧模型会把它读成 WS 下降。记实际高度变化为 $\Delta Z_{\mathrm{true}}$，两路 Z 净读数平均为 $m_Z$，共同的等效行走斜率为 $b$。按[式（2.2）](#wzim-equations)保留一阶 X 项，假设 Z 比例已归一，有
+
+$$
+\Delta m_Z \simeq \Delta Z_{\mathrm{true}}-b\,\Delta X,\qquad
+\Delta \widehat Z_{\mathrm{corr}}=\Delta m_Z+b\,\Delta X .
+\tag{2.8}
+$$
+
+这里 $b>0$ 对应图中向右升高。只考虑同向微倾的理想顶镜时，$b\simeq\tan\theta$。例如 $b=+1\,\mu\mathrm{rad}$、$\Delta X=100\,\mathrm{mm}$，真实等高行走时，旧模型会少读 $100\,\mathrm{nm}$。模型关联见 [IFM 净读数与均值](ifm_model.md#ifm-readout)、[Z 解算中的 X 项](ifm_corr.md#corr-z)。
+
+- **（1）校正前。** 闭环以旧模型的高度为反馈。执行等高指令时，控制器通过升高 WS 使 $\Delta m_Z=0$，于是实际行走轨迹满足 $\Delta Z_{\mathrm{true}}\simeq b\,\Delta X$。两镜共斜的理想例中，两路 Z **净读数**一阶都可保持不变。折返原始光程还含随 X 改变的水平段。
+- **用固定 LS 标定。** 按[WZIM 网格步骤](#wzim-grid)，在各点调 Z 使 M4 回到同一高度，再记录旧模型的 Z。裸片在原卡盘转 180° 后复测，在一阶模型中用两轮平均分离晶圆楔角。剩余斜率在本例为 $-b$，相反号的 $+b$ 用于 Z 模型的 X 项。WZIM 获取的是系统总线性斜率，台体基准倾角、顶镜倾斜或折返镜几何误差都可能贡献到该项。
+- **（2）校正后。** 闭环使用修正后的高度反馈，保持 $\Delta\widehat Z_{\mathrm{corr}}=0$。此时允许旧的净读数按 $-b\,\Delta X$ 变化，由模型中的 $+b\,\Delta X$ 抵消。忽略补偿残差时，WS 的实际高度保持不变。
+
+**示意角度。** 30° 可以用于放大几何关系。在理想 45° 折返布局中，顶镜倾斜 30° 会让反射光相对名义回程偏转 60°。实机测量依赖回光进入接收光路，式（2.8）用于回光有效、姿态保持的小角度工况。线性 XTZ 的光学来源和补偿流程见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–25、27 页（印刷第 16–17、19 页），图 2.2、2.3、2.5。[原图定位](WZIM资料汇整_v1.md#source-figures)
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
