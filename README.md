@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 在 WZIM 图 2.8 画出单 M4 两轮平均中保留的台体倾斜和框架 Z 镜安装倾斜。 | [图 2.8 固定斜率来源](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-average-fixed-tilts_v1.md) |
 | 2026-11-22 | 新增 WZIM 三光斑找平与单 M4 网格的并排对照，说明两种观察量及用途。 | [图 2.8 测量对照](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-three-spot-versus-m4-diagram_v1.md) |
 | 2026-11-22 | 说明 WZIM 单轮 M4 网格斜率与转片平均后固定斜率的物理含义。 | [M4 网格观测](outputs/reports/MEtrology.md#wzim-m4-scan-observable) · [变更日志](changes/2026-11-22-wzim-m4-single-spot-scan_v1.md) |
 | 2026-11-22 | 放大 WZIM 图 2.7（4）的 B→A 剖面，用贯穿虚线表示 XTZ 轨迹。 | [图 2.7 剖面对照](outputs/reports/MEtrology.md#wzim-two-orientation-leveling) · [变更日志](changes/2026-11-22-wzim-xtz-enlarged-cross-section_v1.md) |
