@@ -295,7 +295,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -456,7 +456,17 @@ LS 固定在测量侧。WS 沿 XY 移动，把晶圆上的测点送到 M4 光斑
 **固定光斑与共用零高度。** 子图（4）以裸片 0° 为例。在大地坐标系中，M4 的测量位置始终为 $X_{\mathrm{LS}}$，绿色水平虚线表示它的零高度 $Z_{\mathrm{ref}}$。A、B 都在同一片晶圆的上表面，随 WS 一起移动。WS 到 $x_1$ 时，A 到达 $X_{\mathrm{LS}}$。调 Z 使 LS 读数为零，记录 $Z_{\mathrm{IFM},1}$。随后 WS 到 $x_2$，把 B 送到同一个 $X_{\mathrm{LS}}$。再次调 Z 使 LS 读数为零，记录 $Z_{\mathrm{IFM},2}$。
 
 - **（1）–（3）固定台体姿态。** `Ry0` 定义 IFM 的角度零位。图例中 IFM `Ry` 读零时，WS 支承面相对 LS 的坡度为 +5 µrad。裸片 0°、180° 时，楔角分别贡献 +2、−2 µrad，片面坡度相应为 +7、+3 µrad。M4 回零表示光斑落点达到零高度，片面仍带有坡度。
-- **（4）–（5）走位后调 Z，再记录。** 图例中 WS 沿 +X 平移 100 mm，把 B 送到原来测 A 的位置。XTZ 使台体高度先升高 100 nm，台体姿态保持。0° 轮中 B 在晶圆上比 A 低，需继续升高 WS 才能使 B 回零。两轮在同一组 WS 网格位置分别测量，算例中两次回零姿态之间的实际 Z 高度差分别为 +700、+300 nm。框架 Z 镜的等效读数贡献取 +3 µrad，两轮都多读 +300 nm。以 `Z_IFM2 − Z_IFM1` 除以 `x₂ − x₁`，两轮斜率为 +10、+6 µrad。
+- **（4）–（5）走位后调 Z，再记录。** 图例中 WS 沿 +X 平移 100 mm，把 B 送到原来测 A 的位置。XTZ 使台体高度先升高 100 nm，台体姿态保持，见[图 2.9 的 X–Z 光路剖面](#wzim-xtz-ifm-section)。0° 轮中 B 在晶圆上比 A 低，需继续升高 WS 才能使 B 回零。两轮在同一组 WS 网格位置分别测量，算例中两次回零姿态之间的实际 Z 高度差分别为 +700、+300 nm。框架 Z 镜的等效读数贡献取 +3 µrad，两轮都多读 +300 nm。以 `Z_IFM2 − Z_IFM1` 除以 `x₂ − x₁`，两轮斜率为 +10、+6 µrad。
 - **（6）解释平均值。** 两轮平均为 +8 µrad，例中由 WS 自身倾斜的 +5 和框架 Z 镜的等效读数贡献 +3 组成。实际单 M4 网格只给出这类总斜率，用于修正 XTZ/YTZ 的线性项。两个固定因素的份额需用独立观测区分。单 M4 逐点定高、转片和固定斜率来源见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–25、27 页（印刷第 16–17、19 页）。
+
+<a name="wzim-xtz-ifm-section"></a>
+
+##### XTZ 的 X–Z 光路剖面
+
+![图 2.9，两个位置采用同一计量框架坐标。台体向右走并升高，晶圆上表面与原高度虚线相差 ΔZ。固定的 Z1、Z2 水平射向 WS 两侧的 45° 镜，经反射向上到固定 Zmirror，并沿原路折返。](../images/WZIM-XTZ-IFM-XZ光路_v1.png)
+
+**图 2.9　沿 X 行走时晶圆台高度与 IFM 折返光路。** 对应[图 2.1 的步骤 02](#wzim-grid)。两幅剖面用同一计量框架坐标。WS 由 $x_1$ 移到 $x_2$，晶圆与两侧 45° 镜随 WS 整体升高 $\Delta Z$，绕 Y 的角度保持不变。虚线是起始片面高度，$\Delta Z/\Delta X$ 是这一示例中的实际行走斜率。
+
+Z1、Z2 从两侧水平入射，经 45° 镜折向上方的固定 Zmirror，再沿原路返回。WS 升高时，固定入射光与斜面的交点沿 X 移动。在图示名义几何中，各通道用自身的参考光扣除 X 平移对光程的贡献，再得到对 Z 的响应。光路依据 [IFM 模型图 2](ifm_model.md#ifm-figure-2) 和[参考光扣除关系](ifm_model.md#ifm-readout)。实机测得的 XTZ 还可包含固定 Z 镜的安装倾斜贡献，见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–25 页（印刷第 16–17 页），图 2.2–2.3。[原图定位](WZIM资料汇整_v1.md#source-figures)
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)

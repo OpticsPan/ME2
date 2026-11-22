@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 新增 WZIM 图 2.9，在 X–Z 剖面展示 XTZ 高度变化与 Z-IFM 经 45° 镜到固定 Zmirror 的折返光路。 | [XTZ 光路剖面](outputs/reports/MEtrology.md#wzim-xtz-ifm-section) · [变更日志](changes/2026-11-22-wzim-xtz-ifm-xz-section_v1.md) |
 | 2026-11-22 | 修正 WZIM 图 2.8 的大地坐标，LS 固定在同一位置，WS 依次把 A、B 送到 M4 下。 | [图 2.8 固定光斑](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-fixed-ground-coordinate_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.8 的两幅剖面都画出晶圆 A、B，并标明 x₁、x₂ 与对应 IFM 记录。 | [图 2.8 两次回零](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-both-wafer-markers-in-each-view_v1.md) |
 | 2026-11-22 | 在图 2.8 区分晶圆采样点 A、B 与 WS 参考点在两次采样时的位置。 | [图 2.8 点位标注](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-wafer-and-stage-points_v1.md) |
