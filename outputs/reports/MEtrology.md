@@ -551,11 +551,11 @@ L3-《12-TT-L3-L3-ME_book.pdf》文件第 25、27–29 页（印刷第 17、19�
 
 ##### 单 M4 两轮 Y 向测量怎样分离晶圆楔角和 YTZ
 
-![图 2.12，上方是两幅 Y–Z 剖面。左侧 WS 沿 Y 水平，45 度长条镜已有安装倾角。右侧同一条镜随 WS 叠加同向 Rx，镜条相对 Y 轴的夹角为安装倾角加 Rx。下方四个 Y–Z 剖面展示固定 X 与 WS 姿态后，两轮在相同 Y 位置使 M4 读零并记录 Z-IFM。裸片 0 度轮记录正 50 和负 50 纳米，转 180 度轮记录正 250 和负 250 纳米。两轮斜率半差为正 2 微弧度，平均为负 3 微弧度。本例 Y 向台体坡度已知为零，补偿系数 szya 为正 3 微弧度。](../images/WZIM-YTZ单M4双向取样_v2.png)
+![图 2.12，上方按 IFM 图 4(a) 正视负 X 镜面，比较镜条安装倾斜和台体同向 Rx 叠加。下方四幅 Y–Z 剖面全部采用子图 1b，画出倾斜的台体和镜条。两轮实际台高依次为负 350、正 350、负 150、正 150 纳米，补偿前 IFM 依次记录正 50、负 50、正 250、负 250 纳米。两轮斜率半差给出晶圆楔角正 2 微弧度，平均斜率负 3 微弧度对应 szya 为正 3 微弧度。](../images/WZIM-YTZ单M4双向取样_v3.png)
 
-**图 2.12　固定初始 Ry 时，用单 M4 做 Y 向两轮定高取样。** 沿用[图 2.11](#wzim-three-spot-ifm-ry)的固定 LS、台体参考点、相同网格和两轮装片画法。上方（1）在 Y–Z 剖面比较长条镜的安装倾角与 WS 绕 X 转动后的夹角。下方数值采用（1a）的零 Y 向台体坡度，固定 X 及台体姿态，只移动 Y 和用于 M4 回零的 Z。A、B 是本算例沿 Y 布置的两处晶圆标记。
+**图 2.12　采用子图（1b）的固定台体倾斜，用单 M4 做两轮 Y 向测量。** 上方按 [IFM 图 4(a)](ifm_model.md#ifm-figure-4) 正视 WS 的 $-X$ 镜面。浅橙区是 45° 长条镜的投影，橙色菱形是 Z1 折返点的投影。下方在固定 X、Ry 和 Rx 的条件下，只移动 Y 和用于 M4 回零的 Z。A、B 为沿 Y 布置的晶圆标记，$P_{\mathrm{WS}}$ 的高度用机架坐标表示。
 
-**长条镜的安装倾角与台体 Rx。** 45° 描述折返镜的横向斜面。在 Y–Z 剖面看的是镜条沿 Y 长度方向的安装角 $\beta_{\mathrm{inst}}$。只要这个安装角非零，即使台体沿 Y 水平，沿 Y 平移也会改变固定光束遇到的镜面位置，因而可产生 YTZ。若台体绕 X 转动，条镜和安装座随台体一起转。设镜条在该剖面的方向为 $(\cos\beta_{\mathrm{inst}},\sin\beta_{\mathrm{inst}})$，绕 X 转 $R_x$ 后方向变为 $(\cos(\beta_{\mathrm{inst}}+R_x),\sin(\beta_{\mathrm{inst}}+R_x))$。图示为同向叠加，镜条与 Y 轴夹角增大为 $\beta_{\mathrm{inst}}+R_x$。台面自身的 Y 向坡度也随 $R_x$ 改变，两轮测量需同时考虑台面坡度和 Z-IFM 的光路效应。镜条夹角描述几何，$b_Y$ 由光程变化和 Z 解算口径决定。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 26 页（印刷第 18 页），图 2.4。[原图定位](WZIM资料汇整_v1.md#source-figures)
+**长条镜的安装倾角与台体 Rx。** 45° 描述折返镜的横向斜面，Y–Z 图中标的是镜条沿 Y 长度方向的倾角。镜条安装角为 $\beta_{\mathrm{inst}}$，WS 绕 X 转 $R_x$ 后，镜条的 Y–Z 方向为 $(\cos(\beta_{\mathrm{inst}}+R_x),\sin(\beta_{\mathrm{inst}}+R_x))$。本例两者同向。两路 45° 镜具有相同的 Y 向安装坡度，Zmirror 取水平，忽略其他角度耦合和非线性。实际镜块装调引起 YTZ 的几何例子见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 26 页（印刷第 18 页），图 2.4。[原图定位](WZIM资料汇整_v1.md#source-figures)
 
 **理想镜条下固定 Ry 的几何关系。** 仓库名义 Z1、Z2 从 X 两侧水平入射，在沿 Y 延伸的两块 45° 镜上转向固定顶镜。令 $\mathbf e_Y$ 为 Y 向单位向量，$\mathbf n_{45}$ 为理想斜镜法向。绕 Y 转动只改变 X、Z 分量，因而
 
@@ -566,26 +566,32 @@ $$
 \tag{2.12}
 $$
 
-理想斜镜平面写成 $\mathbf n'_{45}\cdot(\mathbf p-\mathbf p_0)=0$。沿 Y 平移后，$\mathbf p_0$ 增加 $\Delta Y\,\mathbf e_Y$，点积的新增项为零。只要光束仍落在有效镜面内，理想折返和参考光的光程便保持不变。晶圆与 WS 的 Y 向几何坡度也不会因为施加**纯绕 Y 的初始倾角**而产生。下方的紫色虚线用 Y 向等效坡度表示读数随 Y 的变化，上方的金色线表示实际长条镜在 Y–Z 剖面中的方向。初始 Ry 用沿 X 排列的 M0、M4、M8 约束，见[图 2.11](#wzim-three-spot-ifm-ry)。沿固定 X 做单 M4 的 Y 扫描无法从 Y 向斜率确定 Ry0。[IFM 光路图 3：Y–Z 切面](ifm_model.md#ifm-figure-3) · [IFM 光路图 5：俯视与 45° 镜](ifm_model.md#ifm-figure-5)
+理想斜镜平面写成 $\mathbf n'_{45}\cdot(\mathbf p-\mathbf p_0)=0$。沿 Y 平移后，$\mathbf p_0$ 增加 $\Delta Y\,\mathbf e_Y$，点积的新增项为零。只要光束仍落在有效镜面内，理想折返和参考光的光程便保持不变。晶圆与 WS 的 Y 向几何坡度也不会因为施加**纯绕 Y 的初始倾角**而产生。图中金色区域或金色线是实际长条镜投影，紫色虚线以等效坡度表示 Z-IFM 高度随 Y 的变化。初始 Ry 用沿 X 排列的 M0、M4、M8 约束，见[图 2.11](#wzim-three-spot-ifm-ry)。沿固定 X 做单 M4 的 Y 扫描无法从 Y 向斜率确定 Ry0。[IFM 光路图 3：Y–Z 切面](ifm_model.md#ifm-figure-3) · [IFM 光路图 5：俯视与 45° 镜](ifm_model.md#ifm-figure-5)
 
-**两轮能确定什么。** 在同一 Y 网格逐点使 M4 读零，记录 Z-IFM，再将裸片绕 Z 转 180° 装回原卡盘，重复相同步骤。令 $\alpha_Y$ 为台体支承面相对 LS 的 Y 向坡度，小角度下由绕 X 的倾斜贡献。$w_Y$ 为晶圆沿 Y 的楔角，$b_Y$ 为该固定姿态的 IFM 有效 Y 向补偿斜率。当前 Z 公式取单位增益，保留 $+\mathrm{szya}\,Y$ 和 $+\mathrm{czyya}\,Y\,Ry$ 时，$b_Y=\mathrm{szya}+\mathrm{czyya}\,r_{\mathrm{IFM}}$，其中 $r_{\mathrm{IFM}}$ 是**模型在这次固定姿态使用的 Ry 读数**。实际几何 Ry0 和这个模型输入的零点须用各自的定义。[Z 模型原式](ifm_model.md#ifm-table-3) · [位置与姿态交叉项](ifm_model.md#ifm-table-8)
+**先求光路斜率。** 对从 $d=\pm\mathbf e_X$ 水平入射的任一路 Z 光，理想斜镜沿 Y 的同向总倾角记为 $\gamma=\beta_{\mathrm{inst}}+R_x$。略去角度乘积后，斜镜法向的 Y、Z 分量为 $-\gamma/\sqrt 2$、$1/\sqrt 2$，沿入射方向的法向投影取名义值 $-1/\sqrt 2$。本例的 Z 定高变化本身是一阶小量，Ry 对这两个名义投影的修正进入更高阶。台体平移 $(\Delta Y,\Delta Z)$ 时，入射段长度的一阶变化是 $\gamma\Delta Y-\Delta Z$。水平顶镜条件下，固定角度时该折返光的横向入射、返回两段给出相同的一阶变化。按仓库模型的参考光减折返光口径，机架坐标下的未补偿读数为 $\Delta Z_{\mathrm{IFM}}\simeq\Delta Z-b_Y\Delta Y$，其中 $b_Y\simeq\gamma$。本例 $\beta_{\mathrm{inst}}=+3\,\mu\mathrm{rad}$、$R_x=+5\,\mu\mathrm{rad}$，故 $b_Y=+8\,\mu\mathrm{rad}$。[IFM 光程到高度的符号](ifm_model.md#ifm-readout)
+
+**再求两轮 M4 回零时的读数。** 固定 X 和转角。在两个 Y 点分别调 Z 使 M4 读零，记录 Z-IFM。裸片在原卡盘绕 Z 转 180°，复测同一组位置。以测量中点为高度零点，$\alpha_Y\simeq R_x$ 是台体的 Y 向坡度，$w_Y=+2\,\mu\mathrm{rad}$ 是 0° 方位的 Y 向楔角。设两点相对中点为 $d_i=y_i-y_c$，两方位取 $\sigma_\phi=+1,-1$，则
 
 $$
-s_{0^\circ}=\alpha_Y+w_Y-b_Y,\qquad
-s_{180^\circ}=\alpha_Y-w_Y-b_Y,\qquad
-w_Y=\frac{s_{0^\circ}-s_{180^\circ}}{2},\qquad
-\overline s=\alpha_Y-b_Y .
+ Z_{\mathrm{true},i}^{(\phi)}=(\alpha_Y+\sigma_\phi w_Y)d_i,\qquad
+ Z_{\mathrm{IFM},i}^{(\phi)}=(\alpha_Y+\sigma_\phi w_Y-b_Y)d_i.
 \tag{2.13}
 $$
 
-**图中的数值。** 取固定的几何初始角 $Ry_0=-5\,\mu\mathrm{rad}$、已知 $\alpha_Y=0$、$w_Y=+2\,\mu\mathrm{rad}$，并暂只考虑 $\mathrm{szya}=+3\,\mu\mathrm{rad}$ 这一个 Y 向补偿项。每轮两点相对中点是 $-50$、$+50\,\mathrm{mm}$。M4 归零时的实际台高由片面 Y 坡度决定。补偿前 Z-IFM 的偏差是 $-\mathrm{szya}(y_i-y_c)$。
+| 晶圆方位 | 两点实际台高，nm | 两点 IFM 位置偏差，nm | 两点 Z-IFM 记录，nm | Z-IFM 沿 Y 斜率 |
+| --- | ---: | ---: | ---: | ---: |
+| $0^\circ$ | $-350,\ +350$ | $+400,\ -400$ | $+50,\ -50$ | $-1\,\mu\mathrm{rad}$ |
+| $180^\circ$ | $-150,\ +150$ | $+400,\ -400$ | $+250,\ -250$ | $-5\,\mu\mathrm{rad}$ |
 
-| 晶圆方位 | $y_1$ 回零后记录 | $y_2$ 回零后记录 | Z-IFM 的 Y 向斜率 |
-| --- | ---: | ---: | ---: |
-| $0^\circ$ | $+50\,\mathrm{nm}$ | $-50\,\mathrm{nm}$ | $-1\,\mu\mathrm{rad}$ |
-| $180^\circ$ | $+250\,\mathrm{nm}$ | $-250\,\mathrm{nm}$ | $-5\,\mu\mathrm{rad}$ |
+**把系数写回模型的坐标。** 半差 $[-1-(-5)]/2$ 求得晶圆楔角 $+2\,\mu\mathrm{rad}$。平均为 $-3\,\mu\mathrm{rad}$，在此光路假设下等于 $R_x-(\beta_{\mathrm{inst}}+R_x)=-\beta_{\mathrm{inst}}$。仓库的平移量 $T$ 定义在旋转前，机架坐标为 $RT$。固定 X 与姿态时，$\Delta Z\simeq\Delta T_z+R_x\Delta Y$。代入上面的光程关系得到
 
-半差给出 $w_Y=+2\,\mu\mathrm{rad}$，平均为 $-3\,\mu\mathrm{rad}$。在本例的条件下，**单 M4 就能得到 $\mathrm{szya}=+3\,\mu\mathrm{rad}$**。若 $\alpha_Y$ 未知，两轮平均只能给出 $\alpha_Y-b_Y$。若 $\alpha_Y$ 已知、而 $Y\,Ry$ 的贡献在本次姿态未知且非零，则两轮数据给出 $b_Y$，其中同时含 $\mathrm{szya}$ 和 $\mathrm{czyya}\,r_{\mathrm{IFM}}$。
+$$
+ \Delta Z_{\mathrm{IFM}}\simeq \Delta T_z-\beta_{\mathrm{inst}}\Delta Y,\qquad
+ \mathrm{szya}=-\overline{s}=+3\,\mu\mathrm{rad}.
+\tag{2.14}
+$$
+
+因此，$+8\,\mu\mathrm{rad}$ 是**该姿态下相对机架高度的光路补偿斜率**，$+3\,\mu\mathrm{rad}$ 是算例可分离出的**旋转前 Z 模型的 YTZ 系数**。实际光路若还有未知的 $Y\,Ry$ 耦合、顶镜斜率或其他固定 Y 向误差，两轮单 M4 的平均给出 $\alpha_Y-b_Y$。上述抵消依赖图示的共斜理想光路，单组固定姿态数据无法分别识别其他未建模的贡献。[IFM 坐标定义](ifm_corr.md#corr-input) · [Z 模型与交叉项](ifm_model.md#ifm-table-3)
 
 L3-《12-TT-L3-L3-ME_book.pdf》文件第 25–27 页（印刷第 17–19 页），图 2.4、2.5，确认实机 WZIM 的 XTZ、YTZ 网格使用单 LS 光斑，并做原卡盘转片复测。L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张说明用三只 LS 光斑建立 $R_{y0}$。图 2.12 的分项公式与数值为工程推导。[WZIM 资料汇整](WZIM资料汇整_v1.md#procedure-evidence) · [三光斑与单 M4 的原页核查](WZIM三点归零与LS读数核查_v1.md#three-spots)
 
