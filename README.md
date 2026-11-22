@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-22 | 重画图 2.8 的 M4 回零取样，标出 A、B、共用绝对高度轴和 LS 零高度。 | [图 2.8 回零取样](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-zero-height-coordinate_v1.md) |
 | 2026-11-22 | 沿用图 2.7 重画 WZIM 的单 M4 观测，展示从台体与片面姿态到 Z-IFM 平均斜率的算例。 | [图 2.8 单 M4 算例](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-single-m4-figure-27-layout_v1.md) |
 | 2026-11-22 | 在 WZIM 图 2.8 画出单 M4 两轮平均中保留的台体倾斜和框架 Z 镜安装倾斜。 | [图 2.8 固定斜率来源](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-m4-average-fixed-tilts_v1.md) |
 | 2026-11-22 | 新增 WZIM 三光斑找平与单 M4 网格的并排对照，说明两种观察量及用途。 | [图 2.8 测量对照](outputs/reports/MEtrology.md#wzim-method-comparison) · [变更日志](changes/2026-11-22-wzim-three-spot-versus-m4-diagram_v1.md) |
