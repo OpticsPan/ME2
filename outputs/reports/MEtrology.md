@@ -303,7 +303,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ## 2. WZIM — 测量侧初始高度与倾角
 
-[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [XTZ 闭环与补偿](#wzim-xtz-closed-loop) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
+[总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [三光斑倾角](#wzim-three-spot-tilt) · [三点回零与九光斑](#wzim-ls-nulls) · [Ry 均值推导](#wzim-ry-grid-mean) · [双向找平示意](#wzim-two-orientation-leveling) · [三光斑与单 M4 对照](#wzim-method-comparison) · [XTZ 的 X–Z 光路剖面](#wzim-xtz-ifm-section) · [XTZ 闭环与补偿](#wzim-xtz-closed-loop) · [三光斑找平后读 Z 和 Ry](#wzim-three-spot-ifm-ry) · [Level 1–3 资料汇整](WZIM资料汇整_v1.md)
 
 晶圆台完成[初步归零](#swzs)后，干涉仪（IFM）已有起读坐标。WZIM 接着用水平传感器（LS）建立测量侧（M）的高度和倾角基准。LS 测晶圆表面，Z-IFM 记录台体的 Z 读数。两者在同一测量点配合，才能知道沿 XY 行走时 Z 读数怎样变化。
 
@@ -512,5 +512,39 @@ $$
 以（3a）为例，让 M4 读数归零时，算例中 WS 的实际高度为 $-350\,\mathrm{nm}$。XTZ 使 IFM 多读 $150\,\mathrm{nm}$，因此 Z-IFM 显示并记录 $-200\,\mathrm{nm}$。图中前两项用于解释这笔读数，实际取样时记录的是第三项。（3a）、（3b）的记录为 $-200$、$+200\,\mathrm{nm}$，斜率为 $+4\,\mu\mathrm{rad}$。（3c）、（3d）的两笔均为 $0\,\mathrm{nm}$，斜率为零。两轮半差给出楔角 $+2\,\mu\mathrm{rad}$。两轮平均给出 $\alpha-\mathrm{szxa}=+2\,\mu\mathrm{rad}$，即初始坡度与 XTZ **读数贡献**的带符号和。即使把初始坡度改成 $+7\,\mu\mathrm{rad}$、把 $\mathrm{szxa}$ 改成 $+5\,\mu\mathrm{rad}$，按同样方式使 M4 读数归零，仍会得到相同的四笔 Z-IFM 高度记录。单用 M4 的两轮回零数据只能识别这两项的合量。
 
 **示意角度。** 30° 可以用于放大几何关系。在理想 45° 折返布局中，顶镜倾斜 30° 会让反射光相对名义回程偏转 60°。实机测量依赖回光进入接收光路，式（2.8）用于回光有效、姿态保持的小角度工况。线性 XTZ 的光学来源和补偿流程见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 24–25、27 页（印刷第 16–17、19 页），图 2.2、2.3、2.5。[原图定位](WZIM资料汇整_v1.md#source-figures)
+
+<a name="wzim-three-spot-ifm-ry"></a>
+
+##### 三光斑找平后求台体初始倾斜、晶圆楔角与 XTZ
+
+![图 2.11，固定 LS 的 M8、M4、M0 在四幅剖面都落在晶圆上表面的同一零高度。0 度轮在两个 X 位置分别使 M4 对准 A 和 B，记录的 IFM Ry 均为正 7 微弧度。180 度轮依次对准 B 和 A，记录的 IFM Ry 均为正 3 微弧度。每轮的 Z-IFM 高度记录分别为正 150 和负 150 纳米。四笔 Ry 平均得到初始坡度正 5 微弧度。两轮 Ry 半差得到楔角正 2 微弧度，Z 读数斜率为负 3 微弧度，对应 szxa 为正 3 微弧度。](../images/WZIM-三光斑双向找平与IFM读数_v1.png)
+
+**图 2.11　三光斑找平后的两轮 Z、Ry 记录。** 沿用[图 2.10](#wzim-xtz-closed-loop)的两个 WS 位置、固定光斑、台体参考点和数值假设。假定晶圆在该排光斑覆盖范围内是平面，三路 LS 高度已换到同一个零高度。初始台体支承面沿 $+X$ 的几何坡度为 $\alpha=+5\,\mu\mathrm{rad}$，晶圆的 X 向楔角为 $w=+2\,\mu\mathrm{rad}$，IFM 在该初始姿态的 Ry 读数取零。
+
+**每个位置都做两项调节。** 先升降 WS 使中心光斑 M4 到达 $Z_{\mathrm{ref}}$。再转动 WS 的 Ry，使两侧 M0 与 M8 的高度相同，同时复核 M4，必要时再微调 Z。三个高度都为零时，这排光斑下的片面与 $Z_{\mathrm{ref}}$ 重合，此时记录 Z 和 Ry。在 0° 轮的 $x_1$、$x_2$，M4 依次对准 A、B。裸片绕 Z 转 180° 并装回原卡盘后，仍走相同的两个台体位置，M4 依次对准 B、A。
+
+**用 Ry 求台体初始倾斜和晶圆楔角。** 按仓库 [MATLAB v9](../code/sim_ws_ifm_6dof_animation_v9.m) 的右手 Ry，正转会压低 $+X$ 一侧。每次为使片面沿 X 的坡度归零，所需的 Ry 增量等于找平前的几何坡度。以相同的初始 IFM 读数 $R_{y,\mathrm{base}}$ 为起点，有
+
+$$
+\Delta R_{y,i}^{(0^\circ)}=\alpha+w,\qquad
+\Delta R_{y,i}^{(180^\circ)}=\alpha-w,\qquad
+\alpha=\frac{\overline{R}_{y}^{(0^\circ)}+\overline{R}_{y}^{(180^\circ)}}{2}-R_{y,\mathrm{base}},\qquad w=\frac{\overline{R}_{y}^{(0^\circ)}-\overline{R}_{y}^{(180^\circ)}}{2} .
+\tag{2.10}
+$$
+
+本例四笔 Ry 读数是 $+7$、$+7$、$+3$、$+3\,\mu\mathrm{rad}$，平均为 $+5\,\mu\mathrm{rad}$，等于 **WS 沿 $+X$ 的初始几何坡度**。用两轮平均 Ry 的半差 $(7-3)/2$，求得**晶圆 X 向楔角** $+2\,\mu\mathrm{rad}$。若用同一个右手 Ry 符号描述 WS 初始姿态相对 LS 的角度，则是 $-5\,\mu\mathrm{rad}$。图 2.7 中的 $-7$、$-3\,\mu\mathrm{rad}$ 用的是沿 $+X$ 上升为正的坡度改变量，可按符号转换到这里的右手 Ry。初始 IFM 读数有偏置时，先用式（2.10）扣除起始读数。若角度测量还存在未校正的比例或位置相关误差，平均值也会包含相应残差。
+
+**用 Z 高度差求 XTZ。** 算例忽略转动引起的二阶台高变化，并以机架坐标表达 $P_{\mathrm{WS}}$ 的高度。片面找平后，同一轮两点的实际 Z 相同，因此 Z-IFM 沿 X 的变化只来自图 2.10 的未补偿线性项 $-\mathrm{szxa}(x_i-x_c)$。每轮 Z-IFM 都由 $+150$ 变为 $-150\,\mathrm{nm}$，两轮分别计算的斜率均为 $-3\,\mu\mathrm{rad}$。根据 Z 模型中 $+\mathrm{szxa}\,\Delta X$ 的补偿符号，求得 **XTZ 系数** $\mathrm{szxa}=+3\,\mu\mathrm{rad}$。
+
+$$
+s_{Z,\phi}=\frac{Z_{\mathrm{IFM},2}^{(\phi)}-Z_{\mathrm{IFM},1}^{(\phi)}}{x_2-x_1}
+=\frac{(-150-150)\,\mathrm{nm}}{100\,\mathrm{mm}}=-3\,\mu\mathrm{rad},\qquad
+\mathrm{szxa}=-\frac{s_{Z,0^\circ}+s_{Z,180^\circ}}{2}=+3\,\mu\mathrm{rad}.
+\tag{2.11}
+$$
+
+M0 和 M8 的高度差用于找平，共同的 Z 升降在这个差值中抵消。这里的高度、角度均为工程算例。MATLAB v9 旋转前平移量 $T$ 的 Z 分量须按 $R\,T$ 换算到机架坐标后再与图中高度对照。[IFM 坐标约定](ifm_corr.md#corr-input)
+
+L3-《12-TT-L3-L3-ME_book.pdf》文件第 25、27–29 页（印刷第 17、19–21 页）和 L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张说明，WZIM 的实机 XTZ/YTZ 网格用单 M4 定高，三光斑用于建立 $R_{y0}$。图 2.11 的逐点三路回零、转片及 Ry 平均是工程推导，课件未披露相同的逐点实机流程。[三点原页核查](WZIM三点归零与LS读数核查_v1.md#three-spots) · [图 2.7 的坡度角推导](#wzim-two-orientation-leveling)
 
 [回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
