@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 并排绘制 X 侧镜与两面 Z 顶镜的安装误差，对照纯 X 指令下 WS 真实俯仰、X 组反馈和 Z 组读数。 | [三问答疑](outputs/reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v1.md) · [对照图](outputs/images/WGIM-两种镜面安装误差与Ry反馈_v1.png) · [变更日志](changes/2026-11-23-wgim-pitch-loop-two-mirrors_v1.md) |
 | 2026-11-23 | 在图 3.6 答疑中对照上下两排的光程增量，解释固定倾角、X3 比例误差与 Ryx 闭环下的实际转动。 | [答疑草稿](outputs/reports/WGIM-X侧镜固定倾角与Ryx走位斜率说明草稿_v1.md) · [变更日志](changes/2026-11-23-wgim-ryx-fixed-mirror-offset_v1.md) |
 | 2026-11-23 | 合并 WGIM 图 3.6 五幅子图。在（1）放大侧镜落点，在（2）用三路 X 读数解释 Ryx，在（5）逐点对照两组俯仰方向。 | [草稿 v10 与图 3.6](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v10.md#wgim-z-mirror-coupling) · [变更日志](changes/2026-11-23-wgim-integrated-five-panel-figure_v1.md) |
 | 2026-11-23 | 在图 3.6（3）加粗 Z1、Z2 随 X 走位增减的光程段，画出两路变化及从净高度差到 Ryz 的一阶解算。 | [Z 双路光程与 Ryz](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v9.md#wgim-z-path-difference) · [变更日志](changes/2026-11-23-wgim-two-z-paths-and-ryz_v1.md) |

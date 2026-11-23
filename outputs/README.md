@@ -13,6 +13,8 @@
 
 ## 按主题查阅
 
+- **WGIM 俯仰反馈**　[两种镜面安装误差三问](reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v1.md) · [两种误差的 X–Z 光路对照图](images/WGIM-两种镜面安装误差与Ry反馈_v1.png)
+
 - **WGIM 图 3.6 答疑**　[固定侧镜倾角与 Ryx 走位斜率](reports/WGIM-X侧镜固定倾角与Ryx走位斜率说明草稿_v1.md) · [闭环读数与实际运动](reports/WGIM-X侧镜固定倾角与Ryx走位斜率说明草稿_v1.md#feedback)
 
 - **晶圆台 IFM**　[SWZS 初步归零](reports/MEtrology.md#swzs) · [校准项目](reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#core-calibrations) · [实机常数](reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#parameter-evidence) · [逐组 FreeCAD 误差](reports/WS-IFM-C0-v7C3%E5%85%AD%E8%87%AA%E7%94%B1%E5%BA%A6%E8%AF%AF%E5%B7%AE_v1.md#six-pose-summary)
