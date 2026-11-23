@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 提交 WGIM 与 WTAF 校准章节草稿及 Level 1–3 资料汇整。 | [WGIM](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v1.md#wgim) · [WTAF](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v1.md#wtaf) · [变更日志](changes/2026-11-23-wgim-wtaf-calibration-draft_v1.md) |
 | 2026-11-23 | 发布已确认的 MEtrology 全文整合稿，更新 WZIM 图件、公式和测量说明。 | [正式报告](outputs/reports/MEtrology.md#calibration-index) · [变更日志](changes/2026-11-23-metrology-integrated-report-publication_v1.md) |
 | 2026-11-23 | 更正 MEtrology 草稿删图编号，移除报告图 2.6，独立保留三光斑公式。 | [审阅草稿 v2](outputs/reports/MEtrology-%E5%85%A8%E6%96%87%E6%95%B4%E5%90%88%E8%8D%89%E7%A8%BF_v2.md) · [变更日志](changes/2026-11-23-metrology-draft-figure-number-correction_v1.md) |
 | 2026-11-23 | 提交 MEtrology 全文整合草稿，调整 WZIM 图件与公式显示，重写取样与解算说明。 | [审阅草稿](outputs/reports/MEtrology-%E5%85%A8%E6%96%87%E6%95%B4%E5%90%88%E8%8D%89%E7%A8%BF_v1.md) · [变更日志](changes/2026-11-23-metrology-full-review-draft_v1.md) |
