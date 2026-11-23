@@ -2,6 +2,7 @@
 
 | 类型 | 已归档成果 |
 | --- | --- |
+| 光路专题报告（PDF） | [TWINSCAN LS 原理与光路详解 v2](reports/ASML_TWINSCAN_LS原理与光路详解_v2.pdf) · [AA Athena 与 SMASH 原理与光路详解 v2](reports/ASML_AA_Athena与SMASH原理与光路详解_v2.pdf) |
 | [IFM 模型参考存档](#ifm-reference-archive) | [ifm_model 完整网页说明](reports/ifm_model.md) · [v10 原稿 PDF](reports/ifm_model_v10.pdf) · [ifm_raw 原始参考](reports/ifm_raw.md) · [ifm_corr 工程扩展式](reports/ifm_corr.md) |
 | [已审项目 PDF](reports/ME_New.pdf) | [SWZS](reports/MEtrology.md#swzs) · [WZIM](reports/MEtrology.md#wzim) · [WGIM](reports/MEtrology.md#wgim) · [正式报告目录](reports/MEtrology.md#calibration-index) · [PDF 导出脚本](code/build_me_new_pdf_v1.py) |
 | [测校专题报告](reports/MEtrology.md) | [SWZS 初步归零](reports/MEtrology.md#swzs) · [WZIM 测量侧初始高度与倾角](reports/MEtrology.md#wzim) · [WZIM 与 LS 读数核查](reports/WZIM%E4%B8%89%E7%82%B9%E5%BD%92%E9%9B%B6%E4%B8%8ELS%E8%AF%BB%E6%95%B0%E6%A0%B8%E6%9F%A5_v1.md#finding) · [WZIM 资料汇整](reports/WZIM%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [SWZS 资料汇整](reports/SWZS%E8%B5%84%E6%96%99%E6%B1%87%E6%95%B4_v1.md) · [SWZS 步骤 04–08 核查](reports/SWZS%E6%AD%A5%E9%AA%A404%E8%87%B308-PSD%E4%B8%AD%E5%BF%83%E5%AE%9A%E4%BD%8D%E6%A0%B8%E6%9F%A5_v1.md#conclusion) · [SWZS 步骤 12 核查](reports/SWZS%E6%AD%A5%E9%AA%A412-PSD%E5%9F%BA%E5%BA%A7%E4%BD%8D%E5%A7%BF%E6%A0%B8%E6%9F%A5_v1.md#conclusion) · [校准原理与原图](reports/MEtrology.md#swzs-principle) · [正文公式](reports/MEtrology.md#swzs-eq-psd-position) · [校准流程图](reports/MEtrology.md#swzs-procedure) |

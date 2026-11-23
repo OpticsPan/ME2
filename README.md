@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-24 | 归档 TWINSCAN LS 与 AA（Athena、SMASH）两份原理与光路详解 PDF，保留提供的 v2 版本。 | [LS 光路详解](outputs/reports/ASML_TWINSCAN_LS原理与光路详解_v2.pdf) · [AA 光路详解](outputs/reports/ASML_AA_Athena与SMASH原理与光路详解_v2.pdf) · [变更日志](changes/2026-11-24-ls-aa-optics-pdf-archive_v1.md) |
 | 2026-11-23 | WGIM 审核通过并入正式报告。首次发布 SWZS、WZIM、WGIM 三章汇编，后续获批项目续入同一份 PDF。 | [ME_New.pdf](outputs/reports/ME_New.pdf) · [WGIM 正文](outputs/reports/MEtrology.md#wgim) · [变更日志](changes/2026-11-23-approved-metrology-pdf_v1.md) |
 | 2026-11-23 | 按 X‑IFM 主控 Ry 重画 WGIM 图 3.6。用上下束等量位移解释台面保持俯仰，用两路 Z 光程差解释 Ryz 的 X 向斜率，并修订 WGIM 正文。 | [WGIM 草稿 v11](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v11.md#wgim-z-mirror-coupling) · [图 3.6](outputs/images/WGIM-Z镜不平行与Ry位置耦合_v8.png) · [变更日志](changes/2026-11-23-wgim-fixed-pitch-x-scan_v1.md) |
 | 2026-11-23 | 核对原始 IFM 模型的 Ry 主控说明和 WGIM 的校准方向，给出 Ryz 相对 Ryx 的 X 向斜率与 srxa 的出处。 | [答疑草稿 v2](outputs/reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v2.md#relative-slope) · [变更日志](changes/2026-11-23-wgim-ry-feedback-and-calibration-reference_v1.md) |
