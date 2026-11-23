@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 放大图 3.6（2）的上下束光程差，新增沿 X 走位的 WS、Ryx 与 Ryz 方向对照图。 | [红段细节](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v8.md#wgim-upper-lower-range) · [俯仰箭头图](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v8.md#wgim-pitch-arrows) · [变更日志](changes/2026-11-23-wgim-pitch-directions-along-x_v1.md) |
 | 2026-11-23 | 图 3.6 加入 WS 走 X 时的真实 Ry 与倾斜 X 侧镜，对照两姿态下的上下束光程差、Ryx 和 Ryz。 | [图 3.6 审阅稿](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v7.md#wgim-z-mirror-coupling) · [变更日志](changes/2026-11-23-wgim-pitch-and-tilted-x-mirror_v1.md) |
 | 2026-11-23 | WGIM 图 3.5 加粗真实偏航造成的两段光路变化，图 3.6 补入 X1、X2、X3 并说明三束读数误差怎样进入 Ryx。 | [图 3.5](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v6.md#wgim-translation-coupling) · [图 3.6](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v6.md#wgim-z-mirror-coupling) · [变更日志](changes/2026-11-23-wgim-yaw-and-three-x-beam-paths_v1.md) |
 | 2026-11-23 | 从 WGIM 草稿 v3 重画图 3.4、3.5，统一三维视图、镜面视图和俯视图的右手坐标与偏航方向。 | [右手坐标与两图 v5](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v5.md#wgim-tilt-coupling) · [变更日志](changes/2026-11-23-wgim-right-handed-views_v1.md) |
