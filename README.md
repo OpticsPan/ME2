@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 提交图 2.12 的矩形 Y–Z 剖面修订草稿，用蓝线和金线区分台体与镜条倾斜。 | [图 2.12 草稿 v2](outputs/reports/MEtrology-图2.12修订草稿_v2.md) · [变更日志](changes/2026-11-23-ytz-rectangular-section-and-slope-lines-draft_v1.md) |
 | 2026-11-23 | 提交图 2.12 的基准线、刚体倾斜与两轮计算修订草稿，记录正文修改前的审阅规定。 | [图 2.12 审阅草稿](outputs/reports/MEtrology-图2.12修订草稿_v1.md) · [变更日志](changes/2026-11-23-ytz-figure-review-draft-and-review-rule_v1.md) |
 | 2026-11-23 | 重画图 2.12 的 −X 镜面投影，并按（1b）的台体倾斜计算两轮 YTZ 读数。 | [带 Rx 的 YTZ 算例](outputs/reports/MEtrology.md#wzim-ytz-single-m4) · [变更日志](changes/2026-11-23-wzim-ytz-inclined-stage-two-rounds_v1.md) |
 | 2026-11-23 | 修正 WZIM 图 2.12（1），用 Y–Z 剖面区分长条镜安装倾角和 WS 的 Rx 叠加。 | [YTZ 长条镜倾斜](outputs/reports/MEtrology.md#wzim-ytz-single-m4) · [变更日志](changes/2026-11-23-wzim-ytz-strip-mounting-and-rx_v1.md) |
