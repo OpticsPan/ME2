@@ -1,12 +1,14 @@
 # MEtrology 校准项目报告
 
-[项目目录](#calibration-index) · [闭环与校准基准](#ws-ifm-calibration-reference) · [整理范式](#report-format) · [先画总流程再讲细节](#overview-first) · [步骤说明](#step-description) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
+[已审项目 PDF](ME_New.pdf) · [项目目录](#calibration-index) · [闭环与校准基准](#ws-ifm-calibration-reference) · [整理范式](#report-format) · [先画总流程再讲细节](#overview-first) · [步骤说明](#step-description) · [WS-IFM 校准清单](WS-IFM机器常数校准项目_v4.md#initial-zero) · [成果索引](../README.md)
 
 <a name="report-format"></a>
 
 ## 本报告的整理范式
 
 以下范式仅适用于 `MEtrology.md` 收录的校准项目。
+
+**已审项目汇编。** 已通过审核的项目按章收录在 [ME_New.pdf](ME_New.pdf)。本版收录 SWZS、WZIM 和 WGIM。后续项目经用户审核通过后，将该章并入正文，并更新同名 PDF。
 
 <a name="overview-first"></a>
 
@@ -60,6 +62,7 @@ WS–IFM 闭环比较运动指令和 IFM 解算的位姿。若高度反馈带有
 | --- | --- | --- |
 | [1. SWZS — WS 初步归零](#swzs) | 建立晶圆台干涉仪启用时的六自由度参考 | [Purpose](#swzs-constants) · [How](#swzs-procedure) · [Principle](#swzs-principle) · [初始零位测量原理](#swzs-voltage-to-zero) · [资料汇整](SWZS资料汇整_v1.md) |
 | [2. WZIM — 测量侧初始高度与倾角](#wzim) | 用 LS 定初始高度和倾角，校正 Z-IFM 的线性行走倾斜 | [总流程图](#wzim-procedure-diagram) · [Purpose](#wzim-purpose) · [How](#wzim-procedure) · [Principle](#wzim-principle) · [资料汇整](WZIM资料汇整_v1.md) |
+| [3. WGIM — WS TRIM](#wgim) | 同一姿态下，比较由不同 IFM 光束解算的 Rz 和 Ry。 | [总流程](#wgim-procedure-diagram) · [Purpose](#wgim-purpose) · [How](#wgim-procedure) · [Principle](#wgim-principle) · [资料汇整](WGIM资料汇整_v1.md) |
 
 <a name="szws"></a>
 <a name="swzs"></a>
@@ -93,7 +96,7 @@ SWZS 校准零传感器，使晶圆台装片或换台后能重复找回同一个
 
 #### 完成后可以开展的项目
 
-计量设定进入 BMAA 支路及 [WZIM](#wzim) → [WGIM／WS TRIM](WS-IFM机器常数校准项目_v4.md#mc-wgim) → CLPL 支路。SWZS 也是 SWCR 范围检查和 SWSM 短行程电机校准的前提之一。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14–15 页（印刷第 6–7 页），图 1.3；L3-《TT-MA-WS-Calibrations-3v1.ppt》第 79、144、211 张。[完整的上下游项目](SWZS资料汇整_v1.md#dependencies)
+计量设定进入 BMAA 支路及 [WZIM](#wzim) → [WGIM／WS TRIM](#wgim) → CLPL 支路。SWZS 也是 SWCR 范围检查和 SWSM 短行程电机校准的前提之一。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14–15 页（印刷第 6–7 页），图 1.3；L3-《TT-MA-WS-Calibrations-3v1.ppt》第 79、144、211 张。[完整的上下游项目](SWZS资料汇整_v1.md#dependencies)
 
 #### 机器常数及用途
 
@@ -297,7 +300,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 | L3-《TT-MA-WS-Calibrations-3v1.ppt》第 102 张 | 全 PSD 模式包含 IFM-align。两卡盘 M/E 共四组合可选择，图示进度为 0%。 | `assets/56ea2737208dfc3a/images/page_101_image_4_v1.jpg` |
 | L3-《09-TT-L3-WSbook.pdf》第 115 页（印刷第 107 页），**图 2.35** | FZP、MI:SZP、`u0/v0` 和 PSD 增益分别列项，可核对单位和报表字段。 | `assets/b4514b4ae5eb86cb/images/page_114_image_4_v1.jpg` |
 
-[返回项目目录](#calibration-index) · [WS-IFM 清单的初步归零条目](WS-IFM机器常数校准项目_v4.md#initial-zero)
+[下一章 WZIM](#wzim) · [返回项目目录](#calibration-index) · [WS-IFM 清单的初步归零条目](WS-IFM机器常数校准项目_v4.md#initial-zero)
 
 <a name="wzim"></a>
 
@@ -317,7 +320,7 @@ L3-《09-TT-L3-WSbook.pdf》文件第 111 页明确列出前四项校准常数�
 
 ### Purpose（目的）
 
-**为什么做。** 沿 X 或 Y 走位时，Z-IFM 的测高误差可以随位置变化。闭环维持定高读数时，这会造成实际 Z 随走位变化，分别称为 XTZ、YTZ。WZIM 修正其中的线性项，并用 LS 给两卡盘各自建立高度和绕 Y 倾角零点。它为后续 [WGIM／WS TRIM](WS-IFM机器常数校准项目_v4.md#mc-wgim) 提供合适的测量高度与倾角。完成 TRIM 后再做 CLPL 基准板高度与倾角标定。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14、23–28 页（印刷第 6、15–20 页）。
+**为什么做。** 沿 X 或 Y 走位时，Z-IFM 的测高误差可以随位置变化。闭环维持定高读数时，这会造成实际 Z 随走位变化，分别称为 XTZ、YTZ。WZIM 修正其中的线性项，并用 LS 给两卡盘各自建立高度和绕 Y 倾角零点。它为后续 [WGIM／WS TRIM](#wgim) 提供合适的测量高度与倾角。完成 TRIM 后再做 CLPL 基准板高度与倾角标定。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14、23–28 页（印刷第 6、15–20 页）。
 
 **前置条件。** 已建立 WS 初步归零及 IFM 初始化倾角。确认设备洁净度和温度状态，初始化 LS 并检查测高重复性，确认两卡盘都能正常装载裸片。LS 完整线性化在后续进行，WZIM 用中心光斑 M4 的零输出作高度参考。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14、23、26–27 页，L1-《13_AP-L1-ME_rel_3.2.pdf》第 23–24 页。
 
@@ -534,4 +537,170 @@ M0–M8 沿 X 排列。各通道已校到同一高度基准时，平直片面若
 
 结论依赖两条镜同向安装倾斜、水平 Zmirror、姿态固定及一阶近似。如果还有未标定的顶镜坡度、Y–Ry 耦合或其他固定 Y 向误差，两轮平均只能给出合量。课件确认实机 WZIM 用单 M4 定高和原卡盘转片复测。图 2.12 对各项的分解是工程推导。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 25–27 页（印刷第 17–19 页），L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 17 张。[WZIM 原文依据](WZIM资料汇整_v1.md#procedure-evidence)
 
-[回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [返回项目目录](#calibration-index)
+[回到总图](#wzim-procedure-diagram) · [Level 1–3 原图定位](WZIM资料汇整_v1.md#source-figures) · [下一章 WGIM](#wgim) · [返回项目目录](#calibration-index)
+
+<a name="wgim"></a>
+
+## 3. WGIM — 晶圆台干涉仪倾斜与旋转校准
+
+[总流程图](#wgim-procedure-diagram) · [Purpose](#wgim-purpose) · [How](#wgim-procedure) · [Principle](#wgim-principle) · [采样矩阵](#wgim-sampling) · [原图总览](#wgim-source-figures) · [束高差](#wgim-tilt-coupling) · [光束不平行](#wgim-translation-coupling) · [固定 Z 镜不平行](#wgim-z-mirror-coupling) · [X1、X2、X3 怎样测 Ryx](#wgim-x-path-difference) · [Z1、Z2 光程差](#wgim-z-path-difference) · [校准 Ryz 的 X 向斜率](#wgim-ryz-x-slope) · [台面与读数方向](#wgim-pitch-arrows) · [Level 1–3 资料汇整](WGIM资料汇整_v1.md)
+
+WGIM（WS TRIM）在同一台位记录两组角度。偏航 Rz 由 X 组和 Y 组各算一次。俯仰 Ry 由 X 组给出主控反馈 **Ryx**，Z 组给出另一份测量 **Ryz**，供 Z 模型使用。台体依次平移、升降和转动，系统从两组读数差随位置、倾角的变化中求出修正项。[原始 IFM 模型的生产 Ry 反馈说明](ifm_raw.md#z-ifm-原式)
+
+<a name="wgim-procedure-diagram"></a>
+
+![图 3.1，准备名义高度和倾角，逐网格取样，联合估计角度耦合，核对和复测。](../images/WGIM-总流程_v1.png)
+
+**图 3.1　WGIM 总流程。** （01）[准备名义台高和倾角](#wgim-purpose)。（02）[改变 XY 位置和姿态并取样](#wgim-sampling)。（03）[用两组冗余角度差估计修正](#wgim-principle)。（04）[按 Coach 核对并处理结果](#wgim-verification)。测量动作依据 L2-《12-TT-L2-ME-module.pdf》文件第 39–40 页（印刷第 31–32 页），设定顺序见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 23–24、30–33 页（印刷第 15–16、22–25 页）。
+
+<a name="wgim-purpose"></a>
+
+### Purpose（目的）
+
+**修正三个效应。** 理想情况下，WS 平移或改变 Rx、Ry 时，来自两组 IFM 的 Rz 应报告相同的偏航角。入射束高度或方向存在差异时，两组 Rz 会随姿态、位置产生差值。对于 Ry，在相同 Ry 指令下沿 X 取样。若两面固定 Z 镜沿 X 的坡度不同，即使实际台面保持原方向，Z 组的 Ryz 也会相对 Ryx 随 X 变化。WGIM 以 Ryx 为参照校正这个一阶位置依赖，并改善 Z 模型。范围为**两个卡盘、测量侧和曝光侧**，参数分别求得。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 30–32 页（印刷第 22–24 页），L3-《TT-MA-ME_setupblock_1-5_1v3.ppt》第 19 张。
+
+**前置与后续。** 初始计量设定先运行 [WZIM](#wzim)，用确定的名义高度和 Ry 运行 WGIM。之后可进入 CLPL，测 TIS 等基准板的高度和倾角。CLPL 需要 WS 换 XY 位置时高度大致保持一致。Spot Sensor Position 支路也在 WGIM 后开始，再做 RS 旋转／位置偏置与掩模装载偏置。维护验证另按对应版本的 Coach 前置。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 14–15、23–24、30、33 页（印刷第 6–7、15–16、22、25 页）。[初设和维护的区别](WGIM资料汇整_v1.md#sequence)
+
+**表 3.1　WGIM 涉及的机器常数**
+
+| 参数或功能项 | 从什么观测估计 | 用途与出处 |
+| --- | --- | --- |
+| Rz 的倾角修正项 | 比较改变 Rx/Ry 时 Rzx 与 Rzy 的差 | 补偿上束高度差等几何误差造成的偏航读数耦合。L2-《12-TT-L2-ME-module.pdf》文件第 40 页，L3 ME book 文件第 30–31 页。 |
+| Rz 的 XY 位置修正项 | 比较不同 X/Y 位置的 Rzx 与 Rzy | 补偿光束在 XY 面内不平行造成的偏航读数随位置变化。L2-《12-TT-L2-ME-module.pdf》文件第 40 页，L3 ME book 文件第 31 页。 |
+| srxa | 在各 X 位置求 Ryz − Ryx，检查差值随 X 的斜率 | 校正 Ryz 相对主控反馈 Ryx 的 X 向一阶依赖。复查时观察计量框架镜支承的漂移。L3 ME book 文件第 32、57 页。 |
+| sfz | 具体尺度拟合步骤待查对应版本报表 | Z 解算的比例系数。L3-《TT-MA-ME_setupblock_6-8_1v3.ppt》第 35 张备注将其归于 TRIM。 |
+
+Rz 修正的完整字段、各参数的写入符号以及保存状态，均按目标机台 WGIM 报表核对。[常数与证据范围](WGIM资料汇整_v1.md#constants)
+
+<a name="wgim-procedure"></a>
+
+### How（操作流程）
+
+#### 原文操作译文
+
+下列操作译自 L2-《12-TT-L2-ME-module.pdf》文件第 39–40 页（印刷第 31–32 页）中 **WS Tilt Rotation Interferometer Matrix** 条目（Coach csme072.adj）。L2-《TT-L2-ME-3v0.pdf》文件第 58 页（印刷第 52 页）的 csme072.per 条目同样记载网格、姿态组合、记录量和结果处置，前置条件转引对应 Coach。
+
+> **前置条件。** 确认已完成 BMAA Fine、BMWL Fine、BMTIS Fine、WS 非正交性与比例校准、WS 绝对台格试验以及 Combined FOCAL。
+>
+> **测量。** 将卡盘移到若干网格位置。使用覆盖整个晶圆区域的 5×5 网格。每个 XY 网格点施加 17 种由旋转 Rz、倾斜 Rx/Ry 和高度 Z 组成的不同组合。在每个位置测量台体坐标 X、Y、Z、Rx、Ryx、Ryz、Rzx、Rzy。条件允许时，并行测量测量侧和曝光侧的卡盘。
+>
+> **建模。** 为了校准旋转比例效应，WS 移到若干 X 和 Y 位置。X 平移后，将 Rzx 修正到与 Rzy 一致，因为此处把 Rzy 当作不受 X 平移影响的参照。Y 平移后，将 Rzy 修正到与 Rzx 一致，因为此处把 Rzx 当作不受 Y 平移影响的参照。镜面不平会扰动这些值，校准假设镜面平整度足以满足要求。
+>
+> 为了校准 Rz 的倾角依赖，WS 施加多组 Rx 和 Ry。施加 Rx 后，将 Rzy 修正到与 Rzx 一致，此处假设 Rzx 不受 Rx 转动影响。施加 Ry 后，将 Rzx 修正到与 Rzy 一致，此处假设 Rzy 不受 Ry 转动影响。
+>
+> 为了校准 Z 镜不平行造成的 Ry 误差，WS 移到若干 X 位置。X 平移后，将 Ryz 修正到与 Ryx 一致，因为 X 平移对 Ryx 的影响较小。
+>
+> 上述说明按三个效应分段。实际测量在多个位置和倾角进行，用一个联合数学模型校准三类效应。
+>
+> **结果与处置。** 界面显示 OK/NOK。检查结果，各项均在规格内时无需进一步操作。超限时，原文的处置为保存机器常数后再次运行试验，以确认修正。
+
+**初设与验证。** 以上译文列出的各项前置属于 L2 的后期验证语境。初始设定的 WGIM 位于 WZIM 和 CLPL 之间。L3 设定序列 4/8 会再跑 WGIM，重点是 X 对 Ryz 的贡献 srxa。L2 的 .per 版还出现在季度维护清单中。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 23–24、57 页，L2-《12-TT_L2_ME_2v3new.pdf》文件第 29 页（第 57 张）。[版本对照](WGIM资料汇整_v1.md#sequence)
+
+<a name="wgim-sampling"></a>
+
+#### 步骤 02–03　每组姿态保存一笔记录，再做通道比较
+
+![图 3.2，从 5×5 网格选一点，对该点执行 17 组 Rz、Rx、Ry、Z 组合，逐组保存 8 个 IFM 解算坐标并组成两路角度差。](../images/WGIM-网格姿态与冗余读数_v1.png)
+
+**图 3.2　WGIM 测量记录的结构。** 对应[总图步骤 02–03](#wgim-procedure-diagram)。（1）把卡盘带到一个 XY 网格点。（2）在该点执行 17 组姿态。（3）每组读取八个**解算坐标**，用同一笔记录的 Rzx 和 Rzy 求式（3.1a），用 Ryz 和 Ryx 求式（3.1b）。软件随后用多个位置和姿态的记录联合估计修正。图中的差值方向是本文约定。来源为 L2-《12-TT-L2-ME-module.pdf》文件第 39–40 页（印刷第 31–32 页）。
+
+<a name="wgim-verification"></a>
+
+#### 步骤 04　检查校准结果与保存状态
+
+先按对应 Coach 核对各项结果，再看报表中机器常数是否保存。维护验证全部合格时结束。若启用候选常数修正超限结果，按 Coach 复测，确认角度差的相应依赖已减小。复查 srxa 时可对照同一卡盘、同一侧的历史值。源文给出 OK/NOK，具体验收门限待查对应机台的 Coach 和报表。见 L2-《TT-L2-ME-3v0.pdf》文件第 58 页，L3-《12-TT-L3-L3-ME_book.pdf》文件第 57 页。[验证与记录线索](WGIM资料汇整_v1.md#method)
+
+<a name="wgim-principle"></a>
+
+### Principle（校准原理）
+
+三路 X 光给出台体的 X、Rzx、Ryx，三路 Y 光给出 Y、Rzy、Rx，两路 Z 测量光及其参考光给出 Z、Ryz。两组 Rz 读数有同一个实际 Rz 分量，两组 Ry 读数也有同一个实际 Ry 分量。在同一姿态下作差，共同的实际角度一阶相消，差值给出两组测量链的**相对误差**。对于沿 X 走位的俯仰，X 组三束看同一块侧镜，L3 把该镜的面形平整度作为主要考虑；Z 组读数受六个镜面和两台差分干涉仪影响。WGIM 假设 Ryx 的系统误差远小于 Ryz，因此以 Ryx 为参照，估计 Ryz 随 X 的额外变化。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 32 页（印刷第 24 页）。[L3 原图与出处](WGIM资料汇整_v1.md#source-figures)
+
+<a name="wgim-source-figures"></a>
+
+![图 3.3，左侧为 L3 的原图局部。右侧解释上束高度差、XY 内方向差和固定 Z 镜不平行分别怎样进入角度读数。](../images/WGIM-三类角度误差原理_v1.png)
+
+**图 3.3　三个效应的几何来源。** 对应[总图步骤 03](#wgim-procedure-diagram)。左列依次引用 L3-《12-TT-L3-L3-ME_book.pdf》文件第 31、32 页（印刷第 23、24 页）的原图 2.10、原图 2.11 右半、原图 2.12。右列为工程解释。[原图定位](WGIM资料汇整_v1.md#source-figures)
+
+图 3.3 的三个效应分别见[图 3.4 束高差](#wgim-tilt-coupling)、[图 3.5 光束不平行](#wgim-translation-coupling)和[图 3.6 固定 Z 镜不平行](#wgim-z-mirror-coupling)。
+
+**先认方向。** 图 3.4、3.5 均以机架为固定右手系，$\mathbf e_X\times\mathbf e_Y=\mathbf e_Z$。X1 位于 −Y 侧，X2 位于 +Y 侧，名义入射方向为 +X，+Z 向上。从 +Z 朝台面俯视，+X 向右，+Y 向上。台体上原先沿 +Y 的标记向 −X 偏转，表示实际正偏航。两图均用 $m_i$ 表示第 $i$ 路从初态到终态、统一按 +X 定正的等效镜面位移增量。[ME 的坐标与读数定义](https://github.com/OpticsPan/ME/blob/9365f438e1f73a11a1aab27116273adc4253fbbd/calibrations/WGIM-WS-TRIM.md#appendix-conventions)
+
+<a name="wgim-tilt-coupling"></a>
+
+#### 图 3.3（1）　两束不等高时，纯 Ry 和锁住 Rzx 有什么区别？
+
+![图 3.4，在机架右手坐标系中并排比较纯 Ry 和旧 X 组偏航读数锁零。X1、X2、X3 的转前、转后光点对应三个有符号 X 位移，俯视可核对真实偏航的转向。](../images/WGIM-束高差与Rz倾角耦合_v4.png)
+
+**图 3.4　先看三束各读多少，再看台体绕哪条轴转。** 左图只施加正 Ry。正 Ry 使转轴上方的点向 +X 移，下方的点向 −X 移。在本图的平行入射条件下，沿各自的固定光线，从转前镜面交点量到转后交点，便分别得到 $m_1,m_2,m_3$。X2 比 X1 高 $\Delta h=z_2-z_1>0$，所以 X2 比 X1 多读 $\Delta h\,\Delta R_y$。用两路上束按名义等高几何估算偏航，会得到负的旧 Rzx，台体的实际 Rz 此时为零。用三路测 Ry 时，取两上束的读数均值减去下束 X3，扣除 X3 横向偏置引入的偏航分量，再除以上、下束的垂直间距。变量和一阶式见图内式（3.2）。
+
+右图仍施加正 Ry，同时要求旧 Rzx 保持零，即 $m_1=m_2$。偏航正转会让 −Y 侧的 X1 多读、+Y 侧的 X2 少读，刚好抵消束高差时，有 $\Delta R_z=(\Delta h/B_y)\Delta R_y>0$，其中 $B_y=y_2-y_1$。因此，**纯 Ry 的轴平行于机架 Y。锁住旧 Rzx 且取 Rx 为零时，合成转轴的方向才平行于两初始光点的斜连线**。图中另取两上束的公共位移也为零，此例的转轴便穿过两个光点。看右图台面上的绿色刻线，再看右下角同一刻线的俯视图。它从机架 +Y 向 −X 逆时针偏转，显示台体确实发生了正偏航。WGIM 用独立 Y 组的 Rzy 观测真实偏航。依据 L3-《12-TT-L3-L3-ME_book.pdf》文件第 30–31 页（印刷第 22–23 页），原图 2.9、2.10。[ME 图 2 与斜轴推导](https://github.com/OpticsPan/ME/blob/9365f438e1f73a11a1aab27116273adc4253fbbd/calibrations/WGIM-WS-TRIM.md#appendix-tilt) · [IFM 光束位置和符号](ifm_model.md#ifm-table-3)
+
+<a name="wgim-translation-coupling"></a>
+
+#### 图 3.3（2）　沿 X 走位时，什么时候会产生真实 XRZ？
+
+![图 3.5，从机架 +Z 俯视，以同一段 A 至 B 的 X 走位比较仅观测、旧反馈、补偿后反馈。中图两条粗段分别标出同一终点 B 只因真实偏航而增加或减少的光线路程。](../images/WGIM-光束不平行与Rz位置耦合_v5.png)
+
+**图 3.5　从 +Z 看同一段走位，在机架系里比较方台的实际方向。** 设两上束等高，只有 X 平移和可能的 Rz。图中的 $B_y$ 是**起点处两光点沿 Y 的距离**。旧 X 组用 $(m_1-m_2)/B_y$ 估计偏航。若保持实际偏航不变、沿 +X 平移，第二路每单位走位比第一路多读，即 $g_2>g_1$。这是图例采用的局部有效响应，实际大小取决于光路及读数换算。[ME 的双束响应与定号](https://github.com/OpticsPan/ME/blob/9365f438e1f73a11a1aab27116273adc4253fbbd/calibrations/WGIM-WS-TRIM.md#appendix-translation)
+
+**沿子图（2）的两条粗线看偏航。** 两次比较的台心都在 B。$H_i$ 是台体假设保持原方向时第 $i$ 束打到侧镜的位置，$P_i$ 是台体实际偏航后的入射点。从 $H_i$ 到 $P_i$，下方 X1 延长，上方 X2 缩短。图里加粗的是去程上的几何变化，公式使用相位换算后的等效镜面位移。按图示束序，以台心为转动参考，一阶近似下第 $i$ 路的偏航贡献为 $-y_i\Delta R_z$。将两路按 X1 减 X2 作差，偏航一项给出 $B_y\Delta R_z$。如果从起点 A 计算**总读数差**，还要加上平移带来的 $(g_1-g_2)\Delta X$。旧反馈锁零时，这两项相抵。
+
+| 同一段 +X 走位 | X 组偏航读数 | 从 +Z 俯视方台 |
+| --- | --- | --- |
+| （1）保持真实偏航为零，只记录旧读数 | X2 多读，$m_1-m_2<0$，旧 Rzx 为负 | 方台平移，方向不变。 |
+| （2）用旧 Rzx 反馈，要求偏航增量为零 | 控制器使 $m_1=m_2$，旧 Rzx 读零 | 方台实际逆时针转动，产生正 XRZ。正转带来的束差抵消了平移带来的束差。 |
+| （3）用校正后的 Rzx 反馈，给相同指令 | 在旧读数上加位置补偿，校正后读零 | 补偿准确时，方台平移，方向不变。 |
+
+WGIM 以 Y 组的 Rzy 为参照，检查两组偏航读数差随 X 的斜率。上表中的实际转向对应 $g_2>g_1$ 和正向扫描，反向扫描时转角增量反号。这与 WZIM 中 XTZ 的闭环逻辑相同，XTZ 体现为台高随 X 改变，XRZ 体现为真实偏航随 X 改变。依据 L3-《12-TT-L3-L3-ME_book.pdf》文件第 31 页（印刷第 23 页），原图 2.11 右半。[ME 图 3 的三种反馈状态](https://github.com/OpticsPan/ME/blob/9365f438e1f73a11a1aab27116273adc4253fbbd/calibrations/WGIM-WS-TRIM.md#translation-yaw) · [WZIM 图 2.9 的 XTZ](#wzim-xtz-ifm-section)
+
+<a name="wgim-z-mirror-coupling"></a>
+
+#### 图 3.3（3）　台体的 Ry 保持不变，为什么 Z 组还会读到俯仰变化？
+
+**全图只看同一段纯 X 扫描。** WS 从 A 向 +X 走到 B，Ry 指令取起点值。控制器用 X 组的 $R_{yx}$ 作俯仰反馈。在 X 组系统误差随位置的变化可忽略、闭环跟踪良好的条件下，实际俯仰 $R_{y,\mathrm{WS}}$ 近似恒定。图中取起姿水平，所有角度增量以 A 为零。这个常数在实机上可以非零。采用机架右手系，从 −Y 看，+X 向右，+Z 向上，正 Ry 使台面右端下降。[原始模型的主控说明](ifm_raw.md#z-ifm-原式) · [Level 3 的校准基准](WGIM资料汇整_v1.md#method)
+
+![图 3.6。（1）WS 虚线和实线保持平行，两排 X 光增加相同位移。（3）两面固定顶镜坡度不同，左路上行光程增长、右路缩短。（4）用同台位的 Ryz 与 Ryx 估计并校正相对读数的 X 向斜率。（5）实际台面保持原方向，WS 横滚 Rx 的五个增量标记等高，X 组箭头保持水平，未经补偿的 Z 组箭头随 X 改变。](../images/WGIM-Z镜不平行与Ry位置耦合_v8.png)
+
+**图 3.6　沿 X 走位时用 X 组控制 Ry、用 X 组作参照校正 Z 组。** [（1）X 组反馈](#wgim-x-path-difference) · [（3）Z 组光程](#wgim-z-path-difference) · [（4）校准斜率](#wgim-ryz-x-slope) · [（5）逐位置读方向](#wgim-pitch-arrows) · [打开完整图](../images/WGIM-Z镜不平行与Ry位置耦合_v8.png)
+
+<a name="wgim-upper-lower-range"></a>
+<a name="wgim-x-path-difference"></a>
+
+**（1）为什么 X 组的 Ryx 保持不变？** 虚线 WS 是起点，实线 WS 是终点，两条台面平行。看同一块随台侧镜上的三束光：上排 X1、X2 在 X–Z 侧视中重合，下排是 X3。沿上、下两排分别量出从起点到终点的水平位移。侧镜平移了多少，两排就各增加多少。即使侧镜有固定安装倾角，它留下的上下束初始程差也在比较两个台位时相消。
+
+令 $m_i$ 为第 $i$ 束从 A 到 B 的相位变化换算出的等效镜面位移，沿 +X 为正；$d_{zx}$ 为上下束的垂直间距。取偏航增量为零，图中的一阶关系为
+
+$$
+m_u=\frac{m_1+m_2}{2}=m_3=\Delta X,\qquad
+\Delta R_{yx}\simeq\frac{m_u-m_3}{d_{zx}}=0 .
+$$
+
+所以纯 X 平移不会在 X 组反馈中产生随行程增长的俯仰，控制器也无需为这段平移施加逐渐增大的 Ry。[IFM 光路与束间距](ifm_model.md#ifm-geometry) · [Ryx 的完整工程公式](ifm_model.md#ifm-table-3)
+
+<a name="wgim-z-path-difference"></a>
+
+**（3）同一段走位，Z 组为什么看到倾斜？** Z1 从左侧入射，Z2 从右侧入射，经各自的随台 45° 镜折向固定顶镜。两处折转点都向 +X 移动。本例左顶镜沿 +X 升高、右顶镜沿 +X 降低，取两坡度大小相等，显示等高走位。看 B 处的两段粗线：左路从 45° 镜到顶镜的单程增长，右路缩短。水平光程的变化由同侧参考支路扣除。于是 Z1 读起来像是台体左侧降低，Z2 读起来像是右侧升高。台面仍水平，Z 组却读出负俯仰。
+
+设 $b_1,b_2$ 为左右顶镜沿 +X 的高度坡度，$\Delta\ell_i$ 为第 $i$ 路上行段的单程增量，$k_{ze}$ 为左右测点的有效间距。在图示一阶等效高度模型中，
+
+$$
+\Delta\ell_i=b_i\Delta X,\qquad
+\Delta z_i^{\mathrm m}\simeq-\Delta\ell_i,\qquad
+\Delta R_{yz}\simeq\frac{\Delta z_1^{\mathrm m}-\Delta z_2^{\mathrm m}}{k_{ze}}
+=\frac{b_2-b_1}{k_{ze}}\Delta X<0 .
+$$
+
+俯仰读数的斜率取决于两镜的**坡度差**。两镜同坡时，两路测高同向改变，作差后这一项抵消。这里几何上量的是单程；仓库模型从折返测量支路和同侧参考支路的往返光程差换算净高度。[IFM 净读数定义](ifm_model.md#ifm-readout) · [L3 原图 2.12](WGIM资料汇整_v1.md#source-figures)
+
+<a name="wgim-ryz-x-slope"></a>
+
+**（4）WGIM 怎样校准 Ryz？** 在每个 X 位置，用同一笔记录计算 $D(X)=R_{yz}(X)-R_{yx}(X)$。以 A 为参照，只看差值从 A 起变化了多少。校准前，$D(X)-D(X_A)$ 的一阶部分随 X 呈斜线；以 Ryx 为基准更新 Z 组模型后，复查这条线的斜率是否接近零。原始模型在 Ryz 方程中写有 <code>srxa·X</code>，括号外还有测角比例 <code>sfryz</code>。L3 将 srxa 标为 X 对 Ryz 的贡献。图中按一条扫描线解释该项；实际 WGIM 同时使用多个位置和倾角估计各项修正。见 L2-《12-TT-L2-ME-module.pdf》文件第 39–40 页（印刷第 31–32 页）及 L3-《12-TT-L3-L3-ME_book.pdf》文件第 57 页（印刷第 49 页）。[机器常数](WGIM资料汇整_v1.md#constants) · [Ryz 公式](ifm_model.md#ifm-table-3)
+
+<a name="wgim-pitch-arrows"></a>
+
+**（5）同一个 X 位置，从上到下对照四行。** 第一行画 WS 实际台面，五个位置的俯仰均为起点值 $R_{y,\mathrm{WS}}(A)$。第二行单列绕 X 轴的横滚：在各台位都有 $R_x(X)=R_x(A)$，五个等高标记表示 $\Delta R_x=0$。横滚用角度增量表示，从 X–Z 侧视只能看出绕 Y 的俯仰。第三行蓝箭头是 X‑IFM 的俯仰反馈 $R_{yx}$，全程水平。第四行绿箭头是未经位置补偿的 $R_{yz}$，从 A 的水平逐渐变成右端抬起，对应本例的负斜率。L3 原图 2.12 的五条短线也表示各台位的 Ryz。见 L3-《12-TT-L3-L3-ME_book.pdf》文件第 32 页（印刷第 24 页）。[放大子图（5）](../images/WGIM-X走位与两路俯仰方向_v2.png) · [原图定位](WGIM资料汇整_v1.md#source-figures)
+
+**联合模型与残差。** 以上三类激励说明每个依赖怎样可观测。L2 资料明确由同一数学模型使用全部姿态与位置数据。L3 原书对 Ryz 一阶依赖的概述同时列 X 和 Y，原图及课件演示集中在 X，具名参数为 srxa。图 3.3（3）的五笔粗线连起来还呈现高度弯曲，该较高阶的 Z 效应另由后续校准处理。无 Confidence Sensor 的版本把剩余 M/E 相对 X 向抛物项交给 Combined FOCAL。见 L2-《12-TT-L2-ME-module.pdf》文件第 40 页、L3-《12-TT-L3-L3-ME_book.pdf》文件第 32、54–55 页、L3-《TT-MA-ME_setupblock_6-8_1v3.ppt》第 42 张。[版本和曲率证据](WGIM资料汇整_v1.md#sequence)
+
+[回到总图](#wgim-procedure-diagram) · [WZIM 名义台高与倾角](#wzim-purpose) · [返回项目目录](#calibration-index)

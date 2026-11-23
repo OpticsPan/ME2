@@ -1,11 +1,12 @@
 # ME2
 
-本仓库归档 ME2 的项目成果与变更记录。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。晶圆台 IFM 可查阅 [校准项目清单](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#initial-zero)、[MEtrology 校准报告](outputs/reports/MEtrology.md#calibration-index) 和 [模型与仿真参考存档](outputs/README.md#ifm-reference-archive)。
+本仓库归档 ME2 的项目成果与变更记录。按类型浏览 [成果索引](outputs/README.md)，协作规则见 [AGENTS.md](AGENTS.md)。晶圆台 IFM 可查阅 [校准项目清单](outputs/reports/WS-IFM%E6%9C%BA%E5%99%A8%E5%B8%B8%E6%95%B0%E6%A0%A1%E5%87%86%E9%A1%B9%E7%9B%AE_v4.md#initial-zero)、[MEtrology 校准报告](outputs/reports/MEtrology.md#calibration-index)、[已审项目 PDF](outputs/reports/ME_New.pdf) 和 [模型与仿真参考存档](outputs/README.md#ifm-reference-archive)。
 
 ## 更新历史
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | WGIM 审核通过并入正式报告。首次发布 SWZS、WZIM、WGIM 三章汇编，后续获批项目续入同一份 PDF。 | [ME_New.pdf](outputs/reports/ME_New.pdf) · [WGIM 正文](outputs/reports/MEtrology.md#wgim) · [变更日志](changes/2026-11-23-approved-metrology-pdf_v1.md) |
 | 2026-11-23 | 按 X‑IFM 主控 Ry 重画 WGIM 图 3.6。用上下束等量位移解释台面保持俯仰，用两路 Z 光程差解释 Ryz 的 X 向斜率，并修订 WGIM 正文。 | [WGIM 草稿 v11](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v11.md#wgim-z-mirror-coupling) · [图 3.6](outputs/images/WGIM-Z镜不平行与Ry位置耦合_v8.png) · [变更日志](changes/2026-11-23-wgim-fixed-pitch-x-scan_v1.md) |
 | 2026-11-23 | 核对原始 IFM 模型的 Ry 主控说明和 WGIM 的校准方向，给出 Ryz 相对 Ryx 的 X 向斜率与 srxa 的出处。 | [答疑草稿 v2](outputs/reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v2.md#relative-slope) · [变更日志](changes/2026-11-23-wgim-ry-feedback-and-calibration-reference_v1.md) |
 | 2026-11-23 | 并排绘制 X 侧镜与两面 Z 顶镜的安装误差，对照纯 X 指令下 WS 真实俯仰、X 组反馈和 Z 组读数。 | [三问答疑](outputs/reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v1.md) · [对照图](outputs/images/WGIM-两种镜面安装误差与Ry反馈_v1.png) · [变更日志](changes/2026-11-23-wgim-pitch-loop-two-mirrors_v1.md) |
