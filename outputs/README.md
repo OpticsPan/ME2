@@ -13,7 +13,7 @@
 
 ## 按主题查阅
 
-- **WGIM 俯仰反馈**　[两种镜面安装误差三问](reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v1.md) · [两种误差的 X–Z 光路对照图](images/WGIM-两种镜面安装误差与Ry反馈_v1.png)
+- **WGIM 俯仰反馈**　[两种镜面安装误差三问](reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v2.md) · [以 Ryx 为基准校准 Ryz 的依据](reports/WGIM-两种镜面安装误差与Ry反馈说明草稿_v2.md#relative-slope) · [两种误差的 X–Z 光路对照图](images/WGIM-两种镜面安装误差与Ry反馈_v1.png)
 
 - **WGIM 图 3.6 答疑**　[固定侧镜倾角与 Ryx 走位斜率](reports/WGIM-X侧镜固定倾角与Ryx走位斜率说明草稿_v1.md) · [闭环读数与实际运动](reports/WGIM-X侧镜固定倾角与Ryx走位斜率说明草稿_v1.md#feedback)
 
