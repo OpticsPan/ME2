@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 从 WGIM 草稿 v3 重画图 3.4、3.5，统一三维视图、镜面视图和俯视图的右手坐标与偏航方向。 | [右手坐标与两图 v5](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v5.md#wgim-tilt-coupling) · [变更日志](changes/2026-11-23-wgim-right-handed-views_v1.md) |
 | 2026-11-23 | 在 WGIM 图 3.4、3.5 标明光斑位移、束距和一阶偏航解算变量，并补充旧闭环的俯视转角。 | [图与说明 v4](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v4.md#wgim-tilt-coupling) · [变更日志](changes/2026-11-23-wgim-variables-on-geometry_v1.md) |
 | 2026-11-23 | 修订 WGIM 的三维转轴、XRZ 闭环俯视图和两组 Ry 一阶公式。 | [三图与说明 v3](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v3.md#wgim-source-figures) · [变更日志](changes/2026-11-23-wgim-3d-axes-xrz-and-pitch_v1.md) |
 | 2026-11-23 | 将 WGIM 图 3.3 的三类误差分别画成独立原理图，补充至新章草稿 v2。 | [三图与说明](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v2.md#wgim-source-figures) · [变更日志](changes/2026-11-23-wgim-three-error-diagrams-draft_v1.md) |
