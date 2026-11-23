@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-23 | 合并 WGIM 图 3.6 五幅子图。在（1）放大侧镜落点，在（2）用三路 X 读数解释 Ryx，在（5）逐点对照两组俯仰方向。 | [草稿 v10 与图 3.6](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v10.md#wgim-z-mirror-coupling) · [变更日志](changes/2026-11-23-wgim-integrated-five-panel-figure_v1.md) |
 | 2026-11-23 | 在图 3.6（3）加粗 Z1、Z2 随 X 走位增减的光程段，画出两路变化及从净高度差到 Ryz 的一阶解算。 | [Z 双路光程与 Ryz](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v9.md#wgim-z-path-difference) · [变更日志](changes/2026-11-23-wgim-two-z-paths-and-ryz_v1.md) |
 | 2026-11-23 | 放大图 3.6（2）的上下束光程差，新增沿 X 走位的 WS、Ryx 与 Ryz 方向对照图。 | [红段细节](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v8.md#wgim-upper-lower-range) · [俯仰箭头图](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v8.md#wgim-pitch-arrows) · [变更日志](changes/2026-11-23-wgim-pitch-directions-along-x_v1.md) |
 | 2026-11-23 | 图 3.6 加入 WS 走 X 时的真实 Ry 与倾斜 X 侧镜，对照两姿态下的上下束光程差、Ryx 和 Ryz。 | [图 3.6 审阅稿](outputs/reports/MEtrology-WGIM-WTAF%E6%95%B4%E7%90%86%E8%8D%89%E7%A8%BF_v7.md#wgim-z-mirror-coupling) · [变更日志](changes/2026-11-23-wgim-pitch-and-tilted-x-mirror_v1.md) |
