@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-26 | BMAA 图 5.4 中，将 TIS1 名义载板的外轮廓绕晶圆中心 C 旋转 180° 得到 TIS2 名义外轮廓，实际安装轮廓分别按各板的示例偏差绘制。 | [草稿 v5 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v5.md#top-view) · [新版图片](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v4.png) · [变更日志](changes/2026-11-26-bmaa-tis-nominal-central-symmetry_v1.md) |
 | 2026-11-26 | BMAA 图 5.4 的两块载板沿三标记连线相对上版再缩短 25%，名义与实际轮廓均与晶圆边缘留有间隙。 | [草稿 v4 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v4.md#top-view) · [新版图片](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v3.png) · [变更日志](changes/2026-11-26-bmaa-tis-wafer-clearance_v1.md) |
 | 2026-11-26 | 调整 BMAA 图 5.4，将 TIS1、TIS2 的示意载板沿 I1、I0、I2 连线方向各缩短 15%。 | [草稿 v3 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v3.md#top-view) · [查看新版图](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v2.png) · [变更日志](changes/2026-11-26-bmaa-tis-plate-length_v1.md) |
 | 2026-11-25 | BMAA 草稿新增双 TIS 与 WS 的 XY 俯视图，按 L3 原版幻灯片核实两板六标，列明两套 TRM 与 WS 零偏的关系。记录 MEtrology 公式一律以图片显示。 | [图 5.4 与参数](outputs/reports/MEtrology-BMAA整理草稿_v2.md#top-view) · [原页证据](outputs/reports/BMAA-TIS双板四参数资料核查_v1.md) · [公式显示规范](outputs/reports/MEtrology-公式显示规范_v1.md) · [变更日志](changes/2026-11-25-bmaa-top-view-formulas_v1.md) |
