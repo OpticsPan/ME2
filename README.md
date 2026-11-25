@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-26 | BMAA 图 5.4 的两块载板沿三标记连线相对上版再缩短 25%，名义与实际轮廓均与晶圆边缘留有间隙。 | [草稿 v4 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v4.md#top-view) · [新版图片](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v3.png) · [变更日志](changes/2026-11-26-bmaa-tis-wafer-clearance_v1.md) |
 | 2026-11-26 | 调整 BMAA 图 5.4，将 TIS1、TIS2 的示意载板沿 I1、I0、I2 连线方向各缩短 15%。 | [草稿 v3 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v3.md#top-view) · [查看新版图](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v2.png) · [变更日志](changes/2026-11-26-bmaa-tis-plate-length_v1.md) |
 | 2026-11-25 | BMAA 草稿新增双 TIS 与 WS 的 XY 俯视图，按 L3 原版幻灯片核实两板六标，列明两套 TRM 与 WS 零偏的关系。记录 MEtrology 公式一律以图片显示。 | [图 5.4 与参数](outputs/reports/MEtrology-BMAA整理草稿_v2.md#top-view) · [原页证据](outputs/reports/BMAA-TIS双板四参数资料核查_v1.md) · [公式显示规范](outputs/reports/MEtrology-公式显示规范_v1.md) · [变更日志](changes/2026-11-25-bmaa-top-view-formulas_v1.md) |
 | 2026-11-25 | 新增 BMAA 待审章节。三幅图分别说明总流程、AA 如何找到标记中心，以及 TIS1 和其他载板如何用于校准测量侧零偏与载板坐标。 | [BMAA 审阅稿](outputs/reports/MEtrology-BMAA整理草稿_v1.md#bmaa) · [Level 1–3 资料汇整](outputs/reports/BMAA资料汇整_v1.md) · [变更日志](changes/2026-11-25-bmaa-calibration-draft_v1.md) |
