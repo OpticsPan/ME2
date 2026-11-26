@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-26 | 将 WTAF 重新整理为完整校准章节，串起固定 AA、两处 I₀、倾转后重对准、十个物理参数与复测。新增总流程和 Y 向零角读数示意。 | [WTAF 第 4 章 v4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf) · [图 4.4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf-y-model) · [变更日志](changes/2026-11-26-wtaf-chapter-reorganization_v1.md) |
 | 2026-11-26 | 按两张附件照片校核 WTAF 机器常数，将 Kx、Ly 归入附件物理参数，修正上一版对两个独立跨轴项的归属，并核算 Y 向公式的可辨识条件。 | [WTAF v3 对照](outputs/reports/MEtrology-WTAF整理草稿_v3.md#photo-verdict) · [图 4.6 与原式](outputs/reports/MEtrology-WTAF整理草稿_v3.md#photo-y) · [变更日志](changes/2026-11-26-wtaf-attachment-equation-audit_v1.md) |
 | 2026-11-26 | 为现行 IFM 确定测量侧 WTAF 每卡盘十个倾转系数。新增两处标记的解算图、关联项目分工和八项与十项的 MATLAB 独立姿态复验。 | [WTAF v2 参数判定](outputs/reports/MEtrology-WTAF整理草稿_v2.md#wtaf-model-constants) · [外检结果](outputs/reports/MEtrology-WTAF整理草稿_v2.md#full-replay) · [变更日志](changes/2026-11-26-wtaf-parameter-identification_v1.md) |
 | 2026-11-26 | BMAA 图 5.5 用两套安装状态解释 Stage Align 两枚 I₀ 的观测边界。WTAF 图 4.3、4.4 给出 XZ 阿贝臂、等效转动中心、正负倾转辨识算法及机器常数对应。 | [BMAA 图 5.5](outputs/reports/MEtrology-BMAA整理草稿_v6.md#two-i0-stage-align) · [WTAF 新稿](outputs/reports/MEtrology-WTAF整理草稿_v1.md#wtaf-principle) · [资料核查](outputs/reports/WTAF-两枚I0与IFM阿贝臂资料核查_v1.md) · [变更日志](changes/2026-11-26-wtaf-stage-align-abbe_v1.md) |
