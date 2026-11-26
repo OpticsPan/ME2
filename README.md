@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-26 | 为现行 IFM 确定测量侧 WTAF 每卡盘十个倾转系数。新增两处标记的解算图、关联项目分工和八项与十项的 MATLAB 独立姿态复验。 | [WTAF v2 参数判定](outputs/reports/MEtrology-WTAF整理草稿_v2.md#wtaf-model-constants) · [外检结果](outputs/reports/MEtrology-WTAF整理草稿_v2.md#full-replay) · [变更日志](changes/2026-11-26-wtaf-parameter-identification_v1.md) |
 | 2026-11-26 | BMAA 图 5.5 用两套安装状态解释 Stage Align 两枚 I₀ 的观测边界。WTAF 图 4.3、4.4 给出 XZ 阿贝臂、等效转动中心、正负倾转辨识算法及机器常数对应。 | [BMAA 图 5.5](outputs/reports/MEtrology-BMAA整理草稿_v6.md#two-i0-stage-align) · [WTAF 新稿](outputs/reports/MEtrology-WTAF整理草稿_v1.md#wtaf-principle) · [资料核查](outputs/reports/WTAF-两枚I0与IFM阿贝臂资料核查_v1.md) · [变更日志](changes/2026-11-26-wtaf-stage-align-abbe_v1.md) |
 | 2026-11-26 | BMAA 图 5.4 中，将 TIS1 名义载板的外轮廓绕晶圆中心 C 旋转 180° 得到 TIS2 名义外轮廓，实际安装轮廓分别按各板的示例偏差绘制。 | [草稿 v5 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v5.md#top-view) · [新版图片](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v4.png) · [变更日志](changes/2026-11-26-bmaa-tis-nominal-central-symmetry_v1.md) |
 | 2026-11-26 | BMAA 图 5.4 的两块载板沿三标记连线相对上版再缩短 25%，名义与实际轮廓均与晶圆边缘留有间隙。 | [草稿 v4 图 5.4](outputs/reports/MEtrology-BMAA整理草稿_v4.md#top-view) · [新版图片](outputs/images/BMAA-TIS1-TIS2与WS四参数俯视图_v3.png) · [变更日志](changes/2026-11-26-bmaa-tis-wafer-clearance_v1.md) |
