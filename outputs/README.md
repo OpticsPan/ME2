@@ -2,6 +2,7 @@
 
 | 类型 | 已归档成果 |
 | --- | --- |
+| [CLPL 待审第 6 章 v1](reports/MEtrology-CLPL整理草稿_v1.md#clpl) | [总流程](reports/MEtrology-CLPL整理草稿_v1.md#clpl-flow) · [各板保存哪些量](reports/MEtrology-CLPL整理草稿_v1.md#clpl-constants) · [测点与四点建模](reports/MEtrology-CLPL整理草稿_v1.md#clpl-points) · [生产复测与零位误差](reports/MEtrology-CLPL整理草稿_v1.md#clpl-production) · [稳定性验证与漂移监测](reports/MEtrology-CLPL整理草稿_v1.md#clpl-verification) · [Level 1–3 资料汇整](reports/CLPL资料汇整_v1.md) |
 | [BMAA 待审章节 v6](reports/MEtrology-BMAA整理草稿_v6.md#bmaa) | [总流程](reports/MEtrology-BMAA整理草稿_v6.md#overview) · [WQ 标记定位](reports/MEtrology-BMAA整理草稿_v6.md#wq) · [图 5.4 名义载板关于晶圆中心对称](reports/MEtrology-BMAA整理草稿_v6.md#top-view) · [图 5.5 两枚 I₀ 的可辨识性](reports/MEtrology-BMAA整理草稿_v6.md#two-i0-stage-align) · [板 TRM 与 WS 常数](reports/MEtrology-BMAA整理草稿_v6.md#board-mc) · [三标记原页核查](reports/BMAA-TIS双板四参数资料核查_v1.md) · [Level 1–3 全项目资料汇整](reports/BMAA资料汇整_v1.md) · [上版图 5.4](reports/MEtrology-BMAA整理草稿_v4.md#top-view) |
 | MEtrology 整理规范 | [报告既有范式](reports/MEtrology.md#report-format) · [现行公式显示规范：一律用图片](reports/MEtrology-公式显示规范_v1.md) |
 | 光路专题报告（PDF） | [TWINSCAN LS 原理与光路详解 v2](reports/ASML_TWINSCAN_LS原理与光路详解_v2.pdf) · [AA Athena 与 SMASH 原理与光路详解 v2](reports/ASML_AA_Athena与SMASH原理与光路详解_v2.pdf) |

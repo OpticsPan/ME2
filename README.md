@@ -6,6 +6,7 @@
 
 | 日期 | 变更内容 | 成果链接 |
 | --- | --- | --- |
+| 2026-11-26 | 整理 CLPL 基准板调平。用三幅图说明固定 M4 逐点定高、两卡盘各自保存参考值，以及生产时用两块板复测 Z、Ry 零位误差。 | [CLPL 第 6 章审阅稿](outputs/reports/MEtrology-CLPL整理草稿_v1.md#clpl) · [Level 1–3 资料汇整](outputs/reports/CLPL资料汇整_v1.md) · [变更日志](changes/2026-11-26-clpl-calibration-draft_v1.md) |
 | 2026-11-26 | 将 WTAF 重新整理为完整校准章节，串起固定 AA、两处 I₀、倾转后重对准、十个物理参数与复测。新增总流程和 Y 向零角读数示意。 | [WTAF 第 4 章 v4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf) · [图 4.4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf-y-model) · [变更日志](changes/2026-11-26-wtaf-chapter-reorganization_v1.md) |
 | 2026-11-26 | 按两张附件照片校核 WTAF 机器常数，将 Kx、Ly 归入附件物理参数，修正上一版对两个独立跨轴项的归属，并核算 Y 向公式的可辨识条件。 | [WTAF v3 对照](outputs/reports/MEtrology-WTAF整理草稿_v3.md#photo-verdict) · [图 4.6 与原式](outputs/reports/MEtrology-WTAF整理草稿_v3.md#photo-y) · [变更日志](changes/2026-11-26-wtaf-attachment-equation-audit_v1.md) |
 | 2026-11-26 | 为现行 IFM 确定测量侧 WTAF 每卡盘十个倾转系数。新增两处标记的解算图、关联项目分工和八项与十项的 MATLAB 独立姿态复验。 | [WTAF v2 参数判定](outputs/reports/MEtrology-WTAF整理草稿_v2.md#wtaf-model-constants) · [外检结果](outputs/reports/MEtrology-WTAF整理草稿_v2.md#full-replay) · [变更日志](changes/2026-11-26-wtaf-parameter-identification_v1.md) |
