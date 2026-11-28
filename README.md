@@ -8,6 +8,7 @@
 
 | 日期 | 产出方 | 变更内容 | 成果链接 |
 | --- | --- | --- | --- |
+| 2026-11-28 | Gemini | 整理 WZTD 测量侧 Z 干涉仪倾转依赖校准第 7 章审阅稿及 Level 1–3 资料汇整。绘制总流程、死锁与四步绝对标定链、恒定 M4 测高与多点参数分离三幅图及三条排版公式图，并核实原 PDF `800 µrad` 缺字与原书第 16 页侧别笔误。 | [WZTD 第 7 章审阅稿](outputs/reports/MEtrology-WZTD整理草稿_Gemini_v1.md#wztd) · [Level 1–3 资料汇整](outputs/reports/WZTD资料汇整_Gemini_v1.md) · [变更日志](changes/2026-11-28-wztd-calibration-draft_gemini_v1.md) |
 | 2026-11-28 | Gemini | 接入 Gemini 工作区（`D:\work\ME2_Gemini`），建立双工作区同步与 Gemini / GPT 产出区分规范，为首页与成果索引补充产出方标注。 | [产出区分规范](AGENTS.md#model-attribution) · [Gemini 入口](GEMINI.md) · [成果索引](outputs/README.md) · [变更日志](changes/2026-11-28-dual-workspace-and-model-attribution_gemini_v1.md) |
 | 2026-11-26 | GPT | 整理 CLPL 基准板调平。用三幅图说明固定 M4 逐点定高、两卡盘各自保存参考值，以及生产时用两块板复测 Z、Ry 零位误差。 | [CLPL 第 6 章审阅稿](outputs/reports/MEtrology-CLPL整理草稿_v1.md#clpl) · [Level 1–3 资料汇整](outputs/reports/CLPL资料汇整_v1.md) · [变更日志](changes/2026-11-26-clpl-calibration-draft_v1.md) |
 | 2026-11-26 | GPT | 将 WTAF 重新整理为完整校准章节，串起固定 AA、两处 I₀、倾转后重对准、十个物理参数与复测。新增总流程和 Y 向零角读数示意。 | [WTAF 第 4 章 v4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf) · [图 4.4](outputs/reports/MEtrology-WTAF整理草稿_v4.md#wtaf-y-model) · [变更日志](changes/2026-11-26-wtaf-chapter-reorganization_v1.md) |
