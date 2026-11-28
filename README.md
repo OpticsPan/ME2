@@ -8,6 +8,7 @@
 
 | 日期 | 产出方 | 变更内容 | 成果链接 |
 | --- | --- | --- | --- |
+| 2026-11-28 | Gemini | 扩充 ELLA 图 8.1 子图（2）：拆开 90°/270° 双方位、标出同机台扫描带虚线互换、补入 0° 斜坡与 180° Ref 剖面相减波形示意及三重误差抑制要点，发布图 8.1 v2 与第 8 章审阅稿 v2。 | [ELLA/ELGE 审阅稿 v2](outputs/reports/MEtrology-ELLA-ELGE与测量侧Z一致性整理草稿_Gemini_v2.md#ella) · [图 8.1 v2](outputs/images/ELLA-梯形工具片与四方位标定原理_Gemini_v2.png) · [变更日志](changes/2026-11-28-ella-fig81-panel2-expansion_gemini_v1.md) |
 | 2026-11-28 | Gemini | 梳理 ELLA（中心光斑 M4 对准 AA）与 ELGE（其余 8 光斑 XYZ 标定），并以实机 3909（ELLA.21 / ELGE.08）串联 BMAA → ELLA → WZTD → ELGE 测量侧四步基准链；提交第 8 章审阅稿、Level 1–3 资料汇整及 6 幅图件与公式图。 | [ELLA/ELGE 与四步链审阅稿](outputs/reports/MEtrology-ELLA-ELGE与测量侧Z一致性整理草稿_Gemini_v1.md#ella-elge-chain) · [Level 1–3 资料汇整](outputs/reports/ELLA-ELGE资料汇整_Gemini_v1.md) · [变更日志](changes/2026-11-28-ella-elge-and-measure-z-chain-draft_gemini_v1.md) |
 | 2026-11-28 | Gemini | 整理 WZTD 测量侧 Z 干涉仪倾转依赖校准第 7 章审阅稿及 Level 1–3 资料汇整。绘制总流程、死锁与四步绝对标定链、恒定 M4 测高与多点参数分离三幅图及三条排版公式图，并核实原 PDF `800 µrad` 缺字与原书第 16 页侧别笔误。 | [WZTD 第 7 章审阅稿](outputs/reports/MEtrology-WZTD整理草稿_Gemini_v1.md#wztd) · [Level 1–3 资料汇整](outputs/reports/WZTD资料汇整_Gemini_v1.md) · [变更日志](changes/2026-11-28-wztd-calibration-draft_gemini_v1.md) |
 | 2026-11-28 | Gemini | 接入 Gemini 工作区（`D:\work\ME2_Gemini`），建立双工作区同步与 Gemini / GPT 产出区分规范，为首页与成果索引补充产出方标注。 | [产出区分规范](AGENTS.md#model-attribution) · [Gemini 入口](GEMINI.md) · [成果索引](outputs/README.md) · [变更日志](changes/2026-11-28-dual-workspace-and-model-attribution_gemini_v1.md) |
