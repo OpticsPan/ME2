@@ -1,3 +1,7 @@
 /参考文献/
 /work/
 /原始参考存档/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
